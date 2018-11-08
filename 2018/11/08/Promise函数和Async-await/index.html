@@ -22,7 +22,7 @@
     <meta name="description" content="">
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Markdown基本语法 · Voyz&#39;s Studio</title>
+    <title>Promise函数和Async/await · Voyz&#39;s Studio</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -217,7 +217,7 @@
                 <a href="/">Voyz&#39;s Studio.</a>
             </div>
             <div class="post-title">
-                <a href="#" class="post-name">Markdown基本语法</a>
+                <a href="#" class="post-name">Promise函数和Async/await</a>
             </div>
     </div>
     
@@ -247,7 +247,7 @@ height:50vh;
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            Markdown基本语法
+            Promise函数和Async/await
             <!-- 404 -->
             
         </h1>
@@ -266,18 +266,18 @@ height:50vh;
                 
                     <div class="post-intro-tags">
     
-        <a class="post-tag" href="javascript:void(0);" data-tags="技术贴">技术贴</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags="JavaScript">JavaScript</a>
     
 </div>
                 
                 
                     <div class="post-intro-read">
-                        <span>字数统计: <span class="post-count word-count">523</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
+                        <span>字数统计: <span class="post-count word-count">395</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
                     <span class="post-intro-calander iconfont-archer">&#xe676;</span>
-                    <span class="post-intro-time">2018/10/26</span>
+                    <span class="post-intro-time">2018/11/08</span>
                     
                     <span id="busuanzi_container_page_pv" class="busuanzi-pv">
                         <span class="iconfont-archer">&#xe602;</span>
@@ -401,127 +401,27 @@ height:50vh;
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p><strong>markdown是一种纯文本格式的标记语言。通过简单的标记语法，它可以使普通文本内容具有一定的格式。</strong></p>
-<blockquote>
-<p><strong>为什么要使用Markdown</strong></p>
-<blockquote>
-<p>1.因为是纯文本，所以只要支持markdown的地方都能获得一样的编辑效果，可以让作者摆脱排版的困扰，专心写作。</p>
-</blockquote>
-</blockquote>
-<blockquote>
-<blockquote>
-<p>2.操作简单。<br>比如编辑标题时markdown只需要在标题内容前加#即可。</p>
-</blockquote>
-</blockquote>
-<h1 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h1><p>操作系统：MacOS <br><br>编辑器：<a href="http://macdown.uranusjr.com/" target="_blank" rel="noopener">Macdown</a></p>
-<h1 id="Markdown基本语法"><a href="#Markdown基本语法" class="headerlink" title="Markdown基本语法"></a>Markdown基本语法</h1><h2 id="1-标题"><a href="#1-标题" class="headerlink" title="1.标题"></a>1.标题</h2><figure class="highlight clean"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># 这是一级标题</span><br><span class="line">## 这是二级标题</span><br><span class="line">...</span><br><span class="line">##### 这是五级标题</span><br><span class="line">###### 这是六级标题</span><br></pre></td></tr></table></figure>
-<h2 id="2-字体"><a href="#2-字体" class="headerlink" title="2.字体"></a>2.字体</h2><figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">*<span class="strong">*这是加粗的文字*</span><span class="strong">*</span></span><br><span class="line"><span class="strong">*</span>这是倾斜的文字<span class="strong">*`</span></span><br><span class="line"><span class="strong">*</span>*<span class="strong">*这是斜体加粗的文字*</span>*<span class="strong">*</span></span><br><span class="line"><span class="strong">~~这是加删除线的文字~~</span></span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>效果如下：</p>
-<blockquote>
-<p><strong>这是加粗的文字</strong><br><br><em>这是倾斜的文字</em><br><br><strong><em>这是斜体加粗的文字</em></strong><br><br><del>这是加删除线的文字</del><br></p>
-</blockquote>
-</blockquote>
-<h2 id="3-引用"><a href="#3-引用" class="headerlink" title="3.引用"></a>3.引用</h2><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt; 这是引用的内容</span><br><span class="line"><span class="meta">&gt;&gt;</span> 这是引用的内容</span><br></pre></td></tr></table></figure>
-<p>效果如下：</p>
-<blockquote>
-<p>这是引用的内容</p>
-<blockquote>
-<p>这是引用的内容</p>
-</blockquote>
-</blockquote>
-<h2 id="4-分割线"><a href="#4-分割线" class="headerlink" title="4.分割线"></a>4.分割线</h2><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="bullet">-</span><span class="meta">---</span></span><br><span class="line"><span class="string">***</span></span><br><span class="line"><span class="string">*****</span></span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>效果如下</p>
-<blockquote>
-<hr>
-</blockquote>
-</blockquote>
-<h2 id="5-图片"><a href="#5-图片" class="headerlink" title="5.图片"></a>5.图片</h2><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![<span class="string">图片alt</span>](<span class="link">图片地址 ''图片title''</span>)</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>效果如下</p>
-<blockquote>
-<p><img src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/
-u=702257389,1274025419&amp;fm=27&amp;gp=0.jpg" alt="blockchain" title="区块链"></p>
-</blockquote>
-</blockquote>
-<h2 id="6-超链接"><a href="#6-超链接" class="headerlink" title="6.超链接"></a>6.超链接</h2><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[<span class="string">超链接名</span>](<span class="link">超链接地址 "超链接title"</span>)</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>效果如下</p>
-<blockquote>
-<p><a href="http://www.voyz.xyz" target="_blank" rel="noopener">我的主页</a></p>
-</blockquote>
-</blockquote>
-<h2 id="7-列表"><a href="#7-列表" class="headerlink" title="7.列表"></a>7.列表</h2><ul>
-<li><strong>无序列表</strong></li>
-</ul>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">- </span>列表内容</span><br><span class="line"><span class="bullet">+ </span>列表内容</span><br><span class="line"><span class="bullet">* </span>列表内容</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>效果如下</p>
-<blockquote>
+        <h2 id="优势"><a href="#优势" class="headerlink" title="优势"></a>优势</h2><p>ES7 提出的<code>async</code>函数，终于让<code>JavaScript</code>对于异步操作有了终极解决方案。No more callback hell。<br><code>async</code>函数是<code>Generator</code>函数的语法糖。使用 关键字<code>async</code>来表示，在函数内部使用<code>await</code>来表示异步。</p>
+<p>相较于<code>Generator</code>，<code>Async</code>函数的改进在于下面四点：</p>
 <ul>
-<li>列表内容</li>
+<li>内置执行器。  </li>
+<li>更好的语义。</li>
+<li>更广的适用性。 </li>
 </ul>
+<h2 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h2><ul>
+<li>Promise:</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> myFun = <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve,reject</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">let</span> a = <span class="number">1</span>;</span><br><span class="line">  resolve(a);</span><br><span class="line">&#125;).then(<span class="function"><span class="params">res</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(res);  <span class="comment">//a</span></span><br><span class="line">&#125;).catch(<span class="function"><span class="params">error</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(error);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 <ul>
-<li>列表内容</li>
+<li>Async/await: </li>
 </ul>
-<ul>
-<li>列表内容</li>
-</ul>
-</blockquote>
-</blockquote>
-<ul>
-<li><strong>有序列表</strong></li>
-</ul>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">1. </span>列表内容</span><br><span class="line"><span class="bullet">2. </span>列表内容</span><br><span class="line"><span class="bullet">3. </span>列表内容</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>效果如下</p>
-<blockquote>
-<ol>
-<li>列表内容</li>
-<li>列表内容</li>
-<li>列表内容</li>
-</ol>
-</blockquote>
-</blockquote>
-<ul>
-<li><strong>列表嵌套</strong></li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">上一级和下一级之间三个空格</span><br></pre></td></tr></table></figure>
-<h2 id="8-表格"><a href="#8-表格" class="headerlink" title="8.表格"></a>8.表格</h2><figure class="highlight gherkin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">|<span class="string">表头1</span>|<span class="string">表头2</span>|<span class="string">表头3</span>|</span><br><span class="line">|<span class="string">---</span>|<span class="string">:--:</span>|<span class="string">---:</span>|</span><br><span class="line">|<span class="string">内容1</span>|<span class="string">内容2</span>|<span class="string">内容3</span>|</span><br><span class="line">|<span class="string">内容1</span>|<span class="string">内容2</span>|<span class="string">内容3</span>|</span><br><span class="line"></span><br><span class="line">文字默认居左</span><br><span class="line">-两边加：表示文字居中</span><br><span class="line">-右边加：表示文字居右</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>效果如下</p>
-<blockquote>
-<table>
-<thead>
-<tr>
-<th>表头</th>
-<th style="text-align:center">表头</th>
-<th style="text-align:right">表头</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>内容</td>
-<td style="text-align:center">内容</td>
-<td style="text-align:right">内容</td>
-</tr>
-<tr>
-<td>内容</td>
-<td style="text-align:center">内容</td>
-<td style="text-align:right">内容</td>
-</tr>
-</tbody>
-</table>
-</blockquote>
-</blockquote>
-<h2 id="9-代码"><a href="#9-代码" class="headerlink" title="9.代码"></a>9.代码</h2><figure class="highlight clean"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">单行代码：</span><br><span class="line">`代码内容`</span><br><span class="line"></span><br><span class="line">代码块：</span><br><span class="line">(```)</span><br><span class="line">var a = <span class="number">1</span></span><br><span class="line">console.log(a)</span><br><span class="line">(```)</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>效果如下</p>
-<blockquote>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt; <span class="selector-tag">var</span> <span class="selector-tag">a</span> = <span class="number">1</span></span><br><span class="line">console.log(a)</span><br></pre></td></tr></table></figure>
-</blockquote>
-</blockquote>
+<figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">async</span> <span class="title">f</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line">&#125;</span><br><span class="line">f().then(alert)  <span class="comment">// 1</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">async</span> <span class="selector-tag">f</span>() &#123;</span><br><span class="line">  <span class="selector-tag">return</span> <span class="selector-tag">Promise</span><span class="selector-class">.resolve</span>(<span class="number">1</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">f</span>()<span class="selector-class">.then</span>(alert)  <span class="comment">// 1</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">async</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> promise = <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve,reject</span>) =&gt;</span> &#123;</span><br><span class="line">    setTimeout(<span class="function"><span class="params">()</span> =&gt;</span> resolve(<span class="string">'done!'</span>),<span class="number">1000</span>)</span><br><span class="line">  &#125;)</span><br><span class="line">  <span class="keyword">let</span> result = <span class="keyword">await</span> promise</span><br><span class="line">  alert(result)  <span class="comment">// "done!"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>放在一个函数前的async有两个作用：<br>1.使函数总是返回一个promise<br>2.允许在这其中使用await</p>
+<p>promise前面的await关键字能够使JavaScript等待，直到promise处理结束。然后：<br>1.如果它是一个错误，异常就产生了，就像在那个地方调用了throw error一样。<br>2.否则，它会返回一个结果，我们可以将它分配给一个值。  </p>
+<p>他们一起提供了一个很好的框架来编写易于读写的异步代码。</p>
+<p>有了async/await，我们很少需要写promise.then/catch，但是我们仍然不应该忘记它们是基于promise的，因为有些时候（例如在最外面的范围内）我们不得不使用这些方法。Promise.all也是一个非常棒的东西，它能够同时等待很多任务。</p>
 
     </article>
     <!-- license  -->
@@ -530,17 +430,12 @@ u=702257389,1274025419&amp;fm=27&amp;gp=0.jpg" alt="blockchain" title="区块链
     <ul class="post-paginator">
         <li class="next">
             
-                <div class="nextSlogan">Next Post</div>
-                <a href="/2018/10/28/Hexo-github-阿里云快速搭建个人博客网站/" title="Hexo+github+阿里云快速打造个人博客网站系统">
-                    <div class="nextTitle">Hexo+github+阿里云快速打造个人博客网站系统</div>
-                </a>
-            
         </li>
         <li class="previous">
             
                 <div class="prevSlogan">Previous Post</div>
-                <a href="/2018/07/26/第一篇博客/" title="第一篇博客">
-                    <div class="prevTitle">第一篇博客</div>
+                <a href="/2018/11/08/极其重要-原型链/" title="极其重要---原型链">
+                    <div class="prevTitle">极其重要---原型链</div>
                 </a>
             
         </li>
@@ -689,7 +584,7 @@ top:50vh;
         <div class="toc-catalog">
             <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
         </div>
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#简介"><span class="toc-number">1.</span> <span class="toc-text">简介</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#环境"><span class="toc-number">2.</span> <span class="toc-text">环境</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Markdown基本语法"><span class="toc-number">3.</span> <span class="toc-text">Markdown基本语法</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-标题"><span class="toc-number">3.1.</span> <span class="toc-text">1.标题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-字体"><span class="toc-number">3.2.</span> <span class="toc-text">2.字体</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-引用"><span class="toc-number">3.3.</span> <span class="toc-text">3.引用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-分割线"><span class="toc-number">3.4.</span> <span class="toc-text">4.分割线</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-图片"><span class="toc-number">3.5.</span> <span class="toc-text">5.图片</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-超链接"><span class="toc-number">3.6.</span> <span class="toc-text">6.超链接</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-列表"><span class="toc-number">3.7.</span> <span class="toc-text">7.列表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-表格"><span class="toc-number">3.8.</span> <span class="toc-text">8.表格</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-代码"><span class="toc-number">3.9.</span> <span class="toc-text">9.代码</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#优势"><span class="toc-number">1.</span> <span class="toc-text">优势</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#实例"><span class="toc-number">2.</span> <span class="toc-text">实例</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#总结"><span class="toc-number">3.</span> <span class="toc-text">总结</span></a></li></ol>
     </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>

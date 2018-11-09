@@ -22,7 +22,7 @@
     <meta name="description" content="">
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>水果电商小程序从零到上线投入使用 · Voyz&#39;s Studio</title>
+    <title>极其重要---原型链 · Voyz&#39;s Studio</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -217,7 +217,7 @@
                 <a href="/">Voyz&#39;s Studio.</a>
             </div>
             <div class="post-title">
-                <a href="#" class="post-name">水果电商小程序从零到上线投入使用</a>
+                <a href="#" class="post-name">极其重要---原型链</a>
             </div>
     </div>
     
@@ -247,7 +247,7 @@ height:50vh;
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            水果电商小程序从零到上线投入使用
+            极其重要---原型链
             <!-- 404 -->
             
         </h1>
@@ -266,18 +266,18 @@ height:50vh;
                 
                     <div class="post-intro-tags">
     
-        <a class="post-tag" href="javascript:void(0);" data-tags="小程序">小程序</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags="JavaScript">JavaScript</a>
     
 </div>
                 
                 
                     <div class="post-intro-read">
-                        <span>字数统计: <span class="post-count word-count">224</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
+                        <span>字数统计: <span class="post-count word-count">233</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
                     <span class="post-intro-calander iconfont-archer">&#xe676;</span>
-                    <span class="post-intro-time">2018/10/31</span>
+                    <span class="post-intro-time">2018/08/06</span>
                     
                     <span id="busuanzi_container_page_pv" class="busuanzi-pv">
                         <span class="iconfont-archer">&#xe602;</span>
@@ -401,62 +401,14 @@ height:50vh;
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <h1 id="微信小程序-水果商城"><a href="#微信小程序-水果商城" class="headerlink" title="微信小程序-水果商城"></a>微信小程序-水果商城</h1><ul>
-<li><a href="https://github.com/Voyzz/Fruit-store-mp" target="_blank" rel="noopener">项目地址</a><br><code>git clone https://github.com/Voyzz/Fruit-store-mp</code></li>
-<li><a href="http://blog.voyz.vip" target="_blank" rel="noopener">我的博客</a></li>
-</ul>
-<h2 id="项目说明"><a href="#项目说明" class="headerlink" title="项目说明"></a>项目说明</h2><p><img src="http://voyz-image.test.upcdn.net/2018/11/06/e73d196b310001b803c4d7abe72a5a28.jpg" alt="小程序码.jpg"></p>
-<p><code>微信支付开通审核中，下一版本开通微信支付</code> </p>
+        <h2 id="什么是原型链"><a href="#什么是原型链" class="headerlink" title="什么是原型链"></a>什么是原型链</h2><p><img src="http://voyz-image.test.upcdn.net/2018/11/08/c574afc3b330a0ebd3801a0de39f651b.jpg" alt="原型链.jpg"></p>
 <ul>
-<li>项目已上线待投入使用</li>
-<li>前端采用原生小程序框架MINA开发</li>
-<li>后端使用小程序云开发</li>
-<li>腾讯云云支持（数据库、CDN、云函数）</li>
-<li>又拍云云支持（CDN）</li>
+<li>在JavaScript中，万物皆对象<code>Object</code>，每一个对象都是由它的原型对象的构造函数实例化得到的。</li>
+<li>任何对象都有<code>_proto_</code>属性指向它的原形，所以会形成一条<code>_proto_</code>连起来的链条，这就是原型链</li>
+<li>查找对象的属性时，先查找对象本身是否含有该属性，若不存在，则会在原型链上查找，但不会查找自身的<code>prototype</code></li>
 </ul>
-<h2 id="版本说明"><a href="#版本说明" class="headerlink" title="版本说明"></a>版本说明</h2><blockquote>
-<p>v0.1.11 | Nov 6, 2018</p>
-<blockquote>
-<p>主页布局美化、bug修复</p>
-</blockquote>
-</blockquote>
-<blockquote>
-<p>v0.1.1 | Nov 2, 2018</p>
-<blockquote>
-<p>主页布局美化</p>
-</blockquote>
-</blockquote>
-<blockquote>
-<p>v0.1.0 | Oct 16, 2018</p>
-<blockquote>
-<p>添加后台，购物车</p>
-</blockquote>
-</blockquote>
-<blockquote>
-<p>v0.0.2 | Oct 16, 2018</p>
-<blockquote>
-<p>功能基本实现</p>
-</blockquote>
-</blockquote>
-<h2 id="小程序展示"><a href="#小程序展示" class="headerlink" title="小程序展示"></a>小程序展示</h2><p><img src="http://voyz-image.test.upcdn.net/2018/11/06/ddb22f2c7e432005f8c2f9d531d3bf31.jpg" alt="展示.jpg"></p>
-<h2 id="技术栈"><a href="#技术栈" class="headerlink" title="技术栈"></a>技术栈</h2><ul>
-<li><code>JavaScript(ES6)</code></li>
-<li><code>HTML5、CSS3</code></li>
-<li><code>小程序原生框架MINA</code> </li>
-<li><code>~~Koa2(node.js)~~</code></li>
-<li><code>小程序云开发</code> </li>
-</ul>
-<h3 id="微信支付"><a href="#微信支付" class="headerlink" title="微信支付"></a>微信支付</h3><p><code>开通中</code></p>
-<h3 id="云开发"><a href="#云开发" class="headerlink" title="云开发"></a>云开发</h3><p><code>project.config.json</code></p>
-<pre><code>{  
-&quot;cloudfunctionRoot&quot;: &quot;cloudfunctions/&quot;  
-}  
-</code></pre><h2 id="项目结构"><a href="#项目结构" class="headerlink" title="项目结构"></a>项目结构</h2><p><img src="http://voyz-image.test.upcdn.net/2018/11/06/357e874d19822299d72b4d768cc6f4a5.png" alt="代码结构.png"></p>
-<h2 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h2><ul>
-<li><a href="https://developers.weixin.qq.com/miniprogram/dev/wxcloud/basis/getting-started.html" target="_blank" rel="noopener">云开发文档</a></li>
-<li><a href="https://developers.weixin.qq.com/miniprogram/dev/api/" target="_blank" rel="noopener">小程序API</a></li>
-</ul>
-
+<h2 id="三种创建对象的方式"><a href="#三种创建对象的方式" class="headerlink" title="三种创建对象的方式"></a>三种创建对象的方式</h2><p><code>_proto_</code>的指向：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*1、字面量方式*/</span></span><br><span class="line"><span class="keyword">var</span> a = &#123;&#125;;</span><br><span class="line"><span class="built_in">console</span>.log(a.__proto__);  <span class="comment">//Object &#123;&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(a.__proto__ === a.constructor.prototype); <span class="comment">//true</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/*2、构造器方式*/</span></span><br><span class="line"><span class="keyword">var</span> A = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;;</span><br><span class="line"><span class="keyword">var</span> a = <span class="keyword">new</span> A();</span><br><span class="line"><span class="built_in">console</span>.log(a.__proto__); <span class="comment">//A &#123;&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(a.__proto__ === a.constructor.prototype); <span class="comment">//true</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/*3、Object.create()方式*/</span></span><br><span class="line"><span class="keyword">var</span> a1 = &#123;<span class="attr">a</span>:<span class="number">1</span>&#125;</span><br><span class="line"><span class="keyword">var</span> a2 = <span class="built_in">Object</span>.create(a1);</span><br><span class="line"><span class="built_in">console</span>.log(a2.__proto__); <span class="comment">//Object &#123;a: 1&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(a.__proto__ === a.constructor.prototype); <span class="comment">//false（此处即为图1中的例外情况）</span></span><br></pre></td></tr></table></figure>
     </article>
     <!-- license  -->
     
@@ -464,12 +416,17 @@ height:50vh;
     <ul class="post-paginator">
         <li class="next">
             
+                <div class="nextSlogan">Next Post</div>
+                <a href="/2018/08/08/浅谈JavaScript的闭包/" title="浅谈JavaScript的闭包">
+                    <div class="nextTitle">浅谈JavaScript的闭包</div>
+                </a>
+            
         </li>
         <li class="previous">
             
                 <div class="prevSlogan">Previous Post</div>
-                <a href="/2018/10/20/Hexo-github-阿里云快速搭建个人博客网站/" title="Hexo+github+阿里云快速打造个人博客网站系统">
-                    <div class="prevTitle">Hexo+github+阿里云快速打造个人博客网站系统</div>
+                <a href="/2018/08/01/几种排序算法的JS实现/" title="几种排序算法的JS实现">
+                    <div class="prevTitle">几种排序算法的JS实现</div>
                 </a>
             
         </li>
@@ -618,7 +575,7 @@ top:50vh;
         <div class="toc-catalog">
             <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
         </div>
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#微信小程序-水果商城"><span class="toc-number">1.</span> <span class="toc-text">微信小程序-水果商城</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#项目说明"><span class="toc-number">1.1.</span> <span class="toc-text">项目说明</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#版本说明"><span class="toc-number">1.2.</span> <span class="toc-text">版本说明</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#小程序展示"><span class="toc-number">1.3.</span> <span class="toc-text">小程序展示</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#技术栈"><span class="toc-number">1.4.</span> <span class="toc-text">技术栈</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#微信支付"><span class="toc-number">1.4.1.</span> <span class="toc-text">微信支付</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#云开发"><span class="toc-number">1.4.2.</span> <span class="toc-text">云开发</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#项目结构"><span class="toc-number">1.5.</span> <span class="toc-text">项目结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#参考文档"><span class="toc-number">1.6.</span> <span class="toc-text">参考文档</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#什么是原型链"><span class="toc-number">1.</span> <span class="toc-text">什么是原型链</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三种创建对象的方式"><span class="toc-number">2.</span> <span class="toc-text">三种创建对象的方式</span></a></li></ol>
     </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>

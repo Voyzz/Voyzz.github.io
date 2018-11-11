@@ -408,9 +408,8 @@ height:50vh;
 <p><code>node tools/initdb.js</code></p>
 <p><code>npm run dev</code></p>
 <h4 id="1-server-config-js-添加以下配置："><a href="#1-server-config-js-添加以下配置：" class="headerlink" title="1.server/config.js 添加以下配置："></a>1.server/config.js 添加以下配置：</h4><figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 其他配置 ...</span><span class="string">serverHost:</span> <span class="string">'localhost'</span>,<span class="string">tunnelServerUrl:</span> <span class="string">''</span>,<span class="string">tunnelSignatureKey:</span> <span class="string">'27fb7d1c161b7ca52d73cce0f1d833f9f5b5ec89'</span>,<span class="comment">// 腾讯云相关配置可以查看云 API 秘钥控制台：https://console.cloud.tencent.com/capi</span><span class="string">qcloudAppId:</span> <span class="string">'您的腾讯云 AppID'</span>,<span class="string">qcloudSecretId:</span> <span class="string">'您的腾讯云 SecretId'</span>,<span class="string">qcloudSecretKey:</span> <span class="string">'您的腾讯云 SecretKey'</span>,<span class="string">wxMessageToken:</span> <span class="string">'weixinmsgtoken'</span>,<span class="string">networkTimeout:</span> <span class="number">30000</span></span><br></pre></td></tr></table></figure>
-<h4 id="2-修改-client-config-js"><a href="#2-修改-client-config-js" class="headerlink" title="2.修改 client/config.js:"></a>2.修改 client/config.js:</h4><p>在<code>src/utils/config</code>中设置url<br>如：<a href="http://localhost:5757" target="_blank" rel="noopener">http://localhost:5757</a></p>
-<p>####3.安装依赖:</p>
-<ul>
+<h4 id="2-修改-client-config-js"><a href="#2-修改-client-config-js" class="headerlink" title="2.修改 client/config.js:"></a>2.修改 client/config.js:</h4><p>在<code>src/utils/config</code>中设置url,如：<a href="http://localhost:5757" target="_blank" rel="noopener">http://localhost:5757</a></p>
+<h4 id="3-安装依赖"><a href="#3-安装依赖" class="headerlink" title="3.安装依赖:"></a>3.安装依赖:</h4><ul>
 <li><p>切换到服务端代码目录:<br><code>cd server</code></p>
 </li>
 <li><p>安装依赖:<br><code>npm install</code></p>
@@ -424,7 +423,7 @@ height:50vh;
 <h4 id="1-project-config-json"><a href="#1-project-config-json" class="headerlink" title="1.[project.config.json]"></a>1.<code>[project.config.json]</code></h4><pre><code>添加 &quot;qcloudRoot&quot;: &quot;./server/&quot;,
 </code></pre><h4 id="2-src-utils-config"><a href="#2-src-utils-config" class="headerlink" title="2.[src/utils/config]"></a>2.<code>[src/utils/config]</code></h4><pre><code>设置url，如：&apos;https://3yuexwft.qcloud.la&apos;
 </code></pre><h4 id="3-server-config-js"><a href="#3-server-config-js" class="headerlink" title="3.[server/config.js]"></a>3.<code>[server/config.js]</code></h4><pre><code>注释掉本地服务器字段
-修改mysql密码       默认为appid
+修改mysql密码,默认为appid
 </code></pre>
     </article>
     <!-- license  -->
@@ -582,7 +581,7 @@ top:50vh;
         <div class="toc-catalog">
             <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
         </div>
-        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#切换到服务端代码目录"><span class="toc-number">1.</span> <span class="toc-text">切换到服务端代码目录:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装依赖"><span class="toc-number">2.</span> <span class="toc-text">安装依赖:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装全局依赖"><span class="toc-number">3.</span> <span class="toc-text">安装全局依赖:</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-server-config-js-添加以下配置："><span class="toc-number">3.1.</span> <span class="toc-text">1.server/config.js 添加以下配置：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-修改-client-config-js"><span class="toc-number">3.2.</span> <span class="toc-text">2.修改 client/config.js:</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-初始化数据库："><span class="toc-number">3.3.</span> <span class="toc-text">4.初始化数据库：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-本地启动调试环境"><span class="toc-number">3.4.</span> <span class="toc-text">5.本地启动调试环境:</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-project-config-json"><span class="toc-number">3.5.</span> <span class="toc-text">1.[project.config.json]</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-src-utils-config"><span class="toc-number">3.6.</span> <span class="toc-text">2.[src/utils/config]</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-server-config-js"><span class="toc-number">3.7.</span> <span class="toc-text">3.[server/config.js]</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#切换到服务端代码目录"><span class="toc-number">1.</span> <span class="toc-text">切换到服务端代码目录:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装依赖"><span class="toc-number">2.</span> <span class="toc-text">安装依赖:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装全局依赖"><span class="toc-number">3.</span> <span class="toc-text">安装全局依赖:</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-server-config-js-添加以下配置："><span class="toc-number">3.1.</span> <span class="toc-text">1.server/config.js 添加以下配置：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-修改-client-config-js"><span class="toc-number">3.2.</span> <span class="toc-text">2.修改 client/config.js:</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-安装依赖"><span class="toc-number">3.3.</span> <span class="toc-text">3.安装依赖:</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-初始化数据库："><span class="toc-number">3.4.</span> <span class="toc-text">4.初始化数据库：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-本地启动调试环境"><span class="toc-number">3.5.</span> <span class="toc-text">5.本地启动调试环境:</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-project-config-json"><span class="toc-number">3.6.</span> <span class="toc-text">1.[project.config.json]</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-src-utils-config"><span class="toc-number">3.7.</span> <span class="toc-text">2.[src/utils/config]</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-server-config-js"><span class="toc-number">3.8.</span> <span class="toc-text">3.[server/config.js]</span></a></li></ol></li></ol>
     </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
@@ -595,28 +594,6 @@ top:50vh;
     <div class="sidebar-content sidebar-content-show-archive">
           <div class="sidebar-panel-archives">
     <!-- 在ejs中将archive按照时间排序 -->
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     
     
     

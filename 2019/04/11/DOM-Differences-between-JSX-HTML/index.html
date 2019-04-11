@@ -22,7 +22,7 @@
     <meta name="description" content="">
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Hexo+github快速打造个人博客网站系统 · Voyz&#39;s Studio</title>
+    <title>DOM Differences between JSX &amp; HTML · Voyz&#39;s Studio</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -217,7 +217,7 @@
                 <a href="/">Voyz&#39;s Studio.</a>
             </div>
             <div class="post-title">
-                <a href="#" class="post-name">Hexo+github快速打造个人博客网站系统</a>
+                <a href="#" class="post-name">DOM Differences between JSX & HTML</a>
             </div>
     </div>
     
@@ -247,7 +247,7 @@ height:50vh;
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            Hexo+github快速打造个人博客网站系统
+            DOM Differences between JSX & HTML
             <!-- 404 -->
             
         </h1>
@@ -266,18 +266,18 @@ height:50vh;
                 
                     <div class="post-intro-tags">
     
-        <a class="post-tag" href="javascript:void(0);" data-tags="技术贴">技术贴</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags="React">React</a>
     
 </div>
                 
                 
                     <div class="post-intro-read">
-                        <span>字数统计: <span class="post-count word-count">506</span>阅读时长: <span class="post-count reading-time">2 min</span></span>
+                        <span>字数统计: <span class="post-count word-count">0</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
                     <span class="post-intro-calander iconfont-archer">&#xe676;</span>
-                    <span class="post-intro-time">2018/10/20</span>
+                    <span class="post-intro-time">2019/04/11</span>
                     
                     <span id="busuanzi_container_page_pv" class="busuanzi-pv">
                         <span class="iconfont-archer">&#xe602;</span>
@@ -401,66 +401,7 @@ height:50vh;
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <h1 id="Hexo-github快速打造个人博客网站"><a href="#Hexo-github快速打造个人博客网站" class="headerlink" title="Hexo+github快速打造个人博客网站"></a>Hexo+github快速打造个人博客网站</h1><h2 id="Hexo本地环境搭建博客"><a href="#Hexo本地环境搭建博客" class="headerlink" title="Hexo本地环境搭建博客"></a>Hexo本地环境搭建博客</h2><h3 id="环境搭建"><a href="#环境搭建" class="headerlink" title="环境搭建"></a>环境搭建</h3><ul>
-<li><a href="https://hexo.io/zh-cn/" target="_blank" rel="noopener">Hexo</a>: 快速、简洁且高效的博客框架</li>
-<li><a href="https://nodejs.org" target="_blank" rel="noopener">Node.js</a></li>
-<li><a href="https://nodejs.org" target="_blank" rel="noopener">Git</a></li>
-</ul>
-<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>安装Git: </p>
-<p><code>http://nodejs.cn/</code>  </p>
-<p>安装Node.js:  </p>
-<p><code>https://git-scm.com/downloads</code></p>
-<p>安装Hexo:  </p>
-<p><code>$ npm install -g hexo-cli</code>  </p>
-<h3 id="快速开始"><a href="#快速开始" class="headerlink" title="快速开始"></a>快速开始</h3><h4 id="1-创建项目"><a href="#1-创建项目" class="headerlink" title="1.创建项目"></a>1.创建项目</h4><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">hexo <span class="selector-tag">i</span> blog <span class="comment">//初始化项目 blog是项目名</span></span><br><span class="line">cd blog     <span class="comment">//切换到根目录</span></span><br><span class="line">hexo g      <span class="comment">//generetor</span></span><br><span class="line">hexo s      <span class="comment">//server</span></span><br></pre></td></tr></table></figure>
-<h4 id="2-打开浏览器"><a href="#2-打开浏览器" class="headerlink" title="2.打开浏览器"></a>2.打开浏览器</h4><figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">localhost:</span><span class="number">4000</span></span><br></pre></td></tr></table></figure>
-<p><img src="http://voyz-image.test.upcdn.net/2018/11/07/2ce3a25ec725d157e9f621cdb5506187.jpeg" alt="20161115143629057.jpeg"></p>
-<p>这是hexo的默认主题。最简单的本地博客已搭建成功。</p>
-<h4 id="3-配置主题"><a href="#3-配置主题" class="headerlink" title="3.配置主题"></a>3.配置主题</h4><ul>
-<li><a href="https://hexo.io/themes/" target="_blank" rel="noopener">Hexo主题</a> </li>
-</ul>
-<p><img src="http://voyz-image.test.upcdn.net/2018/11/07/fe4df27ab97446fa75d724dde6e5ed15.png" alt="Snip20181107_41.png"></p>
-<p>按照主题文档配置主题。</p>
-<h2 id="上传到Github"><a href="#上传到Github" class="headerlink" title="上传到Github"></a>上传到Github</h2><h3 id="注册GitHub账号"><a href="#注册GitHub账号" class="headerlink" title="注册GitHub账号"></a>注册GitHub账号</h3><figure class="highlight dts"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">https:</span><span class="comment">//github.com/</span></span><br></pre></td></tr></table></figure>
-<h3 id="创建仓库"><a href="#创建仓库" class="headerlink" title="创建仓库"></a>创建仓库</h3><p><img src="http://voyz-image.test.upcdn.net/2018/11/07/b87304a62ccc2e59baa14718813178d1.png" alt="Snip20181107_42.png"></p>
-<p><img src="http://voyz-image.test.upcdn.net/2018/11/07/fa3bdc841ddd1935e0788ec8d63e6f54.png" alt="Snip20181107_43.png"></p>
-<h3 id="设置"><a href="#设置" class="headerlink" title="设置"></a>设置</h3><ul>
-<li>setting</li>
-</ul>
-<p><img src="http://voyz-image.test.upcdn.net/2018/11/07/36ca61c46f809848fd6c1352c7c45da7.png" alt="Snip20181107_44.png"></p>
-<p><img src="http://voyz-image.test.upcdn.net/2018/11/07/f5ba2f077e58c3b007700502b8a9702b.jpeg" alt="20161115152126037.jpeg"></p>
-<p><img src="http://voyz-image.test.upcdn.net/2018/11/07/9d153fe913bc9b06b4c0a1c34d074ac2.jpeg" alt="20161115152110052.jpeg"></p>
-<p><img src="http://voyz-image.test.upcdn.net/2018/11/07/74059807fd8c1c2bfa09b72b06f4d819.jpeg" alt="20161115152334282.jpeg"></p>
-<h3 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h3><figure class="highlight gauss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --<span class="keyword">save</span></span><br><span class="line">hexo d  <span class="comment">//  部署</span></span><br></pre></td></tr></table></figure>
-<h3 id="访问你的网站"><a href="#访问你的网站" class="headerlink" title="访问你的网站"></a>访问你的网站</h3><p>用户名.github.io</p>
-<h2 id="发布博客"><a href="#发布博客" class="headerlink" title="发布博客"></a>发布博客</h2><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cd 根目录</span><br><span class="line">hexo <span class="keyword">new</span> <span class="string">"postName"</span></span><br><span class="line">hexo g <span class="comment">//生成静态页面</span></span><br><span class="line">hexo d <span class="comment">//发布</span></span><br></pre></td></tr></table></figure>
-<h2 id="域名绑定"><a href="#域名绑定" class="headerlink" title="域名绑定"></a>域名绑定</h2><ul>
-<li>首先你得有一个域名，我用的腾讯的域名。  </li>
-<li>实名认证和备案都搞定以后。到域名解析页面添加解析。  </li>
-<li>然后到你博客 根目录/source 目录下创建一个新文件CNAME </li>
-<li>在里面写上你刚刚配置的路径。</li>
-<li>执行以下hexo g,hexo d.</li>
-</ul>
-<h2 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h2><ul>
-<li>hexo new “postName” #新建文章</li>
-<li>hexo new page “pageName” #新建页面</li>
-<li>hexo generate #生成静态页面至public目录</li>
-<li>hexo server #开启预览访问端口（默认端口4000）</li>
-<li>hexo deploy #将.deploy目录部署到GitHub</li>
-<li>hexo help # 查看帮助</li>
-<li>hexo version #查看Hexo的版本</li>
-</ul>
-<h2 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h2><ul>
-<li><p>出现 error deployer not found:git 或者 error deployer not found:github 的错误<br>解决办法：执行 npm install hexo-deployer-git –save</p>
-</li>
-<li><p>出现类似 FATAL can not read a block mapping entry; a multiline key may not be an implicit key at line 70, column 1: … 错误<br>解决办法：_config.yml中配置项的冒号后面要用空格隔开，再跟内容</p>
-</li>
-<li><p>中文乱码问题<br>解决办法：将文件的内容编码改为UTF8格式</p>
-</li>
-<li><p>‘hexo sever’能够成功运行，但是localhost:4000无法访问<br>解决办法：执行hexo s -p 5000，改用其他端口启动</p>
-</li>
-</ul>
-
+        
     </article>
     <!-- license  -->
     
@@ -468,17 +409,12 @@ height:50vh;
     <ul class="post-paginator">
         <li class="next">
             
-                <div class="nextSlogan">Next Post</div>
-                <a href="/2018/10/31/水果电商小程序从零到上线投入使用/" title="水果电商小程序从零到上线投入使用">
-                    <div class="nextTitle">水果电商小程序从零到上线投入使用</div>
-                </a>
-            
         </li>
         <li class="previous">
             
                 <div class="prevSlogan">Previous Post</div>
-                <a href="/2018/10/09/布局神器-css弹性盒子/" title="布局神器--css弹性盒子">
-                    <div class="prevTitle">布局神器--css弹性盒子</div>
+                <a href="/2019/04/10/React学习笔记（一）/" title="React概览">
+                    <div class="prevTitle">React概览</div>
                 </a>
             
         </li>
@@ -622,7 +558,7 @@ top:50vh;
         <div class="toc-catalog">
             <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
         </div>
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Hexo-github快速打造个人博客网站"><span class="toc-number">1.</span> <span class="toc-text">Hexo+github快速打造个人博客网站</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Hexo本地环境搭建博客"><span class="toc-number">1.1.</span> <span class="toc-text">Hexo本地环境搭建博客</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#环境搭建"><span class="toc-number">1.1.1.</span> <span class="toc-text">环境搭建</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装"><span class="toc-number">1.1.2.</span> <span class="toc-text">安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#快速开始"><span class="toc-number">1.1.3.</span> <span class="toc-text">快速开始</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-创建项目"><span class="toc-number">1.1.3.1.</span> <span class="toc-text">1.创建项目</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-打开浏览器"><span class="toc-number">1.1.3.2.</span> <span class="toc-text">2.打开浏览器</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-配置主题"><span class="toc-number">1.1.3.3.</span> <span class="toc-text">3.配置主题</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#上传到Github"><span class="toc-number">1.2.</span> <span class="toc-text">上传到Github</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#注册GitHub账号"><span class="toc-number">1.2.1.</span> <span class="toc-text">注册GitHub账号</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#创建仓库"><span class="toc-number">1.2.2.</span> <span class="toc-text">创建仓库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#设置"><span class="toc-number">1.2.3.</span> <span class="toc-text">设置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#部署"><span class="toc-number">1.2.4.</span> <span class="toc-text">部署</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#访问你的网站"><span class="toc-number">1.2.5.</span> <span class="toc-text">访问你的网站</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#发布博客"><span class="toc-number">1.3.</span> <span class="toc-text">发布博客</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#域名绑定"><span class="toc-number">1.4.</span> <span class="toc-text">域名绑定</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#常用命令"><span class="toc-number">1.5.</span> <span class="toc-text">常用命令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#常见问题"><span class="toc-number">1.6.</span> <span class="toc-text">常见问题</span></a></li></ol></li></ol>
+        
     </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>

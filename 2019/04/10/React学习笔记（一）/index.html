@@ -272,7 +272,7 @@ height:50vh;
                 
                 
                     <div class="post-intro-read">
-                        <span>字数统计: <span class="post-count word-count">86</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
+                        <span>字数统计: <span class="post-count word-count">155</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
@@ -404,13 +404,25 @@ height:50vh;
         <h1 id="React-js概览"><a href="#React-js概览" class="headerlink" title="React.js概览"></a>React.js概览</h1><p>React 的核心思想是：<strong>封装组件</strong>。</p>
 <p>各个组件维护自己的<strong>状态</strong>和 <strong>UI</strong>，当状态变更，自动重新渲染整个组件。</p>
 <p>基于这种方式的一个直观感受就是我们不再需要不厌其烦地来回查找某个 DOM 元素，然后操作 DOM 去更改 UI。</p>
-
+<p>React 大体包含下面这些概念：</p>
+<ul>
+<li>组件</li>
+<li>JSX</li>
+<li>Virtual DOM  </li>
+<li>Data Flow</li>
+</ul>
+<figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="type">React</span>, &#123; <span class="type">Component</span> &#125; from <span class="symbol">'reac</span>t';</span><br><span class="line"><span class="keyword">import</span> &#123; render &#125; from <span class="symbol">'react</span>-dom';</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">HelloMessage</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;</span><br><span class="line">  render() &#123;</span><br><span class="line">    <span class="keyword">return</span> &lt;div&gt;<span class="type">Hello</span> &#123;<span class="keyword">this</span>.props.name&#125;&lt;/div&gt;;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 加载组件到 DOM 元素 mountNode</span></span><br><span class="line">render(&lt;<span class="type">HelloMessage</span> name=<span class="string">"John"</span> /&gt;, mountNode);</span><br></pre></td></tr></table></figure>
     </article>
     <!-- license  -->
     
     <!-- paginator  -->
     <ul class="post-paginator">
         <li class="next">
+            
+                <div class="nextSlogan">Next Post</div>
+                <a href="/2019/04/11/DOM-Differences-between-JSX-HTML/" title="DOM Differences between JSX & HTML">
+                    <div class="nextTitle">DOM Differences between JSX & HTML</div>
+                </a>
             
         </li>
         <li class="previous">
@@ -796,9 +808,40 @@ top:50vh;
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 22
+        Total : 23
         </div>
         <!-- search  -->
         
@@ -811,6 +854,11 @@ top:50vh;
     
     <div class="archive-year"> 2019 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/11</span><a class="archive-post-title" href="/2019/04/11/DOM-Differences-between-JSX-HTML/">DOM Differences between JSX & HTML</a>
+        </li>
     
     
         <li class="archive-post-item">
@@ -936,11 +984,11 @@ top:50vh;
         <div class="sidebar-panel-tags">
     <div class="sidebar-tags-name">
     
-        <span class="sidebar-tag-name" data-tags="JavaScript"><span class="iconfont-archer">&#xe606;</span>JavaScript</span>
-    
         <span class="sidebar-tag-name" data-tags="React"><span class="iconfont-archer">&#xe606;</span>React</span>
     
         <span class="sidebar-tag-name" data-tags="技术贴"><span class="iconfont-archer">&#xe606;</span>技术贴</span>
+    
+        <span class="sidebar-tag-name" data-tags="JavaScript"><span class="iconfont-archer">&#xe606;</span>JavaScript</span>
     
         <span class="sidebar-tag-name" data-tags="React Native"><span class="iconfont-archer">&#xe606;</span>React Native</span>
     

@@ -22,7 +22,7 @@
     <meta name="description" content="">
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>命令行常用命令 · Voyz&#39;s Studio</title>
+    <title>React学习笔记（五） · Voyz&#39;s Studio</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -217,7 +217,7 @@
                 <a href="/">Voyz&#39;s Studio.</a>
             </div>
             <div class="post-title">
-                <a href="#" class="post-name">命令行常用命令</a>
+                <a href="#" class="post-name">React学习笔记（五）</a>
             </div>
     </div>
     
@@ -247,7 +247,7 @@ height:50vh;
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            命令行常用命令
+            React学习笔记（五）
             <!-- 404 -->
             
         </h1>
@@ -266,18 +266,18 @@ height:50vh;
                 
                     <div class="post-intro-tags">
     
-        <a class="post-tag" href="javascript:void(0);" data-tags="技术贴">技术贴</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags="React">React</a>
     
 </div>
                 
                 
                     <div class="post-intro-read">
-                        <span>字数统计: <span class="post-count word-count">42</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
+                        <span>字数统计: <span class="post-count word-count">112</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
                     <span class="post-intro-calander iconfont-archer">&#xe676;</span>
-                    <span class="post-intro-time">2018/10/04</span>
+                    <span class="post-intro-time">2019/04/17</span>
                     
                     <span id="busuanzi_container_page_pv" class="busuanzi-pv">
                         <span class="iconfont-archer">&#xe602;</span>
@@ -401,8 +401,22 @@ height:50vh;
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <h3 id="查看端口"><a href="#查看端口" class="headerlink" title="查看端口"></a>查看端口</h3><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">netstat</span> -ano <span class="comment">#查看所有端口情况</span></span><br><span class="line">netstat -ano|findstr <span class="string">"8080"</span> <span class="comment">#查看8080端口对应PID</span></span><br></pre></td></tr></table></figure>
-<h3 id="结束进程"><a href="#结束进程" class="headerlink" title="结束进程"></a>结束进程</h3><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">taskkill /f /pid (进程PID)</span><br><span class="line">ntsd -c <span class="selector-tag">q</span> -<span class="selector-tag">p</span> (进程PID)</span><br></pre></td></tr></table></figure>
+        <h1 id="React的生命周期函数"><a href="#React的生命周期函数" class="headerlink" title="React的生命周期函数"></a>React的生命周期函数</h1><h2 id="React-v16-4"><a href="#React-v16-4" class="headerlink" title="React v16.4"></a>React v16.4</h2><p><img src="http://voyz-image.test.upcdn.net/2019/04/17/0b487d6f63bf4aabf893d5423ddcbb2b.png" alt="React v16.4生命周期.png"></p>
+<h2 id="React-v16-0之前"><a href="#React-v16-0之前" class="headerlink" title="React v16.0之前"></a>React v16.0之前</h2><p><img src="http://voyz-image.test.upcdn.net/2019/04/17/def22df939d54c6ba9768dfca30a61a8.png" alt="React生命周期.png"></p>
+<p>生命周期函数是指在某一时刻组件会自动执行的函数</p>
+<h3 id="Initialization-初始化"><a href="#Initialization-初始化" class="headerlink" title="Initialization(初始化)"></a>Initialization(初始化)</h3><p>初始化<br>constructor：ES6语法中的，不算React的生命周期函数</p>
+<h3 id="Mounting-挂载"><a href="#Mounting-挂载" class="headerlink" title="Mounting(挂载)"></a>Mounting(挂载)</h3><ul>
+<li>componentWillMount：在组件<code>将被挂载</code>到页面的时候执行（第一次）</li>
+<li>render：</li>
+<li>componentDidMount：在组件<code>被挂载后</code>到页面的时候执行（第一次）</li>
+</ul>
+<h3 id="Updating-更新"><a href="#Updating-更新" class="headerlink" title="Updating(更新)"></a>Updating(更新)</h3><h4 id="props"><a href="#props" class="headerlink" title="props"></a>props</h4><ul>
+<li>componentWillReceiveProp</li>
+<li>shouldComponentUpdat</li>
+<li>componentWillUpdat</li>
+<li>rende</li>
+<li>componentDidUpdate</li>
+</ul>
 
     </article>
     <!-- license  -->
@@ -411,17 +425,12 @@ height:50vh;
     <ul class="post-paginator">
         <li class="next">
             
-                <div class="nextSlogan">Next Post</div>
-                <a href="/2018/10/09/布局神器-css弹性盒子/" title="布局神器--css弹性盒子">
-                    <div class="nextTitle">布局神器--css弹性盒子</div>
-                </a>
-            
         </li>
         <li class="previous">
             
                 <div class="prevSlogan">Previous Post</div>
-                <a href="/2018/09/28/Thai嗨行记/" title="Thai嗨行记">
-                    <div class="prevTitle">Thai嗨行记</div>
+                <a href="/2019/04/17/生活服务小程序【菲鹰生活】前端从零到上线/" title="生活服务小程序【菲鹰生活】前端从零到上线">
+                    <div class="prevTitle">生活服务小程序【菲鹰生活】前端从零到上线</div>
                 </a>
             
         </li>
@@ -565,7 +574,7 @@ top:50vh;
         <div class="toc-catalog">
             <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
         </div>
-        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#查看端口"><span class="toc-number">1.</span> <span class="toc-text">查看端口</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#结束进程"><span class="toc-number">2.</span> <span class="toc-text">结束进程</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#React的生命周期函数"><span class="toc-number">1.</span> <span class="toc-text">React的生命周期函数</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#React-v16-4"><span class="toc-number">1.1.</span> <span class="toc-text">React v16.4</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#React-v16-0之前"><span class="toc-number">1.2.</span> <span class="toc-text">React v16.0之前</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Initialization-初始化"><span class="toc-number">1.2.1.</span> <span class="toc-text">Initialization(初始化)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Mounting-挂载"><span class="toc-number">1.2.2.</span> <span class="toc-text">Mounting(挂载)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Updating-更新"><span class="toc-number">1.2.3.</span> <span class="toc-text">Updating(更新)</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#props"><span class="toc-number">1.2.3.1.</span> <span class="toc-text">props</span></a></li></ol></li></ol></li></ol></li></ol>
     </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>

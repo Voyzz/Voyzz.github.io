@@ -483,7 +483,8 @@ height:50vh;
 <h3 id="createAnimatedComponent"><a href="#createAnimatedComponent" class="headerlink" title="createAnimatedComponent"></a><code>createAnimatedComponent</code></h3><p>封装任意React组件，使其可以动画化。Animated.View等内置组件就是通过这一方法封装的。</p>
 <hr>
 <h3 id="attachNativeEvent"><a href="#attachNativeEvent" class="headerlink" title="attachNativeEvent"></a><code>attachNativeEvent</code></h3><p>用于将动画值附加到视图上的事件的命令式API。喜欢使用Animated.event与useNativeDrive: true如果可能的话。</p>
-<h2 id="动画实例"><a href="#动画实例" class="headerlink" title="动画实例"></a>动画实例</h2>
+<hr>
+
     </article>
     <!-- license  -->
     
@@ -640,7 +641,7 @@ top:50vh;
         <div class="toc-catalog">
             <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
         </div>
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#RN动画系统–Animated"><span class="toc-number">1.</span> <span class="toc-text">RN动画系统–Animated</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Animated简介"><span class="toc-number">1.1.</span> <span class="toc-text">Animated简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Animated的属性和方法"><span class="toc-number">1.2.</span> <span class="toc-text">Animated的属性和方法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#方法"><span class="toc-number">1.2.1.</span> <span class="toc-text">方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#属性"><span class="toc-number">1.2.2.</span> <span class="toc-text">属性</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#方法及参数"><span class="toc-number">1.3.</span> <span class="toc-text">方法及参数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#decay-value-config"><span class="toc-number">1.3.1.</span> <span class="toc-text">decay(value, config)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#timing-value-config"><span class="toc-number">1.3.2.</span> <span class="toc-text">timing(value, config)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#spring-value-config"><span class="toc-number">1.3.3.</span> <span class="toc-text">spring(value, config)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#add-a-b"><span class="toc-number">1.3.4.</span> <span class="toc-text">add(a, b)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#subtract-a-b"><span class="toc-number">1.3.5.</span> <span class="toc-text">subtract(a, b)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#divide-a-b"><span class="toc-number">1.3.6.</span> <span class="toc-text">divide(a, b)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#multiply-a-b"><span class="toc-number">1.3.7.</span> <span class="toc-text">multiply(a, b)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#modulo-a-modulus"><span class="toc-number">1.3.8.</span> <span class="toc-text">modulo(a, modulus)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#diffClamp-a-min-max"><span class="toc-number">1.3.9.</span> <span class="toc-text">diffClamp(a, min, max)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#delay-time"><span class="toc-number">1.3.10.</span> <span class="toc-text">delay(time)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#sequence-animations"><span class="toc-number">1.3.11.</span> <span class="toc-text">sequence(animations)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#parallel-animations-config"><span class="toc-number">1.3.12.</span> <span class="toc-text">parallel()(animations, config?)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#stagger-time-animations"><span class="toc-number">1.3.13.</span> <span class="toc-text">stagger(time, animations)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#loop-animation-config"><span class="toc-number">1.3.14.</span> <span class="toc-text">loop(animation, config?)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#event-argMapping-config"><span class="toc-number">1.3.15.</span> <span class="toc-text">event(argMapping, config?)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#unforkEvent-event-listener"><span class="toc-number">1.3.16.</span> <span class="toc-text">unforkEvent(event, listener)</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#属性及参数"><span class="toc-number">1.4.</span> <span class="toc-text">属性及参数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Value"><span class="toc-number">1.4.1.</span> <span class="toc-text">Value</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ValueXY"><span class="toc-number">1.4.2.</span> <span class="toc-text">ValueXY</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Interpolation"><span class="toc-number">1.4.3.</span> <span class="toc-text">Interpolation</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Node"><span class="toc-number">1.4.4.</span> <span class="toc-text">Node</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#createAnimatedComponent"><span class="toc-number">1.4.5.</span> <span class="toc-text">createAnimatedComponent</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#attachNativeEvent"><span class="toc-number">1.4.6.</span> <span class="toc-text">attachNativeEvent</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#动画实例"><span class="toc-number">1.5.</span> <span class="toc-text">动画实例</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#RN动画系统–Animated"><span class="toc-number">1.</span> <span class="toc-text">RN动画系统–Animated</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Animated简介"><span class="toc-number">1.1.</span> <span class="toc-text">Animated简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Animated的属性和方法"><span class="toc-number">1.2.</span> <span class="toc-text">Animated的属性和方法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#方法"><span class="toc-number">1.2.1.</span> <span class="toc-text">方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#属性"><span class="toc-number">1.2.2.</span> <span class="toc-text">属性</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#方法及参数"><span class="toc-number">1.3.</span> <span class="toc-text">方法及参数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#decay-value-config"><span class="toc-number">1.3.1.</span> <span class="toc-text">decay(value, config)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#timing-value-config"><span class="toc-number">1.3.2.</span> <span class="toc-text">timing(value, config)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#spring-value-config"><span class="toc-number">1.3.3.</span> <span class="toc-text">spring(value, config)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#add-a-b"><span class="toc-number">1.3.4.</span> <span class="toc-text">add(a, b)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#subtract-a-b"><span class="toc-number">1.3.5.</span> <span class="toc-text">subtract(a, b)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#divide-a-b"><span class="toc-number">1.3.6.</span> <span class="toc-text">divide(a, b)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#multiply-a-b"><span class="toc-number">1.3.7.</span> <span class="toc-text">multiply(a, b)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#modulo-a-modulus"><span class="toc-number">1.3.8.</span> <span class="toc-text">modulo(a, modulus)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#diffClamp-a-min-max"><span class="toc-number">1.3.9.</span> <span class="toc-text">diffClamp(a, min, max)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#delay-time"><span class="toc-number">1.3.10.</span> <span class="toc-text">delay(time)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#sequence-animations"><span class="toc-number">1.3.11.</span> <span class="toc-text">sequence(animations)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#parallel-animations-config"><span class="toc-number">1.3.12.</span> <span class="toc-text">parallel()(animations, config?)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#stagger-time-animations"><span class="toc-number">1.3.13.</span> <span class="toc-text">stagger(time, animations)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#loop-animation-config"><span class="toc-number">1.3.14.</span> <span class="toc-text">loop(animation, config?)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#event-argMapping-config"><span class="toc-number">1.3.15.</span> <span class="toc-text">event(argMapping, config?)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#unforkEvent-event-listener"><span class="toc-number">1.3.16.</span> <span class="toc-text">unforkEvent(event, listener)</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#属性及参数"><span class="toc-number">1.4.</span> <span class="toc-text">属性及参数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Value"><span class="toc-number">1.4.1.</span> <span class="toc-text">Value</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ValueXY"><span class="toc-number">1.4.2.</span> <span class="toc-text">ValueXY</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Interpolation"><span class="toc-number">1.4.3.</span> <span class="toc-text">Interpolation</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Node"><span class="toc-number">1.4.4.</span> <span class="toc-text">Node</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#createAnimatedComponent"><span class="toc-number">1.4.5.</span> <span class="toc-text">createAnimatedComponent</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#attachNativeEvent"><span class="toc-number">1.4.6.</span> <span class="toc-text">attachNativeEvent</span></a></li></ol></li></ol></li></ol>
     </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
@@ -997,9 +998,28 @@ top:50vh;
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 30
+        Total : 31
         </div>
         <!-- search  -->
         
@@ -1026,6 +1046,11 @@ top:50vh;
     
         <li class="archive-post-item">
             <span class="archive-post-date">04/17</span><a class="archive-post-title" href="/2019/04/17/React学习笔记（五）/">React学习笔记（五）</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/17</span><a class="archive-post-title" href="/2019/04/17/React学习笔记（六）/">React学习笔记（六）</a>
         </li>
     
     
@@ -1181,9 +1206,9 @@ top:50vh;
     
         <span class="sidebar-tag-name" data-tags="JavaScript"><span class="iconfont-archer">&#xe606;</span>JavaScript</span>
     
-        <span class="sidebar-tag-name" data-tags="React Native"><span class="iconfont-archer">&#xe606;</span>React Native</span>
-    
         <span class="sidebar-tag-name" data-tags="React"><span class="iconfont-archer">&#xe606;</span>React</span>
+    
+        <span class="sidebar-tag-name" data-tags="React Native"><span class="iconfont-archer">&#xe606;</span>React Native</span>
     
         <span class="sidebar-tag-name" data-tags="旅行记"><span class="iconfont-archer">&#xe606;</span>旅行记</span>
     

@@ -272,7 +272,7 @@ height:50vh;
                 
                 
                     <div class="post-intro-read">
-                        <span>字数统计: <span class="post-count word-count">18</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
+                        <span>字数统计: <span class="post-count word-count">133</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
@@ -401,10 +401,29 @@ height:50vh;
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <h1 id="ReactNative填坑指南"><a href="#ReactNative填坑指南" class="headerlink" title="ReactNative填坑指南"></a>ReactNative填坑指南</h1><blockquote>
-<p>ScrollView滑到底部的页面监听函数</p>
-</blockquote>
-<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">onMomentumScrollEnd</span></span><br></pre></td></tr></table></figure>
+        <h1 id="ReactNative填坑指南"><a href="#ReactNative填坑指南" class="headerlink" title="ReactNative填坑指南"></a>ReactNative填坑指南</h1><h3 id="ScrollView滑到底部的页面监听函数"><a href="#ScrollView滑到底部的页面监听函数" class="headerlink" title="ScrollView滑到底部的页面监听函数"></a>ScrollView滑到底部的页面监听函数</h3><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">onMomentumScrollEnd</span></span><br></pre></td></tr></table></figure>
+<h3 id="埋点"><a href="#埋点" class="headerlink" title="埋点"></a>埋点</h3><figure class="highlight lasso"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Log</span>.logTrace(<span class="string">'trace_name'</span>, &#123;</span><br><span class="line">    <span class="keyword">params</span>:<span class="string">''</span>,</span><br><span class="line">    <span class="params">...</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h3 id="statusBar设置"><a href="#statusBar设置" class="headerlink" title="statusBar设置"></a>statusBar设置</h3><figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">pageWillAppear</span>() &#123;</span><br><span class="line">    <span class="selector-tag">Device</span><span class="selector-class">.setStatusBarStyle</span>(<span class="string">'darkContent'</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="iPhone-X-适配"><a href="#iPhone-X-适配" class="headerlink" title="iPhone(X)适配"></a>iPhone(X)适配</h3><table>
+<thead>
+<tr>
+<th style="text-align:center">iPhoneX</th>
+<th style="text-align:center">iPhone</th>
+<th style="text-align:center">Andriod</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">+44</td>
+<td style="text-align:center">+20</td>
+<td style="text-align:center">0</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight maxima"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;View <span class="built_in">style</span>=&#123;Device.isiPhoneX ? &#123;<span class="built_in">width</span>:<span class="built_in">width</span>,<span class="built_in">height</span>:<span class="number">24</span>&#125; : &#123;<span class="built_in">height</span>:<span class="number">0</span>&#125;&#125;&gt;&lt;/View&gt;</span><br><span class="line">&lt;View <span class="built_in">style</span>=&#123;Platform.OS === 'ios' ? &#123;<span class="built_in">width</span>:<span class="built_in">width</span>,<span class="built_in">height</span>:<span class="number">20</span>&#125; : &#123;<span class="built_in">height</span>:<span class="number">0</span>&#125;&#125;&gt;&lt;/View&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="获取URL参数"><a href="#获取URL参数" class="headerlink" title="获取URL参数"></a>获取URL参数</h3><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">this<span class="selector-class">.props</span><span class="selector-class">.app</span><span class="selector-class">.urlQuery</span>.*</span><br></pre></td></tr></table></figure>
+<h3 id="ScrollView滑到底部的页面监听函数-1"><a href="#ScrollView滑到底部的页面监听函数-1" class="headerlink" title="ScrollView滑到底部的页面监听函数"></a>ScrollView滑到底部的页面监听函数</h3><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">onMomentumScrollEnd</span></span><br></pre></td></tr></table></figure>
+<h3 id="react实现多行文本超出加省略号"><a href="#react实现多行文本超出加省略号" class="headerlink" title="react实现多行文本超出加省略号"></a>react实现多行文本超出加省略号</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">View</span> <span class="attr">numberOfLines</span>=<span class="string">&#123;1&#125;</span> <span class="attr">style</span>=<span class="string">&#123;&#123;overflow:hidden&#125;&#125;/</span>&gt;</span></span><br></pre></td></tr></table></figure>
     </article>
     <!-- license  -->
     
@@ -561,7 +580,7 @@ top:50vh;
         <div class="toc-catalog">
             <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
         </div>
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#ReactNative填坑指南"><span class="toc-number">1.</span> <span class="toc-text">ReactNative填坑指南</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#ReactNative填坑指南"><span class="toc-number">1.</span> <span class="toc-text">ReactNative填坑指南</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#ScrollView滑到底部的页面监听函数"><span class="toc-number">1.0.1.</span> <span class="toc-text">ScrollView滑到底部的页面监听函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#埋点"><span class="toc-number">1.0.2.</span> <span class="toc-text">埋点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#statusBar设置"><span class="toc-number">1.0.3.</span> <span class="toc-text">statusBar设置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#iPhone-X-适配"><span class="toc-number">1.0.4.</span> <span class="toc-text">iPhone(X)适配</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#获取URL参数"><span class="toc-number">1.0.5.</span> <span class="toc-text">获取URL参数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ScrollView滑到底部的页面监听函数-1"><span class="toc-number">1.0.6.</span> <span class="toc-text">ScrollView滑到底部的页面监听函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#react实现多行文本超出加省略号"><span class="toc-number">1.0.7.</span> <span class="toc-text">react实现多行文本超出加省略号</span></a></li></ol></li></ol></li></ol>
     </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
@@ -1304,9 +1323,9 @@ top:50vh;
         <div class="sidebar-panel-tags">
     <div class="sidebar-tags-name">
     
-        <span class="sidebar-tag-name" data-tags="JavaScript"><span class="iconfont-archer">&#xe606;</span>JavaScript</span>
-    
         <span class="sidebar-tag-name" data-tags="技术贴"><span class="iconfont-archer">&#xe606;</span>技术贴</span>
+    
+        <span class="sidebar-tag-name" data-tags="JavaScript"><span class="iconfont-archer">&#xe606;</span>JavaScript</span>
     
         <span class="sidebar-tag-name" data-tags="React Native"><span class="iconfont-archer">&#xe606;</span>React Native</span>
     

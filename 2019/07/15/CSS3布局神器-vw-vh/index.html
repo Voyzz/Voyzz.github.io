@@ -22,7 +22,7 @@
     <meta name="description" content="">
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>搜索高亮分词数组 · Voyz&#39;s Studio</title>
+    <title>CSS3布局神器--vw,vh · Voyz&#39;s Studio</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -217,7 +217,7 @@
                 <a href="/">Voyz&#39;s Studio.</a>
             </div>
             <div class="post-title">
-                <a href="#" class="post-name">搜索高亮分词数组</a>
+                <a href="#" class="post-name">CSS3布局神器--vw,vh</a>
             </div>
     </div>
     
@@ -247,7 +247,7 @@ height:50vh;
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            搜索高亮分词数组
+            CSS3布局神器--vw,vh
             <!-- 404 -->
             
         </h1>
@@ -266,18 +266,18 @@ height:50vh;
                 
                     <div class="post-intro-tags">
     
-        <a class="post-tag" href="javascript:void(0);" data-tags="JavaScript">JavaScript</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags="技术贴">技术贴</a>
     
 </div>
                 
                 
                     <div class="post-intro-read">
-                        <span>字数统计: <span class="post-count word-count">75</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
+                        <span>字数统计: <span class="post-count word-count">23</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
                     <span class="post-intro-calander iconfont-archer">&#xe676;</span>
-                    <span class="post-intro-time">2019/06/21</span>
+                    <span class="post-intro-time">2019/07/15</span>
                     
                     <span id="busuanzi_container_page_pv" class="busuanzi-pv">
                         <span class="iconfont-archer">&#xe602;</span>
@@ -401,7 +401,7 @@ height:50vh;
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <h1 id="搜索高亮分词数组"><a href="#搜索高亮分词数组" class="headerlink" title="搜索高亮分词数组"></a>搜索高亮分词数组</h1><h3 id="关键词拆分"><a href="#关键词拆分" class="headerlink" title="关键词拆分"></a>关键词拆分</h3><figure class="highlight maxima"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">var</span> name = <span class="string">"多伦多"</span></span><br><span class="line"><span class="built_in">var</span> word = <span class="string">"多"</span></span><br><span class="line"></span><br><span class="line">// <span class="built_in">let</span> reg = <span class="built_in">new</span> RegExp(`^$&#123;word&#125;|$&#123;word&#125;$`,<span class="string">"g"</span>)</span><br><span class="line"><span class="built_in">let</span> otherList = name.<span class="built_in">split</span>(word)</span><br><span class="line">console.<span class="built_in">log</span>(otherList)</span><br><span class="line"><span class="built_in">let</span> wordsList = []</span><br><span class="line">otherList.forEach((item)=&gt;&#123;</span><br><span class="line">  wordsList.<span class="built_in">push</span>(item)</span><br><span class="line">  wordsList.<span class="built_in">push</span>(word)</span><br><span class="line">&#125;)</span><br><span class="line">wordsList.<span class="built_in">pop</span>()</span><br><span class="line">wordsList.forEach((val,idx)=&gt;&#123;</span><br><span class="line">true<span class="keyword">if</span> (val === '') &#123;</span><br><span class="line">truetruewordsList.<span class="built_in">splice</span>(idx,<span class="number">1</span>)</span><br><span class="line">true&#125;</span><br><span class="line">&#125;)</span><br><span class="line">console.<span class="built_in">log</span>(wordsList)</span><br></pre></td></tr></table></figure>
+        <h1 id="CSS3布局神器–vw-vh"><a href="#CSS3布局神器–vw-vh" class="headerlink" title="CSS3布局神器–vw,vh"></a>CSS3布局神器–vw,vh</h1><figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">@function</span> toVW($width_px)&#123;</span><br><span class="line">    <span class="variable">@return</span> (($width_px*<span class="number">100</span>)/<span class="number">750</span>)*<span class="number">1vw</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="attribute">height</span>: toVW(<span class="number">362</span>);</span><br><span class="line"><span class="attribute">width</span>: toVW(<span class="number">608</span>);</span><br></pre></td></tr></table></figure>
     </article>
     <!-- license  -->
     
@@ -409,17 +409,12 @@ height:50vh;
     <ul class="post-paginator">
         <li class="next">
             
-                <div class="nextSlogan">Next Post</div>
-                <a href="/2019/07/10/RN-scrollview触摸滚动事件/" title="ReactNative的scrollview触摸滚动事件">
-                    <div class="nextTitle">ReactNative的scrollview触摸滚动事件</div>
-                </a>
-            
         </li>
         <li class="previous">
             
                 <div class="prevSlogan">Previous Post</div>
-                <a href="/2019/06/20/python爬虫和数据处理/" title="python爬虫和数据处理">
-                    <div class="prevTitle">python爬虫和数据处理</div>
+                <a href="/2019/07/10/RN-scrollview触摸滚动事件/" title="ReactNative的scrollview触摸滚动事件">
+                    <div class="prevTitle">ReactNative的scrollview触摸滚动事件</div>
                 </a>
             
         </li>
@@ -563,7 +558,7 @@ top:50vh;
         <div class="toc-catalog">
             <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
         </div>
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#搜索高亮分词数组"><span class="toc-number">1.</span> <span class="toc-text">搜索高亮分词数组</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#关键词拆分"><span class="toc-number">1.0.1.</span> <span class="toc-text">关键词拆分</span></a></li></ol></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#CSS3布局神器–vw-vh"><span class="toc-number">1.</span> <span class="toc-text">CSS3布局神器–vw,vh</span></a></li></ol>
     </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>

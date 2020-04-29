@@ -22,7 +22,7 @@
     <meta name="description" content="">
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>React中的一些小细节 · Voyz&#39;s Studio</title>
+    <title>Voyz&#39;s Studio</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -203,23 +203,12 @@
 </head>
 
     
-        <body class="post-body">
-    
     
 <header class="header">
 
     <div class="read-progress"></div>
     <div class="header-sidebar-menu">&#xe775;</div>
     <!-- post页的toggle banner  -->
-    
-    <div class="banner">
-            <div class="blog-title">
-                <a href="/">Voyz&#39;s Studio.</a>
-            </div>
-            <div class="post-title">
-                <a href="#" class="post-name">React中的一些小细节</a>
-            </div>
-    </div>
     
     <a class="home-link" href="/">Voyz's Studio.</a>
 </header>
@@ -231,74 +220,24 @@
 
 
 
-
-height:50vh;
 ">
     
     <!-- 主页  -->
-    
-    
-    <!-- 404页  -->
             
     <div class="site-intro-placeholder"></div>
-    <div class="site-intro-img" style="background-image: url(/intro/post-bg.jpg)"></div>
+    <div class="site-intro-img" style="background-image: url(/)"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
-            
-            React中的一些小细节
-            <!-- 404 -->
             
         </h1>
         <!-- 副标题 -->
         <p class="intro-subtitle">
             <!-- 主页副标题  -->
             
-            
-            <!-- 404 -->
-            
         </p>
         <!-- 文章页meta -->
-        
-            <div class="post-intros">
-                <!-- 文章页标签  -->
-                
-                    <div class="post-intro-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="React">React</a>
-    
-</div>
-                
-                
-                    <div class="post-intro-read">
-                        <span>字数统计: <span class="post-count word-count">497</span>阅读时长: <span class="post-count reading-time">2 min</span></span>
-                    </div>
-                
-                <div class="post-intro-meta">
-                    <span class="post-intro-calander iconfont-archer">&#xe676;</span>
-                    <span class="post-intro-time">2019/05/31</span>
-                    
-                    <span id="busuanzi_container_page_pv" class="busuanzi-pv">
-                        <span class="iconfont-archer">&#xe602;</span>
-                        <span id="busuanzi_value_page_pv"></span>
-                    </span>
-                    
-                    <span class="shareWrapper">
-                        <span class="iconfont-archer shareIcon">&#xe71d;</span>
-                        <span class="shareText">Share</span>
-                        <ul class="shareList">
-                            <li class="iconfont-archer share-qr" data-type="qr">&#xe75b;
-                                <div class="share-qrcode"></div>
-                            </li>
-                            <li class="iconfont-archer" data-type="weibo">&#xe619;</li>
-                            <li class="iconfont-archer" data-type="qzone">&#xe62e;</li>
-                            <li class="iconfont-archer" data-type="twitter">&#xe634;</li>
-                            <li class="iconfont-archer" data-type="facebook">&#xe67a;</li>
-                        </ul>
-                    </span>
-                </div>
-            </div>
         
     </div>
 </div>
@@ -399,72 +338,45 @@ height:50vh;
 </script>        
         <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
         <div class="container container-unloaded">
-            <main class="main post-page">
-    <article class="article-entry">
-        <h1 id="React-JSX中遍历数组"><a href="#React-JSX中遍历数组" class="headerlink" title="React JSX中遍历数组"></a>React JSX中遍历数组</h1><blockquote>
-<p>forEach</p>
-</blockquote>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> dest_hot_element = []</span><br><span class="line"></span><br><span class="line"><span class="keyword">this</span>.state.hot_dest_arr.forEach(<span class="function">(<span class="params">val</span>)=&gt;</span>&#123;</span><br><span class="line">    dest_hot_element.push(</span><br><span class="line">        &lt;Text&gt;&#123;val.districtName&#125;&lt;<span class="regexp">/Text&gt;</span></span><br><span class="line"><span class="regexp">    )</span></span><br><span class="line"><span class="regexp">&#125;)</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">return (</span></span><br><span class="line"><span class="regexp">    &lt;ViewPort&gt;</span></span><br><span class="line"><span class="regexp">        &lt;View&gt;</span></span><br><span class="line"><span class="regexp">             &#123;dest_hot_element&#125;</span></span><br><span class="line"><span class="regexp">        &lt;/</span>View&gt;</span><br><span class="line">    &lt;<span class="regexp">/ViewPort&gt;</span></span><br><span class="line"><span class="regexp">)</span></span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>JSX style属性</p>
-</blockquote>
-<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">borderWidth:</span><span class="number">0.5</span>,</span><br><span class="line"><span class="string">borderStyle:</span><span class="string">'solid'</span>,</span><br><span class="line"><span class="string">borderColor:</span><span class="string">'#00ADF7'</span>,</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>循环内嵌套</p>
-</blockquote>
-<figure class="highlight dust"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml">render() </span><span class="template-variable">&#123;</span></span><br><span class="line"><span class="template-variable">       const dest_hot_element = []</span></span><br><span class="line"><span class="template-variable">       // const back_btn = require('../assets/dest_ic_back_black@3x.png')</span></span><br><span class="line"><span class="template-variable">       this.state.hot_dest_arr.forEach((val,idx)=&gt;&#123;</span></span><br><span class="line"><span class="template-variable">           // 标签</span></span><br><span class="line"><span class="template-variable">           <span class="keyword">if</span>(typeof val.topSightDetail !== 'undefined')&#123;</span></span><br><span class="line"><span class="template-variable">               var topDetail = val.topSightDetail.map((res,idx)=&gt;&#123;</span></span><br><span class="line"><span class="template-variable">                   return (</span></span><br><span class="line"><span class="template-variable">                       &lt;Text style=&#123; styles.topSightDetail &#125;</span><span class="xml"> key=</span><span class="template-variable">&#123;idx&#125;</span><span class="xml">&gt;</span><span class="template-variable">&#123;res&#125;</span><span class="xml"><span class="tag">&lt;/<span class="name">Text</span>&gt;</span></span></span><br><span class="line"><span class="xml">                   )</span></span><br><span class="line"><span class="xml">               &#125;)</span></span><br><span class="line"><span class="xml">           &#125;</span></span><br><span class="line"><span class="xml">           // 所有信息</span></span><br><span class="line"><span class="xml">           dest_hot_element.push(</span></span><br><span class="line"><span class="xml">               <span class="tag">&lt;<span class="name">TouchableOpacity</span></span></span></span><br><span class="line"><span class="xml">                   style=</span><span class="template-variable">&#123;styles.box&#125;</span><span class="xml"></span></span><br><span class="line"><span class="xml">                   key=</span><span class="template-variable">&#123;idx&#125;</span><span class="xml"></span></span><br><span class="line"><span class="xml">                   onPress = </span><span class="template-variable">&#123;() =&gt; &#123;</span></span><br><span class="line"><span class="template-variable">                       URL.openURL(`/rn_destination_home/main.js?CRNModuleName=rnDestinationHome&amp;CRNType=1&amp;initialPage=CTDestDestinationPage&amp;hideDefaultLoading=true&amp;districtId=$&#123;val.districtId&#125;</span><span class="xml">`)</span></span><br><span class="line"><span class="xml">                   &#125;&#125;</span></span><br><span class="line"><span class="xml">               &gt;</span></span><br><span class="line"><span class="xml">                   </span><span class="template-tag">&#123;/* 封面图 */&#125;</span><span class="xml"></span></span><br><span class="line"><span class="xml">                   <span class="tag">&lt;<span class="name">Image</span></span></span></span><br><span class="line"><span class="xml">                       style=</span><span class="template-variable">&#123;styles.coverImg&#125;</span><span class="xml"></span></span><br><span class="line"><span class="xml">                       source = </span><span class="template-variable">&#123;&#123;uri: val.covImgUrl&#125;</span><span class="xml">&#125;</span></span><br><span class="line"><span class="xml">                   /&gt;</span></span><br><span class="line"><span class="xml">                   <span class="tag">&lt;<span class="name">View</span> <span class="attr">style</span>=</span></span><span class="template-variable">&#123;styles.rightBox&#125;</span><span class="xml"><span class="tag">&gt;</span></span></span><br><span class="line"><span class="xml">                       </span><span class="template-tag">&#123;/* 标题 */&#125;</span><span class="xml"></span></span><br><span class="line"><span class="xml">                       <span class="tag">&lt;<span class="name">Text</span> <span class="attr">style</span>=</span></span><span class="template-variable">&#123;styles.title&#125;</span><span class="xml"><span class="tag">&gt;</span></span><span class="template-variable">&#123;val.districtName&#125;</span><span class="xml"><span class="tag">&lt;/<span class="name">Text</span>&gt;</span></span></span><br><span class="line"><span class="xml">                       </span><span class="template-tag">&#123;/* 副标题 */&#125;</span><span class="xml"></span></span><br><span class="line"><span class="xml">                       <span class="tag">&lt;<span class="name">Text</span> <span class="attr">style</span>=</span></span><span class="template-variable">&#123;styles.subTitle&#125;</span><span class="xml"><span class="tag">&gt;</span></span><span class="template-variable">&#123;val.districtEnName&#125;</span><span class="xml"><span class="tag">&lt;/<span class="name">Text</span>&gt;</span></span></span><br><span class="line"><span class="xml">                       </span><span class="template-tag">&#123;/* 景点/游记数目 */&#125;</span><span class="xml"></span></span><br><span class="line"><span class="xml">                       <span class="tag">&lt;<span class="name">View</span> <span class="attr">style</span>=</span></span><span class="template-variable">&#123;styles.numDetailBox&#125;</span><span class="xml"><span class="tag">&gt;</span></span></span><br><span class="line"><span class="xml">                           <span class="tag">&lt;<span class="name">Text</span> <span class="attr">style</span>=</span></span><span class="template-variable">&#123; val.sightNumDetail ? styles.numDetail:&#123;width:0&#125;</span><span class="xml"><span class="tag">&#125;&gt;</span></span><span class="template-variable">&#123;val.sightNumDetail&#125;</span><span class="xml"><span class="tag">&lt;/<span class="name">Text</span>&gt;</span></span></span><br><span class="line"><span class="xml">                           <span class="tag">&lt;<span class="name">Text</span> <span class="attr">style</span>=</span></span><span class="template-variable">&#123; val.travelNumDetail ? styles.numDetail:&#123;width:0&#125;</span><span class="xml"><span class="tag">&#125;&gt;</span></span><span class="template-variable">&#123;val.travelNumDetail&#125;</span><span class="xml"><span class="tag">&lt;/<span class="name">Text</span>&gt;</span></span></span><br><span class="line"><span class="xml">                       <span class="tag">&lt;/<span class="name">View</span>&gt;</span></span></span><br><span class="line"><span class="xml">                       </span><span class="template-tag">&#123;/* 标签 */&#125;</span><span class="xml"></span></span><br><span class="line"><span class="xml">                       <span class="tag">&lt;<span class="name">View</span> <span class="attr">style</span>=</span></span><span class="template-variable">&#123;styles.topSightDetailLine&#125;</span><span class="xml"><span class="tag">&gt;</span></span></span><br><span class="line"><span class="xml">                           </span><span class="template-tag">&#123;/* &lt;<span class="name">Text</span> style=&#123; val.topSightDetail ? styles.topSightDetail:&#123;width:0&#125;</span><span class="xml">&#125;&gt;</span><span class="template-variable">&#123;val.topSightDetail&#125;</span><span class="xml"><span class="tag">&lt;/<span class="name">Text</span>&gt;</span> */&#125;</span></span><br><span class="line"><span class="xml">                           </span><span class="template-variable">&#123;topDetail&#125;</span><span class="xml"></span></span><br><span class="line"><span class="xml">                       <span class="tag">&lt;/<span class="name">View</span>&gt;</span></span></span><br><span class="line"><span class="xml">                   <span class="tag">&lt;/<span class="name">View</span>&gt;</span></span></span><br><span class="line"><span class="xml">               <span class="tag">&lt;/<span class="name">TouchableOpacity</span>&gt;</span></span></span><br><span class="line"><span class="xml">           )</span></span><br><span class="line"><span class="xml">       &#125;)</span></span><br><span class="line"><span class="xml"></span></span><br><span class="line"><span class="xml">	return (</span></span><br><span class="line"><span class="xml">		<span class="tag">&lt;<span class="name">ViewPort</span>&gt;</span></span></span><br><span class="line"><span class="xml">                   </span><span class="template-tag">&#123;/* 状态栏 */&#125;</span><span class="xml"></span></span><br><span class="line"><span class="xml">                   <span class="tag">&lt;<span class="name">StatusBar</span></span></span></span><br><span class="line"><span class="xml">                       backgroundColor='white'</span></span><br><span class="line"><span class="xml">                       barStyle="dark-content"</span></span><br><span class="line"><span class="xml">                   /&gt;</span></span><br><span class="line"><span class="xml">                   <span class="tag">&lt;<span class="name">View</span> <span class="attr">style</span>=</span></span><span class="template-variable">&#123;&#123;width:width,height:20&#125;</span><span class="xml"><span class="tag">&#125;&gt;</span><span class="tag">&lt;/<span class="name">View</span>&gt;</span></span></span><br><span class="line"><span class="xml">                   </span><span class="template-tag">&#123;/* <span class="name">NavBar</span> */&#125;</span><span class="xml"></span></span><br><span class="line"><span class="xml">                   <span class="tag">&lt;<span class="name">View</span> <span class="attr">style</span>=</span></span><span class="template-variable">&#123;styles.navBar&#125;</span><span class="xml"><span class="tag">&gt;</span></span></span><br><span class="line"><span class="xml">                       <span class="tag">&lt;<span class="name">TouchableOpacity</span></span></span></span><br><span class="line"><span class="xml">                           style=</span><span class="template-variable">&#123;&#123;width:22,height:22,marginLeft:12&#125;</span><span class="xml">&#125;</span></span><br><span class="line"><span class="xml">                           onPress=</span><span class="template-variable">&#123;()=&gt;&#123;</span></span><br><span class="line"><span class="template-variable">                               console.log('hhhhhhh')</span></span><br><span class="line"><span class="template-variable">                           &#125;</span><span class="xml">&#125;</span></span><br><span class="line"><span class="xml">                       &gt;</span></span><br><span class="line"><span class="xml">                           <span class="tag">&lt;<span class="name">Image</span></span></span></span><br><span class="line"><span class="xml">                               style=</span><span class="template-variable">&#123;&#123;width:null,height:null&#125;</span><span class="xml">&#125;</span></span><br><span class="line"><span class="xml">                               // source=</span><span class="template-variable">&#123;require('../assets/dest_ic_back_black@3x.png')&#125;</span><span class="xml"></span></span><br><span class="line"><span class="xml">                           /&gt;</span></span><br><span class="line"><span class="xml">                       <span class="tag">&lt;/<span class="name">TouchableOpacity</span>&gt;</span></span></span><br><span class="line"><span class="xml">                       <span class="tag">&lt;<span class="name">Text</span></span></span></span><br><span class="line"><span class="xml">                           style=</span><span class="template-variable">&#123;styles.titleWords&#125;</span><span class="xml"></span></span><br><span class="line"><span class="xml">                       &gt;热门目的地<span class="tag">&lt;/<span class="name">Text</span>&gt;</span></span></span><br><span class="line"><span class="xml">                   <span class="tag">&lt;/<span class="name">View</span>&gt;</span></span></span><br><span class="line"><span class="xml">                   </span><span class="template-tag">&#123;/* 内容 */&#125;</span><span class="xml"></span></span><br><span class="line"><span class="xml">                   <span class="tag">&lt;<span class="name">ScrollView</span> </span></span></span><br><span class="line"><span class="xml">                       style=</span><span class="template-variable">&#123;styles.container&#125;</span><span class="xml"></span></span><br><span class="line"><span class="xml">                       onMomentumScrollEnd = </span><span class="template-variable">&#123;async ()=&gt;&#123;</span></span><br><span class="line"><span class="template-variable">                           <span class="keyword">if</span>(this.state.has_more)&#123;</span></span><br><span class="line"><span class="template-variable">                               await this.setState(&#123;</span></span><br><span class="line"><span class="template-variable">                                   pageIndex:this.state.pageIndex+1</span></span><br><span class="line"><span class="template-variable">                               &#125;</span><span class="xml">)</span></span><br><span class="line"><span class="xml">                               this._fetchHotDestCatalog()</span></span><br><span class="line"><span class="xml">                           &#125;</span></span><br><span class="line"><span class="xml">                       &#125;&#125;</span></span><br><span class="line"><span class="xml">                   &gt;</span></span><br><span class="line"><span class="xml">                       </span><span class="template-variable">&#123;dest_hot_element&#125;</span><span class="xml"></span></span><br><span class="line"><span class="xml">                   <span class="tag">&lt;/<span class="name">ScrollView</span>&gt;</span></span></span><br><span class="line"><span class="xml">		<span class="tag">&lt;/<span class="name">ViewPort</span>&gt;</span></span></span><br><span class="line"><span class="xml">	);</span></span><br><span class="line"><span class="xml">&#125;</span></span><br></pre></td></tr></table></figure>
+            <main class="main index-page">
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href="/2020/04/29/LeetCode算法笔记-Day1/">
+            
+                <span>LeetCode算法笔记--Day1</span>
+        </a>
+        <div class="abstract-content">
+            LeetCode算法笔记–Day101.01. 判定字符是否唯一题目：
+实现一个算法，确定一个字符串 s 的所有字符是否全都不同。
+示例1：输入: s = “leetcode”输出: false 
+示例2：输入: s = “abc”输出: true
+限制：0 &lt;= len(s) &lt;= 100如果你不使用额外的数据结构，会很加分。
 
+我的解答：123456789/** * @param &#123;string&#125; astr * @return &#123;boolean&#125; */var isUnique = function(astr) &#123;    l...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/04/29</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class="abstract-tags">
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="算法题">算法题</a>
+    
+</div>
+            
+        </div>
     </article>
-    <!-- license  -->
     
     <!-- paginator  -->
-    <ul class="post-paginator">
-        <li class="next">
-            
-                <div class="nextSlogan">Next Post</div>
-                <a href="/2019/05/31/ReactNative填坑指南/" title="ReactNative填坑指南">
-                    <div class="nextTitle">ReactNative填坑指南</div>
-                </a>
-            
-        </li>
-        <li class="previous">
-            
-                <div class="prevSlogan">Previous Post</div>
-                <a href="/2019/05/29/我的填坑指南/" title="填坑指南及小问题归纳">
-                    <div class="prevTitle">填坑指南及小问题归纳</div>
-                </a>
-            
-        </li>
-    </ul>
-    <!-- 评论插件 -->
-    <!-- 来必力City版安装代码 -->
-
-    <div id="lv-container" data-id="city" data-uid="MTAyMC80MDU2Ny8xNzA5NA==">
-        <script type="text/javascript">
-            (function (d, s) {
-                var j, e = d.getElementsByTagName(s)[0];
-                if (typeof LivereTower === 'function') { return; }
-                j = d.createElement(s);
-                j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-                j.async = true;
-
-                e.parentNode.insertBefore(j, e);
-            })(document, 'script');
-        </script>
-        <noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
-    </div>
-
-<!-- City版安装代码已完成 -->
     
-    
-    <!-- partial('_partial/comment/changyan') -->
-    <!--PC版-->
-
-
-    
-    
-
-    <!-- 评论 -->
 </main>
             <!-- profile -->
             
@@ -559,24 +471,6 @@ height:50vh;
 </footer>
     </div>
     <!-- toc -->
-    
-    <div class="toc-wrapper" style=
-    
-
-
-
-
-
-
-
-top:50vh;
-
-    >
-        <div class="toc-catalog">
-            <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
-        </div>
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#React-JSX中遍历数组"><span class="toc-number">1.</span> <span class="toc-text">React JSX中遍历数组</span></a></li></ol>
-    </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
     <div class="sidebar sidebar-hide">
@@ -1578,8 +1472,6 @@ jsonContent:
     
     </div>
     <!-- async load share.js -->
-    
-        <script src="/scripts/share.js" async></script>    
      
     </body>
 </html>

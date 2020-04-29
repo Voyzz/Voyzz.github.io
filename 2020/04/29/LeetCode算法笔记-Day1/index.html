@@ -272,7 +272,7 @@ height:50vh;
                 
                 
                     <div class="post-intro-read">
-                        <span>字数统计: <span class="post-count word-count">125</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
+                        <span>字数统计: <span class="post-count word-count">274</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
@@ -402,12 +402,31 @@ height:50vh;
             <main class="main post-page">
     <article class="article-entry">
         <h1 id="LeetCode算法笔记–Day1"><a href="#LeetCode算法笔记–Day1" class="headerlink" title="LeetCode算法笔记–Day1"></a>LeetCode算法笔记–Day1</h1><h3 id="01-01-判定字符是否唯一"><a href="#01-01-判定字符是否唯一" class="headerlink" title="01.01. 判定字符是否唯一"></a>01.01. 判定字符是否唯一</h3><h5 id="题目："><a href="#题目：" class="headerlink" title="题目："></a>题目：</h5><blockquote>
-<p>实现一个算法，确定一个字符串 s 的所有字符是否全都不同。</p>
-<p>示例1：<br>输入: s = “leetcode”<br>输出: false </p>
-<p>示例2：<br>输入: s = “abc”<br>输出: true</p>
-<p>限制：<br>0 &lt;= len(s) &lt;= 100<br>如果你不使用额外的数据结构，会很加分。</p>
+<p><strong>实现一个算法，确定一个字符串 s 的所有字符是否全都不同。</strong></p>
+</blockquote>
+<blockquote>
+<p><em>示例1：</em><br>输入: s = “leetcode”<br>输出: false </p>
+</blockquote>
+<blockquote>
+<p><em>示例2：</em><br>输入: s = “abc”<br>输出: true</p>
+</blockquote>
+<blockquote>
+<p><em>限制：</em><br>0 &lt;= len(s) &lt;= 100<br>如果你不使用额外的数据结构，会很加分。</p>
 </blockquote>
 <h5 id="我的解答："><a href="#我的解答：" class="headerlink" title="我的解答："></a>我的解答：</h5><figure class="highlight zephir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;string&#125; astr</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> &#123;boolean&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> isUnique = <span class="function"><span class="keyword">function</span><span class="params">(astr)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">let</span> astr_arr = astr.split(<span class="string">""</span>)</span><br><span class="line">    <span class="keyword">let</span> unique_arr = <span class="keyword">Array</span>.from(<span class="keyword">new</span> Set(astr_arr))</span><br><span class="line">    <span class="keyword">return</span> astr_arr.length === unique_arr.length ? <span class="keyword">true</span> :<span class="keyword">false</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h3 id="01-02-判定是否互为字符重排"><a href="#01-02-判定是否互为字符重排" class="headerlink" title="01.02. 判定是否互为字符重排"></a>01.02. 判定是否互为字符重排</h3><h5 id="题目：-1"><a href="#题目：-1" class="headerlink" title="题目："></a>题目：</h5><blockquote>
+<p><strong>给定两个字符串 s1 和 s2，请编写一个程序，确定其中一个字符串的字符重新排列后，能否变成另一个字符串。</strong></p>
+</blockquote>
+<blockquote>
+<p><em>示例1：</em><br>输入: s1 = “abc”, s2 = “bca”<br>输出: true </p>
+</blockquote>
+<blockquote>
+<p><em>示例2：</em><br>输入: s1 = “abc”, s2 = “bad”<br>输出: false</p>
+</blockquote>
+<blockquote>
+<p><em>限制：</em><br>0 &lt;= len(s1) &lt;= 100<br>0 &lt;= len(s2) &lt;= 100</p>
+</blockquote>
+<h5 id="我的解答：-1"><a href="#我的解答：-1" class="headerlink" title="我的解答："></a>我的解答：</h5><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;string&#125; s1</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;string&#125; s2</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> &#123;boolean&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> CheckPermutation = <span class="function"><span class="keyword">function</span><span class="params">(s1, s2)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> transStrToSortedArr(s1) == transStrToSortedArr(s2) ? <span class="keyword">true</span> : <span class="keyword">false</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> transStrToSortedArr = <span class="function"><span class="keyword">function</span><span class="params">(_str)</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> _str.split(<span class="string">""</span>).sort((a,b)=&gt;&#123;<span class="keyword">return</span> a.charCodeAt()-b.charCodeAt()&#125;).join(<span class="string">""</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
     </article>
     <!-- license  -->
@@ -565,7 +584,7 @@ top:50vh;
         <div class="toc-catalog">
             <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
         </div>
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#LeetCode算法笔记–Day1"><span class="toc-number">1.</span> <span class="toc-text">LeetCode算法笔记–Day1</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#01-01-判定字符是否唯一"><span class="toc-number">1.0.1.</span> <span class="toc-text">01.01. 判定字符是否唯一</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#题目："><span class="toc-number">1.0.1.0.1.</span> <span class="toc-text">题目：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#我的解答："><span class="toc-number">1.0.1.0.2.</span> <span class="toc-text">我的解答：</span></a></li></ol></li></ol></li></ol></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#LeetCode算法笔记–Day1"><span class="toc-number">1.</span> <span class="toc-text">LeetCode算法笔记–Day1</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#01-01-判定字符是否唯一"><span class="toc-number">1.0.1.</span> <span class="toc-text">01.01. 判定字符是否唯一</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#题目："><span class="toc-number">1.0.1.0.1.</span> <span class="toc-text">题目：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#我的解答："><span class="toc-number">1.0.1.0.2.</span> <span class="toc-text">我的解答：</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#01-02-判定是否互为字符重排"><span class="toc-number">1.0.2.</span> <span class="toc-text">01.02. 判定是否互为字符重排</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#题目：-1"><span class="toc-number">1.0.2.0.1.</span> <span class="toc-text">题目：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#我的解答：-1"><span class="toc-number">1.0.2.0.2.</span> <span class="toc-text">我的解答：</span></a></li></ol></li></ol></li></ol></li></ol></li></ol>
     </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
@@ -1483,9 +1502,9 @@ top:50vh;
     
         <span class="sidebar-tag-name" data-tags="技术贴"><span class="iconfont-archer">&#xe606;</span>技术贴</span>
     
-        <span class="sidebar-tag-name" data-tags="算法题"><span class="iconfont-archer">&#xe606;</span>算法题</span>
-    
         <span class="sidebar-tag-name" data-tags="JavaScript"><span class="iconfont-archer">&#xe606;</span>JavaScript</span>
+    
+        <span class="sidebar-tag-name" data-tags="算法题"><span class="iconfont-archer">&#xe606;</span>算法题</span>
     
         <span class="sidebar-tag-name" data-tags="React Native"><span class="iconfont-archer">&#xe606;</span>React Native</span>
     

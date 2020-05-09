@@ -22,7 +22,7 @@
     <meta name="description" content="">
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>极其重要---原型链 · Voyz&#39;s Studio</title>
+    <title>LeetCode算法笔记--Day6 · Voyz&#39;s Studio</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -217,7 +217,7 @@
                 <a href="/">Voyz&#39;s Studio.</a>
             </div>
             <div class="post-title">
-                <a href="#" class="post-name">极其重要---原型链</a>
+                <a href="#" class="post-name">LeetCode算法笔记--Day6</a>
             </div>
     </div>
     
@@ -247,7 +247,7 @@ height:50vh;
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            极其重要---原型链
+            LeetCode算法笔记--Day6
             <!-- 404 -->
             
         </h1>
@@ -266,18 +266,18 @@ height:50vh;
                 
                     <div class="post-intro-tags">
     
-        <a class="post-tag" href="javascript:void(0);" data-tags="JavaScript">JavaScript</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags="算法题">算法题</a>
     
 </div>
                 
                 
                     <div class="post-intro-read">
-                        <span>字数统计: <span class="post-count word-count">233</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
+                        <span>字数统计: <span class="post-count word-count">193</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
                     <span class="post-intro-calander iconfont-archer">&#xe676;</span>
-                    <span class="post-intro-time">2018/08/06</span>
+                    <span class="post-intro-time">2020/05/09</span>
                     
                     <span id="busuanzi_container_page_pv" class="busuanzi-pv">
                         <span class="iconfont-archer">&#xe602;</span>
@@ -401,14 +401,17 @@ height:50vh;
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <h2 id="什么是原型链"><a href="#什么是原型链" class="headerlink" title="什么是原型链"></a>什么是原型链</h2><p><img src="http://voyz-image.test.upcdn.net/2018/11/08/c574afc3b330a0ebd3801a0de39f651b.jpg" alt="原型链.jpg"></p>
-<ul>
-<li>在JavaScript中，万物皆对象<code>Object</code>，每一个对象都是由它的原型对象的构造函数实例化得到的。</li>
-<li>任何对象都有<code>_proto_</code>属性指向它的原形，所以会形成一条<code>_proto_</code>连起来的链条，这就是原型链</li>
-<li>查找对象的属性时，先查找对象本身是否含有该属性，若不存在，则会在原型链上查找，但不会查找自身的<code>prototype</code></li>
-</ul>
-<h2 id="三种创建对象的方式"><a href="#三种创建对象的方式" class="headerlink" title="三种创建对象的方式"></a>三种创建对象的方式</h2><p><code>_proto_</code>的指向：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*1、字面量方式*/</span></span><br><span class="line"><span class="keyword">var</span> a = &#123;&#125;;</span><br><span class="line"><span class="built_in">console</span>.log(a.__proto__);  <span class="comment">//Object &#123;&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(a.__proto__ === a.constructor.prototype); <span class="comment">//true</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/*2、构造器方式*/</span></span><br><span class="line"><span class="keyword">var</span> A = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;;</span><br><span class="line"><span class="keyword">var</span> a = <span class="keyword">new</span> A();</span><br><span class="line"><span class="built_in">console</span>.log(a.__proto__); <span class="comment">//A &#123;&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(a.__proto__ === a.constructor.prototype); <span class="comment">//true</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/*3、Object.create()方式*/</span></span><br><span class="line"><span class="keyword">var</span> a1 = &#123;<span class="attr">a</span>:<span class="number">1</span>&#125;</span><br><span class="line"><span class="keyword">var</span> a2 = <span class="built_in">Object</span>.create(a1);</span><br><span class="line"><span class="built_in">console</span>.log(a2.__proto__); <span class="comment">//Object &#123;a: 1&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(a.__proto__ === a.constructor.prototype); <span class="comment">//false（此处即为图1中的例外情况）</span></span><br></pre></td></tr></table></figure>
+        <h1 id="LeetCode算法笔记–Day6"><a href="#LeetCode算法笔记–Day6" class="headerlink" title="LeetCode算法笔记–Day6"></a>LeetCode算法笔记–Day6</h1><h1 id="01-09-字符串轮转"><a href="#01-09-字符串轮转" class="headerlink" title="01.09. 字符串轮转"></a>01.09. 字符串轮转</h1><h5 id="题目："><a href="#题目：" class="headerlink" title="题目："></a>题目：</h5><blockquote>
+<p><strong>字符串轮转。给定两个字符串s1和s2，请编写代码检查s2是否为s1旋转而成（比如，waterbottle是erbottlewat旋转后的字符串）。</strong></p>
+</blockquote>
+<blockquote>
+<p><em>示例1：</em><br>输入:  s1 = “waterbottle”, s2 = “erbottlewat”<br>输出: True</p>
+</blockquote>
+<blockquote>
+<p><em>示例2：</em><br>输入: s1 = “aa”, “aba”<br>输出: False</p>
+</blockquote>
+<h5 id="我的解答："><a href="#我的解答：" class="headerlink" title="我的解答："></a>我的解答：</h5><figure class="highlight maxima"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * @param &#123;string&#125; s1</span></span><br><span class="line"><span class="comment"> * @param &#123;string&#125; s2</span></span><br><span class="line"><span class="comment"> * @return &#123;boolean&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="built_in">var</span> isFlipedString = function(s1, s2) &#123;</span><br><span class="line">true<span class="built_in">let</span> _s1 = s1.<span class="built_in">split</span>(<span class="string">""</span>).<span class="built_in">sort</span>();</span><br><span class="line">true<span class="built_in">let</span> _s2 = s2.<span class="built_in">split</span>(<span class="string">""</span>).<span class="built_in">sort</span>();</span><br><span class="line">true<span class="built_in">let</span> isFliped = <span class="literal">false</span>;</span><br><span class="line"></span><br><span class="line">true<span class="keyword">if</span>(_s1.<span class="built_in">length</span> == _s2.<span class="built_in">length</span> &amp;&amp; _s1.<span class="built_in">length</span> != <span class="number">0</span>)&#123;</span><br><span class="line">truetrue<span class="keyword">if</span>(_s1.toString() == _s2.toString())&#123;</span><br><span class="line">truetruetrue<span class="keyword">for</span>(<span class="built_in">let</span> i=<span class="number">0</span>;i&lt;_s1.<span class="built_in">length</span>;i++)&#123;</span><br><span class="line">truetruetruetrue<span class="keyword">if</span>(s1.substr(i) + s1.substr(<span class="number">0</span>,i) == s2)&#123;</span><br><span class="line">truetruetruetruetrueisFliped = <span class="literal">true</span>;</span><br><span class="line">truetruetruetrue&#125;</span><br><span class="line">truetruetrue&#125;</span><br><span class="line">truetrue&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">truetruetrue<span class="built_in">return</span> <span class="literal">false</span>;</span><br><span class="line">truetrue&#125;</span><br><span class="line">true&#125;<span class="keyword">else</span> <span class="keyword">if</span>(_s1.<span class="built_in">length</span> == _s2.<span class="built_in">length</span> &amp;&amp; _s2.<span class="built_in">length</span> == <span class="number">0</span>)&#123;</span><br><span class="line">truetrue<span class="built_in">return</span> <span class="literal">true</span>;</span><br><span class="line">true&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">truetrue<span class="built_in">return</span> <span class="literal">false</span>;</span><br><span class="line">true&#125;</span><br><span class="line">true<span class="built_in">return</span> isFliped;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
     </article>
     <!-- license  -->
     
@@ -416,17 +419,12 @@ height:50vh;
     <ul class="post-paginator">
         <li class="next">
             
-                <div class="nextSlogan">Next Post</div>
-                <a href="/2018/08/08/浅谈JavaScript的闭包/" title="浅谈JavaScript的闭包">
-                    <div class="nextTitle">浅谈JavaScript的闭包</div>
-                </a>
-            
         </li>
         <li class="previous">
             
                 <div class="prevSlogan">Previous Post</div>
-                <a href="/2018/08/01/几种排序算法的JS实现/" title="几种排序算法的JS实现">
-                    <div class="prevTitle">几种排序算法的JS实现</div>
+                <a href="/2020/05/08/LeetCode算法笔记-Day5/" title="LeetCode算法笔记--Day5">
+                    <div class="prevTitle">LeetCode算法笔记--Day5</div>
                 </a>
             
         </li>
@@ -570,7 +568,7 @@ top:50vh;
         <div class="toc-catalog">
             <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
         </div>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#什么是原型链"><span class="toc-number">1.</span> <span class="toc-text">什么是原型链</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三种创建对象的方式"><span class="toc-number">2.</span> <span class="toc-text">三种创建对象的方式</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#LeetCode算法笔记–Day6"><span class="toc-number">1.</span> <span class="toc-text">LeetCode算法笔记–Day6</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#01-09-字符串轮转"><span class="toc-number">2.</span> <span class="toc-text">01.09. 字符串轮转</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#题目："><span class="toc-number">2.0.0.0.1.</span> <span class="toc-text">题目：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#我的解答："><span class="toc-number">2.0.0.0.2.</span> <span class="toc-text">我的解答：</span></a></li></ol></li></ol></li></ol></li></ol></li></ol>
     </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>

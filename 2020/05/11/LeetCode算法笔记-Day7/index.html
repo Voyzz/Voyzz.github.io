@@ -22,7 +22,7 @@
     <meta name="description" content="">
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>微信小程序服务器的搭建 · Voyz&#39;s Studio</title>
+    <title>LeetCode算法笔记--Day7 · Voyz&#39;s Studio</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -217,7 +217,7 @@
                 <a href="/">Voyz&#39;s Studio.</a>
             </div>
             <div class="post-title">
-                <a href="#" class="post-name">微信小程序服务器的搭建</a>
+                <a href="#" class="post-name">LeetCode算法笔记--Day7</a>
             </div>
     </div>
     
@@ -247,7 +247,7 @@ height:50vh;
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            微信小程序服务器的搭建
+            LeetCode算法笔记--Day7
             <!-- 404 -->
             
         </h1>
@@ -266,18 +266,18 @@ height:50vh;
                 
                     <div class="post-intro-tags">
     
-        <a class="post-tag" href="javascript:void(0);" data-tags="小程序">小程序</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags="算法题">算法题</a>
     
 </div>
                 
                 
                     <div class="post-intro-read">
-                        <span>字数统计: <span class="post-count word-count">247</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
+                        <span>字数统计: <span class="post-count word-count">147</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
                     <span class="post-intro-calander iconfont-archer">&#xe676;</span>
-                    <span class="post-intro-time">2018/11/11</span>
+                    <span class="post-intro-time">2020/05/11</span>
                     
                     <span id="busuanzi_container_page_pv" class="busuanzi-pv">
                         <span class="iconfont-archer">&#xe602;</span>
@@ -401,23 +401,17 @@ height:50vh;
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <h1 id="本地环境"><a href="#本地环境" class="headerlink" title="本地环境"></a>本地环境</h1><h3 id="切换到服务端代码目录"><a href="#切换到服务端代码目录" class="headerlink" title="切换到服务端代码目录:"></a>切换到服务端代码目录:</h3><p><code>cd server</code></p>
-<h3 id="安装依赖"><a href="#安装依赖" class="headerlink" title="安装依赖:"></a>安装依赖:</h3><p><code>npm install</code></p>
-<h3 id="安装全局依赖"><a href="#安装全局依赖" class="headerlink" title="安装全局依赖:"></a>安装全局依赖:</h3><p><code>npm install -g nodemon</code></p>
-<p><code>node tools/initdb.js</code></p>
-<p><code>npm run dev</code></p>
-<h4 id="1-server-config-js-添加以下配置："><a href="#1-server-config-js-添加以下配置：" class="headerlink" title="1.server/config.js 添加以下配置："></a>1.server/config.js 添加以下配置：</h4><figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 其他配置 ...</span><span class="string">serverHost:</span> <span class="string">'localhost'</span>,<span class="string">tunnelServerUrl:</span> <span class="string">''</span>,<span class="string">tunnelSignatureKey:</span> <span class="string">'27fb7d1c161b7ca52d73cce0f1d833f9f5b5ec89'</span>,<span class="comment">// 腾讯云相关配置可以查看云 API 秘钥控制台：https://console.cloud.tencent.com/capi</span><span class="string">qcloudAppId:</span> <span class="string">'您的腾讯云 AppID'</span>,<span class="string">qcloudSecretId:</span> <span class="string">'您的腾讯云 SecretId'</span>,<span class="string">qcloudSecretKey:</span> <span class="string">'您的腾讯云 SecretKey'</span>,<span class="string">wxMessageToken:</span> <span class="string">'weixinmsgtoken'</span>,<span class="string">networkTimeout:</span> <span class="number">30000</span></span><br></pre></td></tr></table></figure>
-<h4 id="2-修改-client-config-js"><a href="#2-修改-client-config-js" class="headerlink" title="2.修改 client/config.js:"></a>2.修改 client/config.js:</h4><p>在<code>src/utils/config</code>中设置url,如：<a href="http://localhost:5757" target="_blank" rel="noopener">http://localhost:5757</a></p>
-<h4 id="3-安装依赖"><a href="#3-安装依赖" class="headerlink" title="3.安装依赖:"></a>3.安装依赖:</h4><p>切换到服务端代码目录:<br><code>cd server</code></p>
-<p>安装依赖:<br><code>npm install</code></p>
-<p>安装全局依赖:<br><code>npm install -g nodemon</code></p>
-<h4 id="4-初始化数据库："><a href="#4-初始化数据库：" class="headerlink" title="4.初始化数据库："></a>4.初始化数据库：</h4><p>开启mysql修改config中的密码:<br><code>node tools/initdb.js</code></p>
-<h4 id="5-本地启动调试环境"><a href="#5-本地启动调试环境" class="headerlink" title="5.本地启动调试环境:"></a>5.本地启动调试环境:</h4><p> Debug 模式：<br><code>npm run dev</code></p>
-<h1 id="开发版环境"><a href="#开发版环境" class="headerlink" title="开发版环境"></a>开发版环境</h1><h4 id="1-project-config-json"><a href="#1-project-config-json" class="headerlink" title="1.[project.config.json]"></a>1.<code>[project.config.json]</code></h4><pre><code>添加 &quot;qcloudRoot&quot;: &quot;./server/&quot;,
-</code></pre><h4 id="2-src-utils-config"><a href="#2-src-utils-config" class="headerlink" title="2.[src/utils/config]"></a>2.<code>[src/utils/config]</code></h4><pre><code>设置url，如：&apos;https://3yuexwft.qcloud.la&apos;
-</code></pre><h4 id="3-server-config-js"><a href="#3-server-config-js" class="headerlink" title="3.[server/config.js]"></a>3.<code>[server/config.js]</code></h4><pre><code>注释掉本地服务器字段
-修改mysql密码,默认为appid
-</code></pre>
+        <h1 id="LeetCode算法笔记–Day7"><a href="#LeetCode算法笔记–Day7" class="headerlink" title="LeetCode算法笔记–Day7"></a>LeetCode算法笔记–Day7</h1><h1 id="02-01-移除重复节点"><a href="#02-01-移除重复节点" class="headerlink" title="02.01. 移除重复节点"></a>02.01. 移除重复节点</h1><h5 id="题目："><a href="#题目：" class="headerlink" title="题目："></a>题目：</h5><blockquote>
+<p><strong>编写代码，移除未排序链表中的重复节点。保留最开始出现的节点。</strong></p>
+</blockquote>
+<blockquote>
+<p><em>示例1：</em><br>输入:  [1, 2, 3, 3, 2, 1]<br>输出: [1, 2, 3]</p>
+</blockquote>
+<blockquote>
+<p><em>示例2：</em><br>输入: [1, 1, 1, 1, 2]<br>输出: [1, 2]</p>
+</blockquote>
+<h5 id="我的解答："><a href="#我的解答：" class="headerlink" title="我的解答："></a>我的解答：</h5><figure class="highlight golo"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line"> * Definition <span class="keyword">for</span> singly-linked <span class="keyword">list</span>.</span><br><span class="line"> * <span class="keyword">function</span> ListNode(val) &#123;</span><br><span class="line"> *     this.val = val;</span><br><span class="line"> *     this.next = <span class="literal">null</span>;</span><br><span class="line"> * &#125;</span><br><span class="line"> */</span><br><span class="line">/**</span><br><span class="line"> * <span class="meta">@param</span> &#123;ListNode&#125; head</span><br><span class="line"> * <span class="meta">@return</span> &#123;ListNode&#125;</span><br><span class="line"> */</span><br><span class="line"><span class="keyword">var</span> removeDuplicateNodes = <span class="keyword">function</span>(head) &#123;</span><br><span class="line">  <span class="keyword">let</span> p = head;</span><br><span class="line">  <span class="keyword">let</span> obj = &#123;&#125;;</span><br><span class="line">  <span class="keyword">let</span> pre = <span class="literal">null</span>;</span><br><span class="line">  <span class="keyword">while</span> (p != <span class="literal">null</span>) &#123;</span><br><span class="line">      <span class="keyword">if</span> (obj[p.val]) &#123;</span><br><span class="line">          pre.next = p.next;</span><br><span class="line">      &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">          obj[p.val] = <span class="number">1</span>;</span><br><span class="line">          pre = p;</span><br><span class="line">      &#125;</span><br><span class="line">      p = p.next;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> head;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
     </article>
     <!-- license  -->
     
@@ -425,17 +419,12 @@ height:50vh;
     <ul class="post-paginator">
         <li class="next">
             
-                <div class="nextSlogan">Next Post</div>
-                <a href="/2018/11/30/Vue用axios发送http请求/" title="Vue用axios发送http请求">
-                    <div class="nextTitle">Vue用axios发送http请求</div>
-                </a>
-            
         </li>
         <li class="previous">
             
                 <div class="prevSlogan">Previous Post</div>
-                <a href="/2018/11/07/聊聊足球-曾经的尤文天才少年/" title="聊聊足球--曾经的尤文天才少年">
-                    <div class="prevTitle">聊聊足球--曾经的尤文天才少年</div>
+                <a href="/2020/05/09/LeetCode算法笔记-Day6/" title="LeetCode算法笔记--Day6">
+                    <div class="prevTitle">LeetCode算法笔记--Day6</div>
                 </a>
             
         </li>
@@ -579,7 +568,7 @@ top:50vh;
         <div class="toc-catalog">
             <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
         </div>
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#本地环境"><span class="toc-number">1.</span> <span class="toc-text">本地环境</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#切换到服务端代码目录"><span class="toc-number">1.0.1.</span> <span class="toc-text">切换到服务端代码目录:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装依赖"><span class="toc-number">1.0.2.</span> <span class="toc-text">安装依赖:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装全局依赖"><span class="toc-number">1.0.3.</span> <span class="toc-text">安装全局依赖:</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-server-config-js-添加以下配置："><span class="toc-number">1.0.3.1.</span> <span class="toc-text">1.server/config.js 添加以下配置：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-修改-client-config-js"><span class="toc-number">1.0.3.2.</span> <span class="toc-text">2.修改 client/config.js:</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-安装依赖"><span class="toc-number">1.0.3.3.</span> <span class="toc-text">3.安装依赖:</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-初始化数据库："><span class="toc-number">1.0.3.4.</span> <span class="toc-text">4.初始化数据库：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-本地启动调试环境"><span class="toc-number">1.0.3.5.</span> <span class="toc-text">5.本地启动调试环境:</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#开发版环境"><span class="toc-number">2.</span> <span class="toc-text">开发版环境</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-project-config-json"><span class="toc-number">2.0.0.1.</span> <span class="toc-text">1.[project.config.json]</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-src-utils-config"><span class="toc-number">2.0.0.2.</span> <span class="toc-text">2.[src/utils/config]</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-server-config-js"><span class="toc-number">2.0.0.3.</span> <span class="toc-text">3.[server/config.js]</span></a></li></ol></li></ol></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#LeetCode算法笔记–Day7"><span class="toc-number">1.</span> <span class="toc-text">LeetCode算法笔记–Day7</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#02-01-移除重复节点"><span class="toc-number">2.</span> <span class="toc-text">02.01. 移除重复节点</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#题目："><span class="toc-number">2.0.0.0.1.</span> <span class="toc-text">题目：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#我的解答："><span class="toc-number">2.0.0.0.2.</span> <span class="toc-text">我的解答：</span></a></li></ol></li></ol></li></ol></li></ol></li></ol>
     </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>

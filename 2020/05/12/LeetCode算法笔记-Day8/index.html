@@ -22,7 +22,7 @@
     <meta name="description" content="">
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Voyz&#39;s Studio</title>
+    <title>LeetCode算法笔记--Day8 · Voyz&#39;s Studio</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -77,6 +77,8 @@
 
     <link rel="preload" href="/css/style.css?v=20180824" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="stylesheet" href="/css/mobile.css?v=20180824" media="(max-width: 980px)">
+    
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     
     <!-- /*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
 /* This file is meant as a standalone workflow for
@@ -201,14 +203,23 @@
 </head>
 
     
-        <body class="home-body">
+        <body class="post-body">
     
     
-<header class="header index-header">
+<header class="header">
 
     <div class="read-progress"></div>
     <div class="header-sidebar-menu">&#xe775;</div>
     <!-- post页的toggle banner  -->
+    
+    <div class="banner">
+            <div class="blog-title">
+                <a href="/">Voyz&#39;s Studio.</a>
+            </div>
+            <div class="post-title">
+                <a href="#" class="post-name">LeetCode算法笔记--Day8</a>
+            </div>
+    </div>
     
     <a class="home-link" href="/">Voyz's Studio.</a>
 </header>
@@ -227,17 +238,17 @@ height:50vh;
     <!-- 主页  -->
     
     
-    <!-- 文章页  -->
+    <!-- 404页  -->
             
     <div class="site-intro-placeholder"></div>
-    <div class="site-intro-img" style="background-image: url(/intro/index-bg.jpg)"></div>
+    <div class="site-intro-img" style="background-image: url(/intro/post-bg.jpg)"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            Voyz's Studio.
-            <!-- 文章页  -->
+            LeetCode算法笔记--Day8
+            <!-- 404 -->
             
         </h1>
         <!-- 副标题 -->
@@ -245,12 +256,49 @@ height:50vh;
             <!-- 主页副标题  -->
             
             
-                Facing the sea with spring blossoms
-            
-            <!-- 文章页  -->
+            <!-- 404 -->
             
         </p>
         <!-- 文章页meta -->
+        
+            <div class="post-intros">
+                <!-- 文章页标签  -->
+                
+                    <div class="post-intro-tags">
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="算法题">算法题</a>
+    
+</div>
+                
+                
+                    <div class="post-intro-read">
+                        <span>字数统计: <span class="post-count word-count">136</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
+                    </div>
+                
+                <div class="post-intro-meta">
+                    <span class="post-intro-calander iconfont-archer">&#xe676;</span>
+                    <span class="post-intro-time">2020/05/12</span>
+                    
+                    <span id="busuanzi_container_page_pv" class="busuanzi-pv">
+                        <span class="iconfont-archer">&#xe602;</span>
+                        <span id="busuanzi_value_page_pv"></span>
+                    </span>
+                    
+                    <span class="shareWrapper">
+                        <span class="iconfont-archer shareIcon">&#xe71d;</span>
+                        <span class="shareText">Share</span>
+                        <ul class="shareList">
+                            <li class="iconfont-archer share-qr" data-type="qr">&#xe75b;
+                                <div class="share-qrcode"></div>
+                            </li>
+                            <li class="iconfont-archer" data-type="weibo">&#xe619;</li>
+                            <li class="iconfont-archer" data-type="qzone">&#xe62e;</li>
+                            <li class="iconfont-archer" data-type="twitter">&#xe634;</li>
+                            <li class="iconfont-archer" data-type="facebook">&#xe67a;</li>
+                        </ul>
+                    </span>
+                </div>
+            </div>
         
     </div>
 </div>
@@ -351,394 +399,63 @@ height:50vh;
 </script>        
         <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
         <div class="container container-unloaded">
-            <main class="main index-page">
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/05/22/hexo的SEO优化/">
-            
-                <span>hexo的SEO优化</span>
-        </a>
-        <div class="abstract-content">
-            hexo的SEO优化
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/05/22</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="技术贴">技术贴</a>
-    
-</div>
-            
-        </div>
+            <main class="main post-page">
+    <article class="article-entry">
+        <h1 id="LeetCode算法笔记–Day8"><a href="#LeetCode算法笔记–Day8" class="headerlink" title="LeetCode算法笔记–Day8"></a>LeetCode算法笔记–Day8</h1><h1 id="02-02-返回倒数第-k-个节点"><a href="#02-02-返回倒数第-k-个节点" class="headerlink" title="02.02. 返回倒数第 k 个节点"></a>02.02. 返回倒数第 k 个节点</h1><h5 id="题目："><a href="#题目：" class="headerlink" title="题目："></a>题目：</h5><blockquote>
+<p><strong>实现一种算法，找出单向链表中倒数第 k 个节点。返回该节点的值。</strong></p>
+</blockquote>
+<blockquote>
+<p><em>示例1：</em><br>输入:  1-&gt;2-&gt;3-&gt;4-&gt;5 和 k = 2<br>输出: 4</p>
+</blockquote>
+<h5 id="我的解答："><a href="#我的解答：" class="headerlink" title="我的解答："></a>我的解答：</h5><figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line"> * Definition <span class="keyword">for</span> singly-linked list.</span><br><span class="line"> * <span class="function"><span class="keyword">function</span> <span class="title">ListNode</span><span class="params">(val)</span></span> &#123;</span><br><span class="line"> *     this.val = val;</span><br><span class="line"> *     this.<span class="built_in">next</span> = null;</span><br><span class="line"> * &#125;</span><br><span class="line"> */</span><br><span class="line">/**</span><br><span class="line"> * @param &#123;ListNode&#125; head</span><br><span class="line"> * @param &#123;number&#125; k</span><br><span class="line"> * @<span class="keyword">return</span> &#123;number&#125;</span><br><span class="line"> */</span><br><span class="line">var kthToLast = <span class="function"><span class="keyword">function</span><span class="params">(head, k)</span></span> &#123;</span><br><span class="line">    let _count = head,_res = head;</span><br><span class="line">    <span class="keyword">while</span>(k&gt;<span class="number">0</span>)&#123;</span><br><span class="line">        _count = _count.<span class="built_in">next</span>;</span><br><span class="line">        k<span class="comment">--</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">while</span>(_count != null)&#123;</span><br><span class="line">        _count = _count.<span class="built_in">next</span>;</span><br><span class="line">        _res = _res.<span class="built_in">next</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> _res.val;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
     </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/05/13/小程序开发小问题归纳/">
-            
-                <span>小程序开发小问题归纳</span>
-        </a>
-        <div class="abstract-content">
-            小程序开发小问题归纳
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/05/13</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="小程序">小程序</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/05/03/近期的一些计划-二/">
-            
-                <span>近期的一些计划(二)</span>
-        </a>
-        <div class="abstract-content">
-            五月计划
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/05/03</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="生活">生活</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/04/29/Git常用命令/">
-            
-                <span>Git常用命令</span>
-        </a>
-        <div class="abstract-content">
-            git的常用命令
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/04/29</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="技术贴">技术贴</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/04/26/React学习笔记（七）/">
-            
-                <span>React学习笔记（七）</span>
-        </a>
-        <div class="abstract-content">
-            React组件中this的指向
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/04/26</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="React">React</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/04/25/React学习笔记（六）/">
-            
-                <span>React学习笔记（六）</span>
-        </a>
-        <div class="abstract-content">
-            React的Animated动画实例
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/04/25</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="React">React</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/04/24/RN动画系统-Animated/">
-            
-                <span>RN的动画系统</span>
-        </a>
-        <div class="abstract-content">
-            用于创建精细的交互控制的动画Animated,用于全局的布局动画LayoutAnimation。
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/04/24</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="React Native">React Native</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/04/18/crn脚手架常见问题及命令/">
-            
-                <span>crn脚手架常见问题及命令</span>
-        </a>
-        <div class="abstract-content">
-            crn脚手架常见问题及命令
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/04/18</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="React Native">React Native</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/04/17/React学习笔记（五）/">
-            
-                <span>React学习笔记（五）</span>
-        </a>
-        <div class="abstract-content">
-            React的生命周期函数
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/04/17</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="React">React</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2019/04/16/React学习笔记（四）/">
-            
-                <span>React学习笔记（四）</span>
-        </a>
-        <div class="abstract-content">
-            对于React的思考
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/04/16</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="React">React</a>
-    
-</div>
-            
-        </div>
-    </article>
+    <!-- license  -->
     
     <!-- paginator  -->
+    <ul class="post-paginator">
+        <li class="next">
+            
+        </li>
+        <li class="previous">
+            
+                <div class="prevSlogan">Previous Post</div>
+                <a href="/2020/05/11/LeetCode算法笔记-Day7/" title="LeetCode算法笔记--Day7">
+                    <div class="prevTitle">LeetCode算法笔记--Day7</div>
+                </a>
+            
+        </li>
+    </ul>
+    <!-- 评论插件 -->
+    <!-- 来必力City版安装代码 -->
+
+    <div id="lv-container" data-id="city" data-uid="MTAyMC80MDU2Ny8xNzA5NA==">
+        <script type="text/javascript">
+            (function (d, s) {
+                var j, e = d.getElementsByTagName(s)[0];
+                if (typeof LivereTower === 'function') { return; }
+                j = d.createElement(s);
+                j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+                j.async = true;
+
+                e.parentNode.insertBefore(j, e);
+            })(document, 'script');
+        </script>
+        <noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+    </div>
+
+<!-- City版安装代码已完成 -->
     
-    <nav class="page-nav">
-        <a class="extend prev" rel="prev" href="/page/2/">&#60; PREV</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/4/">NEXT &#62;</a>
-    </nav>
     
+    <!-- partial('_partial/comment/changyan') -->
+    <!--PC版-->
+
+
+    
+    
+
+    <!-- 评论 -->
 </main>
             <!-- profile -->
-            
-            <div class="profile">
-    <img class="profile-avatar" alt="avatar" src="/avatar/avater.jpg">
-    <div class="profile-name">Voyz Shen</div>
-    
-    <div class="profile-signature">
-        Cool Boy
-    </div>
-    
-    
-    <div class="profile-social">
-        
-    
-        
-            
-                <a href="mailto:18217501371@163.com" class="iconfont-archer email" title="email"></a>
-            
-        
-    
-        
-            
-                <a href="//github.com/Voyzz" class="iconfont-archer github" target="_blank" title="github"></a>
-            
-        
-    
-        
-            
-                <span class="iconfont-archer wechat" title="wechat">
-                  
-                  <img class="profile-qr" src="/assets/wechat.jpg">
-                </span>
-            
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-            
-                <a href="https://segmentfault.com/u/mrvoyz" class="iconfont-archer segmentFault" target="_blank" title="segmentFault"></a>
-            
-        
-    
-        
-            
-                <a href="https://juejin.im/user/5bd2ba1fe51d4566a17a1120" class="iconfont-archer juejin" target="_blank" title="juejin"></a>
-            
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-            
-                <a href="https://www.jianshu.com/u/798fb34f6eb0" class="iconfont-archer others" target="_blank" title="others"></a>
-            
-        
-    
-        
-    
-
-    </div>
-    
-    
-    
-</div>
-
-
-
-
             
         </div>
         <footer class="footer footer-unloaded">
@@ -831,6 +548,24 @@ height:50vh;
 </footer>
     </div>
     <!-- toc -->
+    
+    <div class="toc-wrapper" style=
+    
+
+
+
+
+
+
+
+top:50vh;
+
+    >
+        <div class="toc-catalog">
+            <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
+        </div>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#LeetCode算法笔记–Day8"><span class="toc-number">1.</span> <span class="toc-text">LeetCode算法笔记–Day8</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#02-02-返回倒数第-k-个节点"><span class="toc-number">2.</span> <span class="toc-text">02.02. 返回倒数第 k 个节点</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#题目："><span class="toc-number">2.0.0.0.1.</span> <span class="toc-text">题目：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#我的解答："><span class="toc-number">2.0.0.0.2.</span> <span class="toc-text">我的解答：</span></a></li></ol></li></ol></li></ol></li></ol></li></ol>
+    </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
     <div class="sidebar sidebar-hide">
@@ -2022,6 +1757,8 @@ jsonContent:
     
     </div>
     <!-- async load share.js -->
+    
+        <script src="/scripts/share.js" async></script>    
      
     </body>
 </html>

@@ -22,7 +22,7 @@
     <meta name="description" content="">
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>LeetCode算法笔记--Day17 · Voyz&#39;s Studio</title>
+    <title>LeetCode算法笔记--Day22 · Voyz&#39;s Studio</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -217,7 +217,7 @@
                 <a href="/">Voyz&#39;s Studio.</a>
             </div>
             <div class="post-title">
-                <a href="#" class="post-name">LeetCode算法笔记--Day17</a>
+                <a href="#" class="post-name">LeetCode算法笔记--Day22</a>
             </div>
     </div>
     
@@ -247,7 +247,7 @@ height:50vh;
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            LeetCode算法笔记--Day17
+            LeetCode算法笔记--Day22
             <!-- 404 -->
             
         </h1>
@@ -272,12 +272,12 @@ height:50vh;
                 
                 
                     <div class="post-intro-read">
-                        <span>字数统计: <span class="post-count word-count">271</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
+                        <span>字数统计: <span class="post-count word-count">180</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
                     <span class="post-intro-calander iconfont-archer">&#xe676;</span>
-                    <span class="post-intro-time">2020/06/01</span>
+                    <span class="post-intro-time">2020/06/08</span>
                     
                     <span id="busuanzi_container_page_pv" class="busuanzi-pv">
                         <span class="iconfont-archer">&#xe602;</span>
@@ -401,20 +401,17 @@ height:50vh;
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <h1 id="LeetCode算法笔记–Day17"><a href="#LeetCode算法笔记–Day17" class="headerlink" title="LeetCode算法笔记–Day17"></a>LeetCode算法笔记–Day17</h1><h1 id="4-寻找两个正序数组的中位数"><a href="#4-寻找两个正序数组的中位数" class="headerlink" title="4. 寻找两个正序数组的中位数"></a>4. 寻找两个正序数组的中位数</h1><h5 id="题目："><a href="#题目：" class="headerlink" title="题目："></a>题目：</h5><blockquote>
-<p><strong>给定两个大小为 m 和 n 的正序（从小到大）数组 nums1 和 nums2。</strong></p>
+        <h1 id="LeetCode算法笔记–Day22"><a href="#LeetCode算法笔记–Day22" class="headerlink" title="LeetCode算法笔记–Day22"></a>LeetCode算法笔记–Day22</h1><h1 id="20-有效的括号"><a href="#20-有效的括号" class="headerlink" title="20. 有效的括号"></a>20. 有效的括号</h1><h5 id="题目："><a href="#题目：" class="headerlink" title="题目："></a>题目：</h5><blockquote>
+<p><strong>给定一个只包括 ‘(‘，’)’，’{‘，’}’，’[‘，’]’ 的字符串，判断字符串是否有效。</strong> </p>
 </blockquote>
 <blockquote>
-<p><strong>请你找出这两个正序数组的中位数，并且要求算法的时间复杂度为 O(log(m + n))。</strong></p>
+<p>有效字符串需满足：<br>左括号必须用相同类型的右括号闭合。<br>左括号必须以正确的顺序闭合。<br>注意空字符串可被认为是有效字符串</p>
 </blockquote>
 <blockquote>
-<p><strong>你可以假设 nums1 和 nums2 不会同时为空。</strong>  </p>
+<p><em>示例1：</em><br>输入: “()[]{}”<br>输出：true</p>
+<p><em>示例2：</em><br>输入: “([)]”<br>输出：false</p>
 </blockquote>
-<blockquote>
-<p><em>示例1：</em><br>输入: nums1 = [1, 2],nums2 = [3, 4]<br>输出：2.5</p>
-</blockquote>
-<h5 id="我的解答："><a href="#我的解答：" class="headerlink" title="我的解答："></a>我的解答：</h5><figure class="highlight sqf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * @param &#123;number[]&#125; nums1</span></span><br><span class="line"><span class="comment"> * @param &#123;number[]&#125; nums2</span></span><br><span class="line"><span class="comment"> * @return &#123;number&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line">var findMedianSortedArrays = function(nums1, nums2) &#123;</span><br><span class="line">    let <span class="variable">_len1</span> = nums1.length;</span><br><span class="line">    let <span class="variable">_len2</span> = nums2.length;</span><br><span class="line">    let <span class="variable">_combineArr</span> = [];</span><br><span class="line">    let <span class="variable">_p1</span> = <span class="number">0</span>;</span><br><span class="line">    let <span class="variable">_p2</span> = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span>(<span class="variable">_len1</span> == <span class="number">0</span> || <span class="variable">_len2</span> == <span class="number">0</span>)&#123;</span><br><span class="line">        return <span class="variable">_len1</span> == <span class="number">0</span> ? getMedianNum(nums2) : getMedianNum(nums1); </span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="comment">// console.log(_p1 == _len1,_p2 == _len2)</span></span><br><span class="line">        <span class="comment">// 合并数组</span></span><br><span class="line">        <span class="keyword">while</span>(<span class="variable">_p1</span> &lt; <span class="variable">_len1</span> || <span class="variable">_p2</span> &lt; <span class="variable">_len2</span>)&#123;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span>(<span class="built_in">typeof</span> nums1[<span class="variable">_p1</span>] == <span class="string">"undefined"</span>)&#123;</span><br><span class="line">                <span class="variable">_combineArr</span> = <span class="variable">_combineArr</span>.concat(nums2.splice(<span class="variable">_p2</span>))</span><br><span class="line">                return getMedianNum(<span class="variable">_combineArr</span>)</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span>(<span class="built_in">typeof</span> nums2[<span class="variable">_p2</span>] == <span class="string">"undefined"</span>)&#123;</span><br><span class="line">                <span class="variable">_combineArr</span> = <span class="variable">_combineArr</span>.concat(nums1.splice(<span class="variable">_p1</span>))</span><br><span class="line">                return getMedianNum(<span class="variable">_combineArr</span>)</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span>&#123;</span><br><span class="line">                <span class="keyword">if</span>(nums1[<span class="variable">_p1</span>] &lt; nums2[<span class="variable">_p2</span>])&#123;</span><br><span class="line">                    <span class="variable">_combineArr</span>.push(nums1[<span class="variable">_p1</span>]);</span><br><span class="line">                    <span class="variable">_p1</span> += <span class="number">1</span>;</span><br><span class="line">                &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                    <span class="variable">_combineArr</span>.push(nums2[<span class="variable">_p2</span>]);</span><br><span class="line">                    <span class="variable">_p2</span> += <span class="number">1</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            </span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">var getMedianNum = function(nums)&#123;</span><br><span class="line">    let <span class="variable">_len</span> = nums.length;</span><br><span class="line">    return <span class="variable">_len</span>%<span class="number">2</span>==<span class="number">0</span> ? ((nums[<span class="variable">_len</span>/<span class="number">2</span>-<span class="number">1</span>]+nums[<span class="variable">_len</span>/<span class="number">2</span>])/<span class="number">2</span>).<span class="built_in">toFixed</span>(<span class="number">1</span>) : nums[Math.<span class="built_in">floor</span>(<span class="variable">_len</span>/<span class="number">2</span>)].<span class="built_in">toFixed</span>(<span class="number">1</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+<h5 id="我的解答："><a href="#我的解答：" class="headerlink" title="我的解答："></a>我的解答：</h5><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * @param &#123;string&#125; s</span></span><br><span class="line"><span class="comment"> * @return &#123;boolean&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line">var isValid = (s) =&gt; &#123;</span><br><span class="line">  <span class="keyword">const</span> <span class="built_in">map</span> = &#123; <span class="string">"&#123;"</span>: <span class="string">"&#125;"</span>, <span class="string">"("</span>: <span class="string">")"</span>, <span class="string">"["</span>: <span class="string">"]"</span> &#125;</span><br><span class="line">  <span class="keyword">const</span> <span class="built_in">stack</span> = []</span><br><span class="line">  <span class="keyword">for</span> (let i = <span class="number">0</span>; i &lt; s.length; i++) &#123;</span><br><span class="line">    <span class="keyword">const</span> cur = s[i]</span><br><span class="line">    <span class="keyword">if</span> (<span class="built_in">map</span>[cur]) &#123;</span><br><span class="line">      <span class="built_in">stack</span>.push(cur)</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      <span class="keyword">if</span> (<span class="built_in">stack</span>.length === <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span></span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">const</span> stackTop = <span class="built_in">stack</span>.pop()</span><br><span class="line">      <span class="keyword">if</span> (<span class="built_in">map</span>[stackTop] !== cur) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> <span class="built_in">stack</span>.length === <span class="number">0</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
     </article>
     <!-- license  -->
     
@@ -422,17 +419,12 @@ height:50vh;
     <ul class="post-paginator">
         <li class="next">
             
-                <div class="nextSlogan">Next Post</div>
-                <a href="/2020/06/02/LeetCode算法笔记-Day18/" title="LeetCode算法笔记--Day18">
-                    <div class="nextTitle">LeetCode算法笔记--Day18</div>
-                </a>
-            
         </li>
         <li class="previous">
             
                 <div class="prevSlogan">Previous Post</div>
-                <a href="/2020/05/28/LeetCode算法笔记-Day16/" title="LeetCode算法笔记--Day16">
-                    <div class="prevTitle">LeetCode算法笔记--Day16</div>
+                <a href="/2020/06/05/LeetCode算法笔记-Day21/" title="LeetCode算法笔记--Day21">
+                    <div class="prevTitle">LeetCode算法笔记--Day21</div>
                 </a>
             
         </li>
@@ -576,7 +568,7 @@ top:50vh;
         <div class="toc-catalog">
             <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
         </div>
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#LeetCode算法笔记–Day17"><span class="toc-number">1.</span> <span class="toc-text">LeetCode算法笔记–Day17</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-寻找两个正序数组的中位数"><span class="toc-number">2.</span> <span class="toc-text">4. 寻找两个正序数组的中位数</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#题目："><span class="toc-number">2.0.0.0.1.</span> <span class="toc-text">题目：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#我的解答："><span class="toc-number">2.0.0.0.2.</span> <span class="toc-text">我的解答：</span></a></li></ol></li></ol></li></ol></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#LeetCode算法笔记–Day22"><span class="toc-number">1.</span> <span class="toc-text">LeetCode算法笔记–Day22</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#20-有效的括号"><span class="toc-number">2.</span> <span class="toc-text">20. 有效的括号</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#题目："><span class="toc-number">2.0.0.0.1.</span> <span class="toc-text">题目：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#我的解答："><span class="toc-number">2.0.0.0.2.</span> <span class="toc-text">我的解答：</span></a></li></ol></li></ol></li></ol></li></ol></li></ol>
     </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>

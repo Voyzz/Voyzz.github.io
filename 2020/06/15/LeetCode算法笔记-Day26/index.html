@@ -22,7 +22,7 @@
     <meta name="description" content="">
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>LeetCode算法笔记--Day12 · Voyz&#39;s Studio</title>
+    <title>LeetCode算法笔记--Day26 · Voyz&#39;s Studio</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -217,7 +217,7 @@
                 <a href="/">Voyz&#39;s Studio.</a>
             </div>
             <div class="post-title">
-                <a href="#" class="post-name">LeetCode算法笔记--Day12</a>
+                <a href="#" class="post-name">LeetCode算法笔记--Day26</a>
             </div>
     </div>
     
@@ -247,7 +247,7 @@ height:50vh;
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            LeetCode算法笔记--Day12
+            LeetCode算法笔记--Day26
             <!-- 404 -->
             
         </h1>
@@ -272,12 +272,12 @@ height:50vh;
                 
                 
                     <div class="post-intro-read">
-                        <span>字数统计: <span class="post-count word-count">162</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
+                        <span>字数统计: <span class="post-count word-count">123</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
                     <span class="post-intro-calander iconfont-archer">&#xe676;</span>
-                    <span class="post-intro-time">2020/05/21</span>
+                    <span class="post-intro-time">2020/06/15</span>
                     
                     <span id="busuanzi_container_page_pv" class="busuanzi-pv">
                         <span class="iconfont-archer">&#xe602;</span>
@@ -401,17 +401,13 @@ height:50vh;
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <h1 id="LeetCode算法笔记–Day12"><a href="#LeetCode算法笔记–Day12" class="headerlink" title="LeetCode算法笔记–Day12"></a>LeetCode算法笔记–Day12</h1><h1 id="LCP-02-分式化简"><a href="#LCP-02-分式化简" class="headerlink" title="LCP 02. 分式化简"></a>LCP 02. 分式化简</h1><h5 id="题目："><a href="#题目：" class="headerlink" title="题目："></a>题目：</h5><blockquote>
-<p><strong>有一个同学在学习分式。他需要将一个连分数化成最简分数，你能帮助他吗？</strong></p>
-</blockquote>
-<p><img src="http://voyz-image.test.upcdn.net/2020/05/21/996943a2598f97478e64d321c7200c16.jpg" alt="fraction_example_1.jpg"></p>
-<blockquote>
-<p><em>示例1：</em><br>cont = [3, 2, 0, 2]<br>输出: [13, 4]<br>解释：原连分数等价于3 + (1 / (2 + (1 / (0 + 1 / 2))))。注意[26, 8], [-13, -4]都不是正确答案。  </p>
+        <h1 id="LeetCode算法笔记–Day26"><a href="#LeetCode算法笔记–Day26" class="headerlink" title="LeetCode算法笔记–Day26"></a>LeetCode算法笔记–Day26</h1><h1 id="46-全排列"><a href="#46-全排列" class="headerlink" title="46. 全排列"></a>46. 全排列</h1><h5 id="题目："><a href="#题目：" class="headerlink" title="题目："></a>题目：</h5><blockquote>
+<p><strong>给定一个 没有重复 数字的序列，返回其所有可能的全排列。</strong>   </p>
 </blockquote>
 <blockquote>
-<p><em>示例2：</em><br>cont = [0, 0, 3]<br>输出: [3, 1]<br>解释：如果答案是整数，令分母为1即可。</p>
+<p><em>示例1：</em><br>输入: [1,2,3]<br>输出：[<br>  [1,2,3],<br>  [1,3,2],<br>  [2,1,3],<br>  [2,3,1],<br>  [3,1,2],<br>  [3,2,1]<br>]</p>
 </blockquote>
-<h5 id="我的解答："><a href="#我的解答：" class="headerlink" title="我的解答："></a>我的解答：</h5><figure class="highlight x86asm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line"> * @param &#123;number[]&#125; cont</span><br><span class="line"> * @return &#123;number[]&#125;</span><br><span class="line"> */</span><br><span class="line">function fraction(cont) &#123;</span><br><span class="line">  let <span class="meta">up</span> = <span class="number">1</span>, <span class="meta">down</span> = cont[cont.length - <span class="number">1</span>]<span class="comment">;</span></span><br><span class="line">  for (var i = cont.length - <span class="number">2</span><span class="comment">; i &gt;= 0; --i) &#123;</span></span><br><span class="line">    <span class="meta">up</span> += cont[i] * <span class="meta">down</span><span class="comment">;</span></span><br><span class="line">    [<span class="meta">up</span>, <span class="meta">down</span>] = [<span class="meta">down</span>, <span class="meta">up</span>]<span class="comment">;</span></span><br><span class="line">  &#125;</span><br><span class="line">  return [<span class="meta">down</span>, <span class="meta">up</span>]<span class="comment">;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="我的解答："><a href="#我的解答：" class="headerlink" title="我的解答："></a>我的解答：</h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * @param &#123;number[]&#125; nums</span></span><br><span class="line"><span class="comment"> * @return &#123;number[][]&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> permute = <span class="function">(<span class="params">nums</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">let</span> res = []</span><br><span class="line">  dfs([])</span><br><span class="line">  <span class="function"><span class="keyword">function</span> <span class="title">dfs</span>(<span class="params">path</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (path.length===nums.length) &#123;</span><br><span class="line">      res.push(path.slice())</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">const</span> num <span class="keyword">of</span> nums) &#123;</span><br><span class="line">      <span class="keyword">if</span> (path.includes(num)) <span class="keyword">continue</span></span><br><span class="line">      path.push(num)</span><br><span class="line">      dfs(path)</span><br><span class="line">      path.pop()</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> res</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
     </article>
     <!-- license  -->
     
@@ -419,17 +415,12 @@ height:50vh;
     <ul class="post-paginator">
         <li class="next">
             
-                <div class="nextSlogan">Next Post</div>
-                <a href="/2020/05/25/LeetCode算法笔记-Day13/" title="LeetCode算法笔记--Day13">
-                    <div class="nextTitle">LeetCode算法笔记--Day13</div>
-                </a>
-            
         </li>
         <li class="previous">
             
                 <div class="prevSlogan">Previous Post</div>
-                <a href="/2020/05/19/LeetCode算法笔记-Day11/" title="LeetCode算法笔记--Day11">
-                    <div class="prevTitle">LeetCode算法笔记--Day11</div>
+                <a href="/2020/06/11/LeetCode算法笔记-Day25/" title="LeetCode算法笔记--Day25">
+                    <div class="prevTitle">LeetCode算法笔记--Day25</div>
                 </a>
             
         </li>
@@ -573,7 +564,7 @@ top:50vh;
         <div class="toc-catalog">
             <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
         </div>
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#LeetCode算法笔记–Day12"><span class="toc-number">1.</span> <span class="toc-text">LeetCode算法笔记–Day12</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#LCP-02-分式化简"><span class="toc-number">2.</span> <span class="toc-text">LCP 02. 分式化简</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#题目："><span class="toc-number">2.0.0.0.1.</span> <span class="toc-text">题目：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#我的解答："><span class="toc-number">2.0.0.0.2.</span> <span class="toc-text">我的解答：</span></a></li></ol></li></ol></li></ol></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#LeetCode算法笔记–Day26"><span class="toc-number">1.</span> <span class="toc-text">LeetCode算法笔记–Day26</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#46-全排列"><span class="toc-number">2.</span> <span class="toc-text">46. 全排列</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#题目："><span class="toc-number">2.0.0.0.1.</span> <span class="toc-text">题目：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#我的解答："><span class="toc-number">2.0.0.0.2.</span> <span class="toc-text">我的解答：</span></a></li></ol></li></ol></li></ol></li></ol></li></ol>
     </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>

@@ -22,7 +22,7 @@
     <meta name="description" content="">
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>LeetCode算法笔记--Day2 · Voyz&#39;s Studio</title>
+    <title>LeetCode算法笔记-Day31 · Voyz&#39;s Studio</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -217,7 +217,7 @@
                 <a href="/">Voyz&#39;s Studio.</a>
             </div>
             <div class="post-title">
-                <a href="#" class="post-name">LeetCode算法笔记--Day2</a>
+                <a href="#" class="post-name">LeetCode算法笔记-Day31</a>
             </div>
     </div>
     
@@ -247,7 +247,7 @@ height:50vh;
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            LeetCode算法笔记--Day2
+            LeetCode算法笔记-Day31
             <!-- 404 -->
             
         </h1>
@@ -268,16 +268,20 @@ height:50vh;
     
         <a class="post-tag" href="javascript:void(0);" data-tags="算法题">算法题</a>
     
+        <a class="post-tag" href="javascript:void(0);" data-tags="热题HOT100">热题HOT100</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="滑动窗口">滑动窗口</a>
+    
 </div>
                 
                 
                     <div class="post-intro-read">
-                        <span>字数统计: <span class="post-count word-count">290</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
+                        <span>字数统计: <span class="post-count word-count">121</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
                     <span class="post-intro-calander iconfont-archer">&#xe676;</span>
-                    <span class="post-intro-time">2020/04/30</span>
+                    <span class="post-intro-time">2020/07/27</span>
                     
                     <span id="busuanzi_container_page_pv" class="busuanzi-pv">
                         <span class="iconfont-archer">&#xe602;</span>
@@ -401,26 +405,23 @@ height:50vh;
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <h1 id="LeetCode算法笔记–Day2"><a href="#LeetCode算法笔记–Day2" class="headerlink" title="LeetCode算法笔记–Day2"></a>LeetCode算法笔记–Day2</h1><h1 id="01-03-URL化"><a href="#01-03-URL化" class="headerlink" title="01.03. URL化"></a>01.03. URL化</h1><h5 id="题目："><a href="#题目：" class="headerlink" title="题目："></a>题目：</h5><blockquote>
-<p><strong>URL化。编写一种方法，将字符串中的空格全部替换为%20。假定该字符串尾部有足够的空间存放新增字符，并且知道字符串的“真实”长度。</strong></p>
+        <h1 id="LeetCode算法笔记–Day31"><a href="#LeetCode算法笔记–Day31" class="headerlink" title="LeetCode算法笔记–Day31"></a>LeetCode算法笔记–Day31</h1><h1 id="3-Longest-Substring-Without-Repeating-Characters"><a href="#3-Longest-Substring-Without-Repeating-Characters" class="headerlink" title="3. Longest Substring Without Repeating Characters"></a>3. Longest Substring Without Repeating Characters</h1><h5 id="题目："><a href="#题目：" class="headerlink" title="题目："></a>题目：</h5><blockquote>
+<p><strong>Given a string, find the length of the longest substring without repeating characters.</strong>      </p>
 </blockquote>
 <blockquote>
-<p><em>示例1：</em><br>输入: “Mr John Smith    “, 13<br>输出: “Mr%20John%20Smith”   </p>
+<p><em>example</em><br><strong>input</strong>: “abcabcbb”<br><strong>output</strong>: 3 (“abc”)</p>
 </blockquote>
 <blockquote>
-<p><em>示例2：</em><br>输入: “               “, 5<br>输出: “%20%20%20%20%20”</p>
+<p><em>example</em><br><strong>input</strong>: “pwwkew”<br><strong>output</strong>: 3 (“wke”)</p>
 </blockquote>
+<h5 id="My-Answer："><a href="#My-Answer：" class="headerlink" title="My Answer："></a>My Answer：</h5><p>1.Hash Map</p>
 <blockquote>
-<p><em>限制：</em><br>字符串长度在[0, 500000]范围内。</p>
+<p>Time complexity : O(n)<br>Space complexity : O(n)</p>
 </blockquote>
-<h5 id="我的解答："><a href="#我的解答：" class="headerlink" title="我的解答："></a>我的解答：</h5><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;string&#125; S</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;number&#125; length</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> &#123;string&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> replaceSpaces = <span class="function"><span class="keyword">function</span><span class="params">(S, length)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> S.substr(<span class="number">0</span>,length).replace(/\s/g,<span class="string">"%20"</span>)</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<h1 id="01-04-回文排列"><a href="#01-04-回文排列" class="headerlink" title="01.04. 回文排列"></a>01.04. 回文排列</h1><h5 id="题目：-1"><a href="#题目：-1" class="headerlink" title="题目："></a>题目：</h5><blockquote>
-<p><strong>给定一个字符串，编写一个函数判定其是否为某个回文串的排列之一。<br>回文串是指正反两个方向都一样的单词或短语。排列是指字母的重新排列。<br>回文串不一定是字典当中的单词。</strong></p>
-</blockquote>
-<blockquote>
-<p><em>示例1：</em><br>“tactcoa”<br>true（排列有”tacocat”、”atcocta”，等等 </p>
-</blockquote>
-<h5 id="我的解答：-1"><a href="#我的解答：-1" class="headerlink" title="我的解答："></a>我的解答：</h5><figure class="highlight zephir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;string&#125; s</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> &#123;boolean&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> canPermutePalindrome = <span class="function"><span class="keyword">function</span><span class="params">(s)</span> </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> obj = &#123;&#125;;</span><br><span class="line">  <span class="keyword">for</span>(<span class="keyword">let</span> i=<span class="number">0</span>; i&lt;s.length; i++)&#123;</span><br><span class="line">    <span class="keyword">let</span> <span class="keyword">char</span> = s[i];</span><br><span class="line">    <span class="keyword">if</span>(obj[<span class="keyword">char</span>])</span><br><span class="line">      delete obj[<span class="keyword">char</span>]</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">      obj[<span class="keyword">char</span>] = <span class="number">1</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> Object.keys(obj).length &lt;= <span class="number">1</span>;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p><img src="http://voyz-image.test.upcdn.net/2020/07/27/a49c17b7843a8c2e7565d38096f6a4d3.jpg" alt="6.cc528cb2.jpg"></p>
+<figure class="highlight sqf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * @param &#123;string&#125; s</span></span><br><span class="line"><span class="comment"> * @return &#123;number&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line">var lengthOfLongestSubstring = function(s) &#123;</span><br><span class="line">    <span class="keyword">if</span>(s.length == <span class="number">0</span>) return <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">    let <span class="variable">_start</span> = <span class="number">0</span>,<span class="variable">_end</span> = <span class="number">0</span>,<span class="variable">_res</span> = <span class="number">0</span>; </span><br><span class="line">    let <span class="variable">_map</span> = new Map();</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">while</span>(<span class="variable">_end</span> &lt; s.length)&#123;</span><br><span class="line">        <span class="keyword">if</span>(<span class="variable">_map</span>.has(s[<span class="variable">_end</span>]))&#123;</span><br><span class="line">            <span class="variable">_start</span> = Math.<span class="built_in">max</span>(<span class="variable">_start</span>,<span class="variable">_map</span>.get(s[<span class="variable">_end</span>])+<span class="number">1</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="variable">_res</span> = Math.<span class="built_in">max</span>(<span class="variable">_res</span>,<span class="variable">_end</span>-<span class="variable">_start</span>+<span class="number">1</span>);</span><br><span class="line">        <span class="variable">_map</span>.<span class="built_in">set</span>(s[<span class="variable">_end</span>],<span class="variable">_end</span>);</span><br><span class="line">        <span class="variable">_end</span> += <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    return <span class="variable">_res</span>;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p><img src="http://voyz-image.test.upcdn.net/2020/07/27/03fef6f16810caf17572a96d0190ef2c.png" alt="Snip20200727_1.png"></p>
+
     </article>
     <!-- license  -->
     
@@ -428,17 +429,12 @@ height:50vh;
     <ul class="post-paginator">
         <li class="next">
             
-                <div class="nextSlogan">Next Post</div>
-                <a href="/2020/05/06/ES6中的for…of循环/" title="ES6中的for…of循环">
-                    <div class="nextTitle">ES6中的for…of循环</div>
-                </a>
-            
         </li>
         <li class="previous">
             
                 <div class="prevSlogan">Previous Post</div>
-                <a href="/2020/04/29/LeetCode算法笔记-Day1/" title="LeetCode算法笔记--Day1">
-                    <div class="prevTitle">LeetCode算法笔记--Day1</div>
+                <a href="/2020/07/24/JS-Map对象的用法/" title="JS_Map对象的用法">
+                    <div class="prevTitle">JS_Map对象的用法</div>
                 </a>
             
         </li>
@@ -582,7 +578,7 @@ top:50vh;
         <div class="toc-catalog">
             <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
         </div>
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#LeetCode算法笔记–Day2"><span class="toc-number">1.</span> <span class="toc-text">LeetCode算法笔记–Day2</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#01-03-URL化"><span class="toc-number">2.</span> <span class="toc-text">01.03. URL化</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#题目："><span class="toc-number">2.0.0.0.1.</span> <span class="toc-text">题目：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#我的解答："><span class="toc-number">2.0.0.0.2.</span> <span class="toc-text">我的解答：</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#01-04-回文排列"><span class="toc-number">3.</span> <span class="toc-text">01.04. 回文排列</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#题目：-1"><span class="toc-number">3.0.0.0.1.</span> <span class="toc-text">题目：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#我的解答：-1"><span class="toc-number">3.0.0.0.2.</span> <span class="toc-text">我的解答：</span></a></li></ol></li></ol></li></ol></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#LeetCode算法笔记–Day31"><span class="toc-number">1.</span> <span class="toc-text">LeetCode算法笔记–Day31</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-Longest-Substring-Without-Repeating-Characters"><span class="toc-number">2.</span> <span class="toc-text">3. Longest Substring Without Repeating Characters</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#题目："><span class="toc-number">2.0.0.0.1.</span> <span class="toc-text">题目：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#My-Answer："><span class="toc-number">2.0.0.0.2.</span> <span class="toc-text">My Answer：</span></a></li></ol></li></ol></li></ol></li></ol></li></ol>
     </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>

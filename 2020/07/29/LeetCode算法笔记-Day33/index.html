@@ -22,7 +22,7 @@
     <meta name="description" content="">
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>LeetCode算法笔记--Day17 · Voyz&#39;s Studio</title>
+    <title>LeetCode算法笔记-Day33 · Voyz&#39;s Studio</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -217,7 +217,7 @@
                 <a href="/">Voyz&#39;s Studio.</a>
             </div>
             <div class="post-title">
-                <a href="#" class="post-name">LeetCode算法笔记--Day17</a>
+                <a href="#" class="post-name">LeetCode算法笔记-Day33</a>
             </div>
     </div>
     
@@ -247,7 +247,7 @@ height:50vh;
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            LeetCode算法笔记--Day17
+            LeetCode算法笔记-Day33
             <!-- 404 -->
             
         </h1>
@@ -268,16 +268,20 @@ height:50vh;
     
         <a class="post-tag" href="javascript:void(0);" data-tags="算法题">算法题</a>
     
+        <a class="post-tag" href="javascript:void(0);" data-tags="热题HOT100">热题HOT100</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="链表">链表</a>
+    
 </div>
                 
                 
                     <div class="post-intro-read">
-                        <span>字数统计: <span class="post-count word-count">271</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
+                        <span>字数统计: <span class="post-count word-count">254</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
                     <span class="post-intro-calander iconfont-archer">&#xe676;</span>
-                    <span class="post-intro-time">2020/06/01</span>
+                    <span class="post-intro-time">2020/07/29</span>
                     
                     <span id="busuanzi_container_page_pv" class="busuanzi-pv">
                         <span class="iconfont-archer">&#xe602;</span>
@@ -401,19 +405,14 @@ height:50vh;
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <h1 id="LeetCode算法笔记–Day17"><a href="#LeetCode算法笔记–Day17" class="headerlink" title="LeetCode算法笔记–Day17"></a>LeetCode算法笔记–Day17</h1><h1 id="4-寻找两个正序数组的中位数"><a href="#4-寻找两个正序数组的中位数" class="headerlink" title="4. 寻找两个正序数组的中位数"></a>4. 寻找两个正序数组的中位数</h1><h5 id="题目："><a href="#题目：" class="headerlink" title="题目："></a>题目：</h5><blockquote>
-<p><strong>给定两个大小为 m 和 n 的正序（从小到大）数组 nums1 和 nums2。</strong></p>
+        <h1 id="LeetCode算法笔记–Day33"><a href="#LeetCode算法笔记–Day33" class="headerlink" title="LeetCode算法笔记–Day33"></a>LeetCode算法笔记–Day33</h1><h1 id="19-Remove-Nth-Node-From-End-of-List"><a href="#19-Remove-Nth-Node-From-End-of-List" class="headerlink" title="19. Remove Nth Node From End of List"></a>19. Remove Nth Node From End of List</h1><h5 id="题目："><a href="#题目：" class="headerlink" title="题目："></a>题目：</h5><blockquote>
+<p><strong>Given a linked list, remove the n-th node from the end of list and return its head.</strong>  </p>
+<p><em>example</em><br><strong>input</strong>: 1-&gt;2-&gt;3-&gt;4-&gt;5, and n = 2.<br><strong>output</strong>: 1-&gt;2-&gt;3-&gt;5.</p>
 </blockquote>
-<blockquote>
-<p><strong>请你找出这两个正序数组的中位数，并且要求算法的时间复杂度为 O(log(m + n))。</strong></p>
-</blockquote>
-<blockquote>
-<p><strong>你可以假设 nums1 和 nums2 不会同时为空。</strong>  </p>
-</blockquote>
-<blockquote>
-<p><em>示例1：</em><br>输入: nums1 = [1, 2],nums2 = [3, 4]<br>输出：2.5</p>
-</blockquote>
-<h5 id="我的解答："><a href="#我的解答：" class="headerlink" title="我的解答："></a>我的解答：</h5><figure class="highlight sqf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * @param &#123;number[]&#125; nums1</span></span><br><span class="line"><span class="comment"> * @param &#123;number[]&#125; nums2</span></span><br><span class="line"><span class="comment"> * @return &#123;number&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line">var findMedianSortedArrays = function(nums1, nums2) &#123;</span><br><span class="line">    let <span class="variable">_len1</span> = nums1.length;</span><br><span class="line">    let <span class="variable">_len2</span> = nums2.length;</span><br><span class="line">    let <span class="variable">_combineArr</span> = [];</span><br><span class="line">    let <span class="variable">_p1</span> = <span class="number">0</span>;</span><br><span class="line">    let <span class="variable">_p2</span> = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span>(<span class="variable">_len1</span> == <span class="number">0</span> || <span class="variable">_len2</span> == <span class="number">0</span>)&#123;</span><br><span class="line">        return <span class="variable">_len1</span> == <span class="number">0</span> ? getMedianNum(nums2) : getMedianNum(nums1); </span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="comment">// console.log(_p1 == _len1,_p2 == _len2)</span></span><br><span class="line">        <span class="comment">// 合并数组</span></span><br><span class="line">        <span class="keyword">while</span>(<span class="variable">_p1</span> &lt; <span class="variable">_len1</span> || <span class="variable">_p2</span> &lt; <span class="variable">_len2</span>)&#123;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span>(<span class="built_in">typeof</span> nums1[<span class="variable">_p1</span>] == <span class="string">"undefined"</span>)&#123;</span><br><span class="line">                <span class="variable">_combineArr</span> = <span class="variable">_combineArr</span>.concat(nums2.splice(<span class="variable">_p2</span>))</span><br><span class="line">                return getMedianNum(<span class="variable">_combineArr</span>)</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span>(<span class="built_in">typeof</span> nums2[<span class="variable">_p2</span>] == <span class="string">"undefined"</span>)&#123;</span><br><span class="line">                <span class="variable">_combineArr</span> = <span class="variable">_combineArr</span>.concat(nums1.splice(<span class="variable">_p1</span>))</span><br><span class="line">                return getMedianNum(<span class="variable">_combineArr</span>)</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span>&#123;</span><br><span class="line">                <span class="keyword">if</span>(nums1[<span class="variable">_p1</span>] &lt; nums2[<span class="variable">_p2</span>])&#123;</span><br><span class="line">                    <span class="variable">_combineArr</span>.push(nums1[<span class="variable">_p1</span>]);</span><br><span class="line">                    <span class="variable">_p1</span> += <span class="number">1</span>;</span><br><span class="line">                &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                    <span class="variable">_combineArr</span>.push(nums2[<span class="variable">_p2</span>]);</span><br><span class="line">                    <span class="variable">_p2</span> += <span class="number">1</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            </span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">var getMedianNum = function(nums)&#123;</span><br><span class="line">    let <span class="variable">_len</span> = nums.length;</span><br><span class="line">    return <span class="variable">_len</span>%<span class="number">2</span>==<span class="number">0</span> ? ((nums[<span class="variable">_len</span>/<span class="number">2</span>-<span class="number">1</span>]+nums[<span class="variable">_len</span>/<span class="number">2</span>])/<span class="number">2</span>).<span class="built_in">toFixed</span>(<span class="number">1</span>) : nums[Math.<span class="built_in">floor</span>(<span class="variable">_len</span>/<span class="number">2</span>)].<span class="built_in">toFixed</span>(<span class="number">1</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="My-Answer："><a href="#My-Answer：" class="headerlink" title="My Answer："></a>My Answer：</h5><p>双指针<br>时间复杂度：O(n)<br>空间复杂度：O(1)  </p>
+<p>设快慢两个指针<br>1、快指针先移n个节点<br>2、快、慢指针一起移动，使得两指针之间一直保持n个节点<br>3、当指针到达链表底了，将慢指针的指针指向它的下下一个指针<br>4、慢指针的下一个指针即为要删除的节点边界<br>最后返回哨兵节点的next即为所求。</p>
+<figure class="highlight vbscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line"> * Definition <span class="keyword">for</span> singly-linked list.</span><br><span class="line"> * <span class="keyword">function</span> ListNode(val) &#123;</span><br><span class="line"> *     this.val = val;</span><br><span class="line"> *     this.<span class="keyword">next</span> = <span class="literal">null</span>;</span><br><span class="line"> * &#125;</span><br><span class="line"> */</span><br><span class="line">/**</span><br><span class="line"> * @param &#123;ListNode&#125; head</span><br><span class="line"> * @param &#123;number&#125; n</span><br><span class="line"> * @return &#123;ListNode&#125;</span><br><span class="line"> */</span><br><span class="line">var removeNthFromEnd = <span class="keyword">function</span>(head, n) &#123;</span><br><span class="line">    <span class="keyword">let</span> preHead = <span class="keyword">new</span> ListNode(<span class="number">-1</span>);</span><br><span class="line">    preHead.<span class="keyword">next</span> = head;</span><br><span class="line">    <span class="keyword">let</span> <span class="built_in">left</span> = preHead;</span><br><span class="line">    <span class="keyword">let</span> <span class="built_in">right</span> = preHead;</span><br><span class="line">    <span class="keyword">while</span>(n != <span class="number">0</span>)&#123;</span><br><span class="line">        <span class="built_in">right</span> = <span class="built_in">right</span>.<span class="keyword">next</span>;</span><br><span class="line">        n--;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">while</span>(<span class="built_in">right</span>.<span class="keyword">next</span> != <span class="literal">null</span>)&#123;</span><br><span class="line">        <span class="built_in">right</span> = <span class="built_in">right</span>.<span class="keyword">next</span>;</span><br><span class="line">        <span class="built_in">left</span> = <span class="built_in">left</span>.<span class="keyword">next</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">left</span>.<span class="keyword">next</span> = <span class="built_in">left</span>.<span class="keyword">next</span>.<span class="keyword">next</span>;</span><br><span class="line">    return preHead.<span class="keyword">next</span>;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p><img src="http://voyz-image.test.upcdn.net/2020/07/29/c0ac1d953eea8be9a2d7e37009855cf2.png" alt="Snip20200729_1.png"></p>
 
     </article>
     <!-- license  -->
@@ -422,17 +421,12 @@ height:50vh;
     <ul class="post-paginator">
         <li class="next">
             
-                <div class="nextSlogan">Next Post</div>
-                <a href="/2020/06/02/LeetCode算法笔记-Day18/" title="LeetCode算法笔记--Day18">
-                    <div class="nextTitle">LeetCode算法笔记--Day18</div>
-                </a>
-            
         </li>
         <li class="previous">
             
                 <div class="prevSlogan">Previous Post</div>
-                <a href="/2020/05/28/LeetCode算法笔记-Day16/" title="LeetCode算法笔记--Day16">
-                    <div class="prevTitle">LeetCode算法笔记--Day16</div>
+                <a href="/2020/07/28/LeetCode算法笔记-Day32/" title="LeetCode算法笔记-Day32">
+                    <div class="prevTitle">LeetCode算法笔记-Day32</div>
                 </a>
             
         </li>
@@ -576,7 +570,7 @@ top:50vh;
         <div class="toc-catalog">
             <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
         </div>
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#LeetCode算法笔记–Day17"><span class="toc-number">1.</span> <span class="toc-text">LeetCode算法笔记–Day17</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-寻找两个正序数组的中位数"><span class="toc-number">2.</span> <span class="toc-text">4. 寻找两个正序数组的中位数</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#题目："><span class="toc-number">2.0.0.0.1.</span> <span class="toc-text">题目：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#我的解答："><span class="toc-number">2.0.0.0.2.</span> <span class="toc-text">我的解答：</span></a></li></ol></li></ol></li></ol></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#LeetCode算法笔记–Day33"><span class="toc-number">1.</span> <span class="toc-text">LeetCode算法笔记–Day33</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#19-Remove-Nth-Node-From-End-of-List"><span class="toc-number">2.</span> <span class="toc-text">19. Remove Nth Node From End of List</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#题目："><span class="toc-number">2.0.0.0.1.</span> <span class="toc-text">题目：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#My-Answer："><span class="toc-number">2.0.0.0.2.</span> <span class="toc-text">My Answer：</span></a></li></ol></li></ol></li></ol></li></ol></li></ol>
     </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>

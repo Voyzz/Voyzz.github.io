@@ -22,7 +22,7 @@
     <meta name="description" content="">
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>LeetCode算法笔记-Day31 · Voyz&#39;s Studio</title>
+    <title>LeetCode算法笔记-Day36 · Voyz&#39;s Studio</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -217,7 +217,7 @@
                 <a href="/">Voyz&#39;s Studio.</a>
             </div>
             <div class="post-title">
-                <a href="#" class="post-name">LeetCode算法笔记-Day31</a>
+                <a href="#" class="post-name">LeetCode算法笔记-Day36</a>
             </div>
     </div>
     
@@ -247,7 +247,7 @@ height:50vh;
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            LeetCode算法笔记-Day31
+            LeetCode算法笔记-Day36
             <!-- 404 -->
             
         </h1>
@@ -270,18 +270,18 @@ height:50vh;
     
         <a class="post-tag" href="javascript:void(0);" data-tags="热题HOT100">热题HOT100</a>
     
-        <a class="post-tag" href="javascript:void(0);" data-tags="滑动窗口">滑动窗口</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags="回溯算法">回溯算法</a>
     
 </div>
                 
                 
                     <div class="post-intro-read">
-                        <span>字数统计: <span class="post-count word-count">121</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
+                        <span>字数统计: <span class="post-count word-count">388</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
                     <span class="post-intro-calander iconfont-archer">&#xe676;</span>
-                    <span class="post-intro-time">2020/07/27</span>
+                    <span class="post-intro-time">2020/08/05</span>
                     
                     <span id="busuanzi_container_page_pv" class="busuanzi-pv">
                         <span class="iconfont-archer">&#xe602;</span>
@@ -405,23 +405,32 @@ height:50vh;
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <h1 id="LeetCode算法笔记–Day31"><a href="#LeetCode算法笔记–Day31" class="headerlink" title="LeetCode算法笔记–Day31"></a>LeetCode算法笔记–Day31</h1><h1 id="3-Longest-Substring-Without-Repeating-Characters"><a href="#3-Longest-Substring-Without-Repeating-Characters" class="headerlink" title="3. Longest Substring Without Repeating Characters"></a>3. Longest Substring Without Repeating Characters</h1><h5 id="题目："><a href="#题目：" class="headerlink" title="题目："></a>题目：</h5><blockquote>
-<p><strong>Given a string, find the length of the longest substring without repeating characters.</strong>      </p>
+        <h1 id="LeetCode算法笔记–Day36"><a href="#LeetCode算法笔记–Day36" class="headerlink" title="LeetCode算法笔记–Day36"></a>LeetCode算法笔记–Day36</h1><h1 id="31-Next-Permutation"><a href="#31-Next-Permutation" class="headerlink" title="31. Next Permutation"></a>31. Next Permutation</h1><h2 id="题目："><a href="#题目：" class="headerlink" title="题目："></a>题目：</h2><blockquote>
+<p><strong>Implement next permutation, which rearranges numbers into the lexicographically next greater permutation of numbers.</strong></p>
 </blockquote>
 <blockquote>
-<p><em>example</em><br><strong>input</strong>: “abcabcbb”<br><strong>output</strong>: 3 (“abc”)</p>
+<p><strong>If such arrangement is not possible, it must rearrange it as the lowest possible order (ie, sorted in ascending order).</strong></p>
 </blockquote>
 <blockquote>
-<p><em>example</em><br><strong>input</strong>: “pwwkew”<br><strong>output</strong>: 3 (“wke”)</p>
+<p><strong>The replacement must be in-place and use only constant extra memory.</strong></p>
 </blockquote>
-<h5 id="My-Answer："><a href="#My-Answer：" class="headerlink" title="My Answer："></a>My Answer：</h5><p>1.Hash Map</p>
 <blockquote>
-<p>Time complexity : O(n)<br>Space complexity : O(n)</p>
+<p><strong>Here are some examples. Inputs are in the left-hand column and its corresponding outputs are in the right-hand column.</strong>  </p>
 </blockquote>
-<p><img src="http://voyz-image.test.upcdn.net/2020/07/27/a49c17b7843a8c2e7565d38096f6a4d3.jpg" alt="6.cc528cb2.jpg"></p>
-<figure class="highlight sqf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * @param &#123;string&#125; s</span></span><br><span class="line"><span class="comment"> * @return &#123;number&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line">var lengthOfLongestSubstring = function(s) &#123;</span><br><span class="line">    <span class="keyword">if</span>(s.length == <span class="number">0</span>) return <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">    let <span class="variable">_start</span> = <span class="number">0</span>,<span class="variable">_end</span> = <span class="number">0</span>,<span class="variable">_res</span> = <span class="number">0</span>; </span><br><span class="line">    let <span class="variable">_map</span> = new Map();</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">while</span>(<span class="variable">_end</span> &lt; s.length)&#123;</span><br><span class="line">        <span class="keyword">if</span>(<span class="variable">_map</span>.has(s[<span class="variable">_end</span>]))&#123;</span><br><span class="line">            <span class="variable">_start</span> = Math.<span class="built_in">max</span>(<span class="variable">_start</span>,<span class="variable">_map</span>.get(s[<span class="variable">_end</span>])+<span class="number">1</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="variable">_res</span> = Math.<span class="built_in">max</span>(<span class="variable">_res</span>,<span class="variable">_end</span>-<span class="variable">_start</span>+<span class="number">1</span>);</span><br><span class="line">        <span class="variable">_map</span>.<span class="built_in">set</span>(s[<span class="variable">_end</span>],<span class="variable">_end</span>);</span><br><span class="line">        <span class="variable">_end</span> += <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    return <span class="variable">_res</span>;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<p><img src="http://voyz-image.test.upcdn.net/2020/07/27/03fef6f16810caf17572a96d0190ef2c.png" alt="Snip20200727_1.png"></p>
-
+<h2 id="My-Answer："><a href="#My-Answer：" class="headerlink" title="My Answer："></a>My Answer：</h2><h3 id="方法一：扫描"><a href="#方法一：扫描" class="headerlink" title="方法一：扫描"></a>方法一：扫描</h3><p><img src="http://voyz-image.test.upcdn.net/2020/08/05/239f877f76e4a2a521565cd36010b5bf.png" alt="e56a66ed318d1761cd8c8f9d1521f82a30c71ecc84f551912b90d8fe254c8f3d-image.png"></p>
+<ul>
+<li><p>1.从后向前查找第一个相邻升序的元素对 (i,j)，满足 A[i] &lt; A[j]。此时 [j,end) 必然是降序.</p>
+</li>
+<li><p>2.在 [j,end) 从后向前查找第一个满足 A[i] &lt; A[k] 的 k。A[i]、A[k] 分别就是上文所说的「小数」、「大数」.</p>
+</li>
+<li><p>3.将 A[i] 与 A[k] 交换.</p>
+</li>
+<li><p>4.可以断定这时 [j,end) 必然是降序，逆置 [j,end)，使其升序.</p>
+</li>
+<li><p>5.如果在步骤 1 找不到符合的相邻元素对，说明当前 [begin,end) 为一个降序顺序，则直接跳到步骤 4</p>
+</li>
+</ul>
+<figure class="highlight sqf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * @param &#123;number[]&#125; nums</span></span><br><span class="line"><span class="comment"> * @return &#123;void&#125; Do not return anything, modify nums in-place instead.</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line">var nextPermutation = function(nums) &#123;</span><br><span class="line">    let i=-<span class="number">1</span>,j=-<span class="number">1</span>;</span><br><span class="line">    <span class="comment">// 从后向前获取第一组相邻升序的坐标</span></span><br><span class="line">    <span class="keyword">for</span>(let <span class="variable">_p</span> = nums.length-<span class="number">1</span>;<span class="variable">_p</span>&gt;=<span class="number">0</span>;<span class="variable">_p</span>--)&#123;</span><br><span class="line">        <span class="keyword">if</span>(nums[<span class="variable">_p</span>]&gt;nums[<span class="variable">_p</span>-<span class="number">1</span>])&#123;</span><br><span class="line">            i = <span class="variable">_p</span>-<span class="number">1</span>;</span><br><span class="line">            j = <span class="variable">_p</span>;</span><br><span class="line">            break;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 最大排列则返回最小排列</span></span><br><span class="line">    <span class="keyword">if</span>(i&lt;<span class="number">0</span>) return nums.<span class="built_in">reverse</span>();</span><br><span class="line">    <span class="comment">// 从后向前获取第一个大于nums[i]的值与之交换</span></span><br><span class="line">    <span class="keyword">for</span>(let <span class="variable">_p</span> = nums.length-<span class="number">1</span>;<span class="variable">_p</span>&gt;=j;<span class="variable">_p</span>--)&#123;</span><br><span class="line">        <span class="keyword">if</span>(nums[<span class="variable">_p</span>]&gt;nums[i])&#123;</span><br><span class="line">            nums[<span class="variable">_p</span>] = [nums[i],nums[i]=nums[<span class="variable">_p</span>]][<span class="number">0</span>];</span><br><span class="line">            break;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// j之后的降序变升序</span></span><br><span class="line">    return nums.slice(<span class="number">0</span>,j).concat(nums.slice(j).<span class="built_in">reverse</span>())</span><br><span class="line"></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
     </article>
     <!-- license  -->
     
@@ -429,17 +438,12 @@ height:50vh;
     <ul class="post-paginator">
         <li class="next">
             
-                <div class="nextSlogan">Next Post</div>
-                <a href="/2020/07/28/LeetCode算法笔记-Day32/" title="LeetCode算法笔记-Day32">
-                    <div class="nextTitle">LeetCode算法笔记-Day32</div>
-                </a>
-            
         </li>
         <li class="previous">
             
                 <div class="prevSlogan">Previous Post</div>
-                <a href="/2020/07/24/JS-Map对象的用法/" title="JS_Map对象的用法">
-                    <div class="prevTitle">JS_Map对象的用法</div>
+                <a href="/2020/08/04/LeetCode算法笔记-Day35/" title="LeetCode算法笔记-Day35">
+                    <div class="prevTitle">LeetCode算法笔记-Day35</div>
                 </a>
             
         </li>
@@ -583,7 +587,7 @@ top:50vh;
         <div class="toc-catalog">
             <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
         </div>
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#LeetCode算法笔记–Day31"><span class="toc-number">1.</span> <span class="toc-text">LeetCode算法笔记–Day31</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-Longest-Substring-Without-Repeating-Characters"><span class="toc-number">2.</span> <span class="toc-text">3. Longest Substring Without Repeating Characters</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#题目："><span class="toc-number">2.0.0.0.1.</span> <span class="toc-text">题目：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#My-Answer："><span class="toc-number">2.0.0.0.2.</span> <span class="toc-text">My Answer：</span></a></li></ol></li></ol></li></ol></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#LeetCode算法笔记–Day36"><span class="toc-number">1.</span> <span class="toc-text">LeetCode算法笔记–Day36</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#31-Next-Permutation"><span class="toc-number">2.</span> <span class="toc-text">31. Next Permutation</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#题目："><span class="toc-number">2.1.</span> <span class="toc-text">题目：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#My-Answer："><span class="toc-number">2.2.</span> <span class="toc-text">My Answer：</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#方法一：扫描"><span class="toc-number">2.2.1.</span> <span class="toc-text">方法一：扫描</span></a></li></ol></li></ol></li></ol>
     </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>

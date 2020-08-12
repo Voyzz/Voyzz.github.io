@@ -22,7 +22,7 @@
     <meta name="description" content="">
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>弹性布局相关参数 · Voyz&#39;s Studio</title>
+    <title>LeetCode算法笔记-Day39 · Voyz&#39;s Studio</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -217,7 +217,7 @@
                 <a href="/">Voyz&#39;s Studio.</a>
             </div>
             <div class="post-title">
-                <a href="#" class="post-name">弹性布局相关参数</a>
+                <a href="#" class="post-name">LeetCode算法笔记-Day39</a>
             </div>
     </div>
     
@@ -247,7 +247,7 @@ height:50vh;
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            弹性布局相关参数
+            LeetCode算法笔记-Day39
             <!-- 404 -->
             
         </h1>
@@ -266,18 +266,22 @@ height:50vh;
                 
                     <div class="post-intro-tags">
     
-        <a class="post-tag" href="javascript:void(0);" data-tags="技术贴">技术贴</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags="算法题">算法题</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="热题HOT100">热题HOT100</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="回溯算法">回溯算法</a>
     
 </div>
                 
                 
                     <div class="post-intro-read">
-                        <span>字数统计: <span class="post-count word-count">343</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
+                        <span>字数统计: <span class="post-count word-count">253</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
                     <span class="post-intro-calander iconfont-archer">&#xe676;</span>
-                    <span class="post-intro-time">2019/04/07</span>
+                    <span class="post-intro-time">2020/08/12</span>
                     
                     <span id="busuanzi_container_page_pv" class="busuanzi-pv">
                         <span class="iconfont-archer">&#xe602;</span>
@@ -401,33 +405,17 @@ height:50vh;
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <h2 id="块级元素"><a href="#块级元素" class="headerlink" title="块级元素"></a>块级元素</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span>&#123;    <span class="attribute">display</span>: flex;  </span><br><span class="line">  <span class="attribute">display</span>: -webkit-flex; <span class="comment">/* Safari */</span>  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="内联元素"><a href="#内联元素" class="headerlink" title="内联元素"></a>内联元素</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span>&#123;  <span class="attribute">display</span>: inline-flex;&#125;</span><br></pre></td></tr></table></figure>
-<h1 id="容器属性"><a href="#容器属性" class="headerlink" title="容器属性"></a>容器属性</h1><h2 id="flex-direction"><a href="#flex-direction" class="headerlink" title="flex-direction"></a>flex-direction</h2><p>主轴的方向（即项目的排列方向）</p>
-<figure class="highlight excel"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">row</span> | <span class="built_in">row</span>-reverse | <span class="built_in">column</span> | <span class="built_in">column</span>-reverse</span><br></pre></td></tr></table></figure>
-<h2 id="flex-wrap"><a href="#flex-wrap" class="headerlink" title="flex-wrap"></a>flex-wrap</h2><p>一条轴线排不下，如何换行</p>
-<figure class="highlight gherkin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">nowrap |<span class="string"> wrap </span>|<span class="string"> wrap-reverse</span></span><br><span class="line"><span class="string">不换行  </span>|<span class="string"> 换行  </span>|<span class="string">  倒序换行</span></span><br></pre></td></tr></table></figure>
-<h2 id="flex-flow"><a href="#flex-flow" class="headerlink" title="flex-flow"></a>flex-flow</h2><p>flex-direction属性和flex-wrap属性的简写形式</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">flex-direction</span>&gt;</span> || <span class="tag">&lt;<span class="name">flex-wrap</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<h2 id="justify-content"><a href="#justify-content" class="headerlink" title="justify-content"></a>justify-content</h2><p>项目在主轴上的对齐方式</p>
-<figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">flex-start | flex-<span class="keyword">end</span> | center | <span class="literal">space</span>-<span class="keyword">between</span> | <span class="literal">space</span>-<span class="keyword">around</span></span><br></pre></td></tr></table></figure>
-<h2 id="align-items"><a href="#align-items" class="headerlink" title="align-items"></a>align-items</h2><p>项目在交叉轴上如何对齐</p>
-<figure class="highlight coq"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">flex-start | <span class="type">flex</span>-<span class="keyword">end</span> | <span class="type">center</span> | <span class="type">baseline</span> | <span class="type">stretch</span></span><br></pre></td></tr></table></figure>
-<h2 id="align-content"><a href="#align-content" class="headerlink" title="align-content"></a>align-content</h2><p>定义了多根轴线的对齐方式<br>如果项目只有一根轴线，该属性不起作用</p>
-<figure class="highlight coq"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">flex-start | <span class="type">flex</span>-<span class="keyword">end</span> | <span class="type">center</span> | <span class="type">space</span>-between | <span class="type">space</span>-around | <span class="type">stretch</span></span><br></pre></td></tr></table></figure>
-<h1 id="项目属性"><a href="#项目属性" class="headerlink" title="项目属性"></a>项目属性</h1><h2 id="align-self"><a href="#align-self" class="headerlink" title="align-self"></a>align-self</h2><p>单个项目有与其他项目不一样的对齐方式，可覆盖align-items属性。默认值为auto</p>
-<figure class="highlight coq"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">align-self: <span class="built_in">auto</span> | <span class="type">flex</span>-start | <span class="type">flex</span>-<span class="keyword">end</span> | <span class="type">center</span> | <span class="type">baseline</span> | <span class="type">stretch</span></span><br></pre></td></tr></table></figure>
-<h2 id="order"><a href="#order" class="headerlink" title="order"></a>order</h2><p>项目的排列顺序。数值越小，排列越靠前，默认为0。</p>
-<figure class="highlight dts"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">order:</span> <span class="params">&lt;integer&gt;</span></span><br></pre></td></tr></table></figure>
-<h2 id="flex-grow"><a href="#flex-grow" class="headerlink" title="flex-grow"></a>flex-grow</h2><p>项目的放大比例，默认为0</p>
-<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">flex-grow</span>: &lt;number&gt;; <span class="comment">/* default 0 */</span></span><br></pre></td></tr></table></figure>
-<h2 id="flex-shrink"><a href="#flex-shrink" class="headerlink" title="flex-shrink"></a>flex-shrink</h2><p>项目的缩小比例，默认为1</p>
-<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">flex-shrink</span>: &lt;number&gt;; <span class="comment">/* default 1 */</span></span><br></pre></td></tr></table></figure>
-<h2 id="flex-basis"><a href="#flex-basis" class="headerlink" title="flex-basis"></a>flex-basis</h2><p>项目占据的主轴空间</p>
-<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">flex-basis</span>: &lt;length&gt; | auto; <span class="comment">/* default auto */</span></span><br></pre></td></tr></table></figure>
-<h2 id="flex"><a href="#flex" class="headerlink" title="flex"></a>flex</h2><p>flex-grow, flex-shrink 和 flex-basis的简写，默认值为0 1 auto</p>
-<figure class="highlight sml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">flex: none | [ &lt;<span class="symbol">'flex</span>-grow'&gt; &lt;<span class="symbol">'flex</span>-shrink'&gt;? || &lt;<span class="symbol">'flex</span>-basis'&gt; ]</span><br></pre></td></tr></table></figure>
-
+        <h1 id="LeetCode算法笔记–Day39"><a href="#LeetCode算法笔记–Day39" class="headerlink" title="LeetCode算法笔记–Day39"></a>LeetCode算法笔记–Day39</h1><h1 id="39-Combination-Sum"><a href="#39-Combination-Sum" class="headerlink" title="39. Combination Sum"></a>39. Combination Sum</h1><h2 id="题目："><a href="#题目：" class="headerlink" title="题目："></a>题目：</h2><blockquote>
+<p><strong>Given a set of candidate numbers (candidates) (without duplicates) and a target number (target), find all unique combinations in candidates where the candidate numbers sums to target.</strong></p>
+</blockquote>
+<blockquote>
+<p><strong>The same repeated number may be chosen from candidates unlimited number of times.</strong></p>
+</blockquote>
+<blockquote>
+<p><em>example</em><br><strong>input</strong>: candidates = [2,3,6,7], target = 7<br><strong>output</strong>: [<br>  [7],<br>  [2,2,3]<br>]</p>
+</blockquote>
+<h2 id="Analyze："><a href="#Analyze：" class="headerlink" title="Analyze："></a>Analyze：</h2><h3 id="方法一：回溯递归"><a href="#方法一：回溯递归" class="headerlink" title="方法一：回溯递归"></a>方法一：回溯递归</h3><p><img src="http://voyz-image.test.upcdn.net/2020/08/12/1d645e9374a0128ad55e05d9ca8243ba.png" alt="fe32ae9cee9ec8e2545d038d80a8da70d809eed01c153c6f0076801baab5010d-39-1.png"></p>
+<h2 id="My-Answer："><a href="#My-Answer：" class="headerlink" title="My Answer："></a>My Answer：</h2><figure class="highlight zephir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;number[]&#125; candidates</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;number&#125; target</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> &#123;number[][]&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> combinationSum = <span class="function"><span class="keyword">function</span> <span class="params">(candidates, target)</span> </span>&#123;</span><br><span class="line">  <span class="comment">// 先排序, 方便去重</span></span><br><span class="line">  candidates.sort();</span><br><span class="line">  <span class="keyword">const</span> path = [],</span><br><span class="line">    ans = []</span><br><span class="line">  backtrack(target, path, candidates, ans)</span><br><span class="line">  <span class="keyword">return</span> ans</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 实质上就是树的遍历, target是当前节点要达到的目标值, path是当前的路径</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">backtrack</span><span class="params">(target, path, candidates, ans)</span> </span>&#123;</span><br><span class="line">  <span class="comment">// target &lt; 0 这条路结束</span></span><br><span class="line">  <span class="keyword">if</span> (target &lt; <span class="number">0</span>) <span class="keyword">return</span></span><br><span class="line">  <span class="comment">// target = 0 找到一个方案, 生成快照放入ans中</span></span><br><span class="line">  <span class="keyword">if</span> (target === <span class="number">0</span>) &#123;</span><br><span class="line">    ans.push([...path])</span><br><span class="line">    <span class="keyword">return</span></span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">// 对每个备选节点进行回溯操作</span></span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; candidates.length; i++) &#123;</span><br><span class="line">    <span class="keyword">const</span> val = candidates[i]</span><br><span class="line">    path.push(val)</span><br><span class="line">    <span class="comment">// 由于排过序了, 所以备选路径只需要当前节点和之后的节点</span></span><br><span class="line">    backtrack(target - val, path, candidates.slice(i), ans)</span><br><span class="line">    path.pop()</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
     </article>
     <!-- license  -->
     
@@ -435,17 +423,12 @@ height:50vh;
     <ul class="post-paginator">
         <li class="next">
             
-                <div class="nextSlogan">Next Post</div>
-                <a href="/2019/04/08/近期的一些小计划/" title="近期的一些小计划">
-                    <div class="nextTitle">近期的一些小计划</div>
-                </a>
-            
         </li>
         <li class="previous">
             
                 <div class="prevSlogan">Previous Post</div>
-                <a href="/2019/04/04/JavaScript的URI编码与解码/" title="JS的URL参数编码与解码">
-                    <div class="prevTitle">JS的URL参数编码与解码</div>
+                <a href="/2020/08/11/LeetCode算法笔记-Day38/" title="LeetCode算法笔记-Day38">
+                    <div class="prevTitle">LeetCode算法笔记-Day38</div>
                 </a>
             
         </li>
@@ -589,7 +572,7 @@ top:50vh;
         <div class="toc-catalog">
             <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
         </div>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#块级元素"><span class="toc-number">1.</span> <span class="toc-text">块级元素</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#内联元素"><span class="toc-number">2.</span> <span class="toc-text">内联元素</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#容器属性"><span class="toc-number"></span> <span class="toc-text">容器属性</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#flex-direction"><span class="toc-number">1.</span> <span class="toc-text">flex-direction</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#flex-wrap"><span class="toc-number">2.</span> <span class="toc-text">flex-wrap</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#flex-flow"><span class="toc-number">3.</span> <span class="toc-text">flex-flow</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#justify-content"><span class="toc-number">4.</span> <span class="toc-text">justify-content</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#align-items"><span class="toc-number">5.</span> <span class="toc-text">align-items</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#align-content"><span class="toc-number">6.</span> <span class="toc-text">align-content</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#项目属性"><span class="toc-number"></span> <span class="toc-text">项目属性</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#align-self"><span class="toc-number">1.</span> <span class="toc-text">align-self</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#order"><span class="toc-number">2.</span> <span class="toc-text">order</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#flex-grow"><span class="toc-number">3.</span> <span class="toc-text">flex-grow</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#flex-shrink"><span class="toc-number">4.</span> <span class="toc-text">flex-shrink</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#flex-basis"><span class="toc-number">5.</span> <span class="toc-text">flex-basis</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#flex"><span class="toc-number">6.</span> <span class="toc-text">flex</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#LeetCode算法笔记–Day39"><span class="toc-number">1.</span> <span class="toc-text">LeetCode算法笔记–Day39</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#39-Combination-Sum"><span class="toc-number">2.</span> <span class="toc-text">39. Combination Sum</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#题目："><span class="toc-number">2.1.</span> <span class="toc-text">题目：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Analyze："><span class="toc-number">2.2.</span> <span class="toc-text">Analyze：</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#方法一：回溯递归"><span class="toc-number">2.2.1.</span> <span class="toc-text">方法一：回溯递归</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#My-Answer："><span class="toc-number">2.3.</span> <span class="toc-text">My Answer：</span></a></li></ol></li></ol>
     </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>

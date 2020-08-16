@@ -22,7 +22,7 @@
     <meta name="description" content="">
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>小程序接入微信支付前端代码 · Voyz&#39;s Studio</title>
+    <title>Voyz&#39;s Studio</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -203,23 +203,12 @@
 </head>
 
     
-        <body class="post-body">
-    
     
 <header class="header">
 
     <div class="read-progress"></div>
     <div class="header-sidebar-menu">&#xe775;</div>
     <!-- post页的toggle banner  -->
-    
-    <div class="banner">
-            <div class="blog-title">
-                <a href="/">Voyz&#39;s Studio.</a>
-            </div>
-            <div class="post-title">
-                <a href="#" class="post-name">小程序接入微信支付前端代码</a>
-            </div>
-    </div>
     
     <a class="home-link" href="/">Voyz's Studio.</a>
 </header>
@@ -231,74 +220,24 @@
 
 
 
-
-height:50vh;
 ">
     
     <!-- 主页  -->
-    
-    
-    <!-- 404页  -->
             
     <div class="site-intro-placeholder"></div>
-    <div class="site-intro-img" style="background-image: url(/intro/post-bg.jpg)"></div>
+    <div class="site-intro-img" style="background-image: url(/)"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
-            
-            小程序接入微信支付前端代码
-            <!-- 404 -->
             
         </h1>
         <!-- 副标题 -->
         <p class="intro-subtitle">
             <!-- 主页副标题  -->
             
-            
-            <!-- 404 -->
-            
         </p>
         <!-- 文章页meta -->
-        
-            <div class="post-intros">
-                <!-- 文章页标签  -->
-                
-                    <div class="post-intro-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="小程序">小程序</a>
-    
-</div>
-                
-                
-                    <div class="post-intro-read">
-                        <span>字数统计: <span class="post-count word-count">573</span>阅读时长: <span class="post-count reading-time">3 min</span></span>
-                    </div>
-                
-                <div class="post-intro-meta">
-                    <span class="post-intro-calander iconfont-archer">&#xe676;</span>
-                    <span class="post-intro-time">2019/01/01</span>
-                    
-                    <span id="busuanzi_container_page_pv" class="busuanzi-pv">
-                        <span class="iconfont-archer">&#xe602;</span>
-                        <span id="busuanzi_value_page_pv"></span>
-                    </span>
-                    
-                    <span class="shareWrapper">
-                        <span class="iconfont-archer shareIcon">&#xe71d;</span>
-                        <span class="shareText">Share</span>
-                        <ul class="shareList">
-                            <li class="iconfont-archer share-qr" data-type="qr">&#xe75b;
-                                <div class="share-qrcode"></div>
-                            </li>
-                            <li class="iconfont-archer" data-type="weibo">&#xe619;</li>
-                            <li class="iconfont-archer" data-type="qzone">&#xe62e;</li>
-                            <li class="iconfont-archer" data-type="twitter">&#xe634;</li>
-                            <li class="iconfont-archer" data-type="facebook">&#xe67a;</li>
-                        </ul>
-                    </span>
-                </div>
-            </div>
         
     </div>
 </div>
@@ -399,60 +338,43 @@ height:50vh;
 </script>        
         <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
         <div class="container container-unloaded">
-            <main class="main post-page">
-    <article class="article-entry">
-        <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 去支付</span></span><br><span class="line">  toPay() &#123;</span><br><span class="line">    <span class="keyword">var</span> that = <span class="keyword">this</span></span><br><span class="line">    <span class="keyword">if</span> (that.data.hasAddress) &#123;</span><br><span class="line">      <span class="comment">// 地址信息</span></span><br><span class="line">      <span class="built_in">console</span>.log(that.data.address)</span><br><span class="line">      <span class="comment">// 总价信息</span></span><br><span class="line">      <span class="built_in">console</span>.log(that.data)</span><br><span class="line">      <span class="comment">// 支付后订单信息</span></span><br><span class="line">      that.getListAfterPay(that)</span><br><span class="line"></span><br><span class="line">      <span class="comment">// 获取prepay_id，所需的签名字符串</span></span><br><span class="line">      <span class="keyword">var</span> p = <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve,reject</span>)=&gt;</span>&#123;</span><br><span class="line">        <span class="comment">// 生成订单号</span></span><br><span class="line">        <span class="keyword">var</span> out_trade_no = (<span class="keyword">new</span> <span class="built_in">Date</span>().getTime() + app.RndNum(<span class="number">6</span>)).toString()</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 生成字符串</span></span><br><span class="line">        <span class="keyword">var</span> stringA = </span><br><span class="line">          <span class="string">"appid="</span>+app.globalData.appid</span><br><span class="line">        + <span class="string">"&amp;attach=test"</span></span><br><span class="line">        + <span class="string">"&amp;body=JSAPItest"</span></span><br><span class="line">        + <span class="string">"&amp;device_info=WEB"</span></span><br><span class="line">        + <span class="string">"&amp;mch_id="</span>+app.globalData.mch_id</span><br><span class="line">        + <span class="string">"&amp;nonce_str="</span>+that.data.nonce_str</span><br><span class="line">        + <span class="string">"&amp;notify_url=http://www.weixin.qq.com/wxpay/pay.php"</span></span><br><span class="line">        + <span class="string">"&amp;openid="</span>+that.data.openid</span><br><span class="line">        + <span class="string">"&amp;out_trade_no="</span>+out_trade_no</span><br><span class="line">        + <span class="string">"&amp;spbill_create_ip="</span>+that.data.spbill_create_ip</span><br><span class="line">        + <span class="string">"&amp;time_expire="</span>+app.beforeNowtimeByMin(<span class="number">-15</span>)</span><br><span class="line">        + <span class="string">"&amp;time_start="</span>+app.CurrentTime()</span><br><span class="line">        + <span class="string">"&amp;total_fee="</span>+<span class="built_in">parseInt</span>(that.data.total*<span class="number">100</span>)</span><br><span class="line">        + <span class="string">"&amp;trade_type=JSAPI"</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">var</span> stringSignTemp = stringA +<span class="string">"&amp;key="</span>+app.globalData.apikey</span><br><span class="line">        <span class="comment">// 签名MD5加密</span></span><br><span class="line">        <span class="keyword">var</span> sign = md5.md5(stringSignTemp).toUpperCase()</span><br><span class="line">        <span class="comment">// console.log("签名：" + stringSignTemp)</span></span><br><span class="line">        </span><br><span class="line">        <span class="comment">// openid</span></span><br><span class="line">        <span class="keyword">var</span> openid = that.data.openid</span><br><span class="line"></span><br><span class="line">        resolve([sign,openid,out_trade_no])</span><br><span class="line">      &#125;)</span><br><span class="line">      p.then(<span class="function"><span class="params">e</span> =&gt;</span> &#123;</span><br><span class="line">        <span class="comment">// 生成获取prepay_id请求的xml参数</span></span><br><span class="line">        <span class="keyword">var</span> xmlData = <span class="string">'&lt;xml&gt;'</span>+</span><br><span class="line">          <span class="string">'&lt;appid&gt;'</span>+app.globalData.appid+<span class="string">'&lt;/appid&gt;'</span>+</span><br><span class="line">          <span class="string">'&lt;attach&gt;test&lt;/attach&gt;'</span>+</span><br><span class="line">          <span class="string">'&lt;body&gt;JSAPItest&lt;/body&gt;'</span>+</span><br><span class="line">          <span class="string">'&lt;device_info&gt;WEB&lt;/device_info&gt;'</span>+</span><br><span class="line">          <span class="string">'&lt;mch_id&gt;'</span>+app.globalData.mch_id+<span class="string">'&lt;/mch_id&gt;'</span> +</span><br><span class="line">          <span class="string">'&lt;nonce_str&gt;'</span>+that.data.nonce_str+<span class="string">'&lt;/nonce_str&gt;'</span> +</span><br><span class="line">          <span class="string">'&lt;notify_url&gt;http://www.weixin.qq.com/wxpay/pay.php&lt;/notify_url&gt;'</span> +</span><br><span class="line">          <span class="string">'&lt;openid&gt;'</span>+that.data.openid+<span class="string">'&lt;/openid&gt;'</span>+</span><br><span class="line">          <span class="string">'&lt;out_trade_no&gt;'</span>+e[<span class="number">2</span>]+<span class="string">'&lt;/out_trade_no&gt;'</span>+</span><br><span class="line">          <span class="string">'&lt;spbill_create_ip&gt;'</span>+that.data.spbill_create_ip+<span class="string">'&lt;/spbill_create_ip&gt;'</span>+</span><br><span class="line">          <span class="string">'&lt;time_expire&gt;'</span>+app.beforeNowtimeByMin(<span class="number">-15</span>)+<span class="string">'&lt;/time_expire&gt;'</span>+</span><br><span class="line">          <span class="string">'&lt;time_start&gt;'</span>+app.CurrentTime()+<span class="string">'&lt;/time_start&gt;'</span>+</span><br><span class="line">          <span class="string">'&lt;total_fee&gt;'</span>+<span class="built_in">parseInt</span>(that.data.total * <span class="number">100</span>)+<span class="string">'&lt;/total_fee&gt;'</span>+</span><br><span class="line">          <span class="string">'&lt;trade_type&gt;JSAPI&lt;/trade_type&gt;'</span>+</span><br><span class="line">          <span class="string">'&lt;sign&gt;'</span>+e[<span class="number">0</span>]+<span class="string">'&lt;/sign&gt;'</span>+</span><br><span class="line">          <span class="string">'&lt;/xml&gt;'</span></span><br><span class="line">    </span><br><span class="line">        <span class="comment">// 发起获取prepay_id请求</span></span><br><span class="line">        wx.request(&#123;</span><br><span class="line">          url: <span class="string">'https://api.mch.weixin.qq.com/pay/unifiedorder'</span>, </span><br><span class="line">          method: <span class="string">'POST'</span>,</span><br><span class="line">          header: &#123;</span><br><span class="line">            <span class="string">"content-type"</span>:<span class="string">"text/xml"</span>,</span><br><span class="line">            <span class="string">"charset"</span>: <span class="string">"utf-8"</span></span><br><span class="line">          &#125;,</span><br><span class="line">          data: xmlData,</span><br><span class="line">          success(res) &#123;</span><br><span class="line">            <span class="keyword">if</span> (res) &#123; </span><br><span class="line">              <span class="comment">// 得到prepay_id</span></span><br><span class="line">              <span class="comment">// console.log(res.data)</span></span><br><span class="line">              <span class="keyword">var</span> prepay_id = res.data.split(<span class="string">"&lt;prepay_id&gt;&lt;![CDATA["</span>)[<span class="number">1</span>].split(<span class="string">"]]&gt;&lt;/prepay_id&gt;"</span>)[<span class="number">0</span>];</span><br><span class="line">              <span class="keyword">var</span> timeStamp = <span class="built_in">Math</span>.round((<span class="built_in">Date</span>.now()/<span class="number">1000</span>)).toString()</span><br><span class="line">              <span class="keyword">var</span> nonceStr = app.RndNum()</span><br><span class="line">              <span class="keyword">var</span> stringB =</span><br><span class="line">                <span class="string">"appId="</span> + app.globalData.appid</span><br><span class="line">                + <span class="string">"&amp;nonceStr="</span> + nonceStr</span><br><span class="line">                + <span class="string">"&amp;package="</span> + <span class="string">'prepay_id='</span> + prepay_id</span><br><span class="line">                + <span class="string">"&amp;signType=MD5"</span></span><br><span class="line">                + <span class="string">"&amp;timeStamp="</span> + timeStamp</span><br><span class="line">              <span class="keyword">var</span> paySignTemp = stringB + <span class="string">"&amp;key="</span> + app.globalData.apikey</span><br><span class="line">              <span class="built_in">console</span>.log(paySignTemp)</span><br><span class="line">              <span class="comment">// 签名MD5加密</span></span><br><span class="line">              <span class="keyword">var</span> paySign = md5.md5(paySignTemp).toUpperCase()</span><br><span class="line">              <span class="built_in">console</span>.log(paySign)</span><br><span class="line">              </span><br><span class="line">              wx.requestPayment(&#123;</span><br><span class="line">                  appId: app.globalData.appid,</span><br><span class="line">                  timeStamp: timeStamp,</span><br><span class="line">                  nonceStr: nonceStr,</span><br><span class="line">                  package: <span class="string">'prepay_id='</span> + prepay_id,</span><br><span class="line">                  signType: <span class="string">'MD5'</span>,</span><br><span class="line">                  paySign: paySign,</span><br><span class="line">                  success: <span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;</span><br><span class="line">                    <span class="built_in">console</span>.log(e)</span><br><span class="line">                  &#125;</span><br><span class="line">                &#125;)</span><br><span class="line">              &#125;</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;)</span><br><span class="line"></span><br><span class="line">      &#125;)</span><br><span class="line"></span><br><span class="line">      </span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">      wx.showModal(&#123;</span><br><span class="line">        title: <span class="string">'Oh No'</span>,</span><br><span class="line">        content: <span class="string">'请填写收货地址~'</span>,</span><br><span class="line">      &#125;)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">  <span class="comment">// 支付后的订单信息</span></span><br><span class="line">  getListAfterPay: <span class="function"><span class="keyword">function</span> (<span class="params">that</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> p = <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> &#123;</span><br><span class="line">      <span class="keyword">let</span> theList = []</span><br><span class="line">      that.data.orders.forEach(<span class="function">(<span class="params">val, idx, obj</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">var</span> &#123; name, num, price &#125; = val</span><br><span class="line">        <span class="keyword">var</span> tmpInfo = &#123; name, num, price &#125;</span><br><span class="line">        theList.push(tmpInfo)</span><br><span class="line">      &#125;)</span><br><span class="line">      resolve(theList)</span><br><span class="line">    &#125;).then(<span class="function"><span class="params">res</span> =&gt;</span> &#123;</span><br><span class="line">      <span class="comment">// console.log(res)</span></span><br><span class="line">      that.setData(&#123;</span><br><span class="line">        myList: res</span><br><span class="line">      &#125;)</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+            <main class="main index-page">
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href="/2020/08/16/LeetCode算法笔记-Day43/">
+            
+                <span>LeetCode算法笔记-Day43</span>
+        </a>
+        <div class="abstract-content">
+            最大子序和
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/08/16</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class="abstract-tags">
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="算法题">算法题</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="热题HOT100">热题HOT100</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="贪心算法">贪心算法</a>
+    
+</div>
+            
+        </div>
     </article>
-    <!-- license  -->
     
     <!-- paginator  -->
-    <ul class="post-paginator">
-        <li class="next">
-            
-                <div class="nextSlogan">Next Post</div>
-                <a href="/2019/01/02/详解小程序如何接入微信支付/" title="详解小程序如何接入微信支付(云函数)">
-                    <div class="nextTitle">详解小程序如何接入微信支付(云函数)</div>
-                </a>
-            
-        </li>
-        <li class="previous">
-            
-                <div class="prevSlogan">Previous Post</div>
-                <a href="/2018/11/30/Vue用axios发送http请求/" title="Vue用axios发送http请求">
-                    <div class="prevTitle">Vue用axios发送http请求</div>
-                </a>
-            
-        </li>
-    </ul>
-    <!-- 评论插件 -->
-    <!-- 来必力City版安装代码 -->
-
-    <div id="lv-container" data-id="city" data-uid="MTAyMC80MDU2Ny8xNzA5NA==">
-        <script type="text/javascript">
-            (function (d, s) {
-                var j, e = d.getElementsByTagName(s)[0];
-                if (typeof LivereTower === 'function') { return; }
-                j = d.createElement(s);
-                j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-                j.async = true;
-
-                e.parentNode.insertBefore(j, e);
-            })(document, 'script');
-        </script>
-        <noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
-    </div>
-
-<!-- City版安装代码已完成 -->
     
-    
-    <!-- partial('_partial/comment/changyan') -->
-    <!--PC版-->
-
-
-    
-    
-
-    <!-- 评论 -->
 </main>
             <!-- profile -->
             
@@ -547,24 +469,6 @@ height:50vh;
 </footer>
     </div>
     <!-- toc -->
-    
-    <div class="toc-wrapper" style=
-    
-
-
-
-
-
-
-
-top:50vh;
-
-    >
-        <div class="toc-catalog">
-            <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
-        </div>
-        
-    </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
     <div class="sidebar sidebar-hide">
@@ -2698,8 +2602,6 @@ jsonContent:
     
     </div>
     <!-- async load share.js -->
-    
-        <script src="/scripts/share.js" async></script>    
      
     </body>
 </html>

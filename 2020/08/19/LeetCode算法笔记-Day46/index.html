@@ -22,7 +22,7 @@
     <meta name="description" content="">
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>LeetCode算法笔记-Day34 · Voyz&#39;s Studio</title>
+    <title>LeetCode算法笔记-Day46 · Voyz&#39;s Studio</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -217,7 +217,7 @@
                 <a href="/">Voyz&#39;s Studio.</a>
             </div>
             <div class="post-title">
-                <a href="#" class="post-name">LeetCode算法笔记-Day34</a>
+                <a href="#" class="post-name">LeetCode算法笔记-Day46</a>
             </div>
     </div>
     
@@ -247,7 +247,7 @@ height:50vh;
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            LeetCode算法笔记-Day34
+            LeetCode算法笔记-Day46
             <!-- 404 -->
             
         </h1>
@@ -270,18 +270,18 @@ height:50vh;
     
         <a class="post-tag" href="javascript:void(0);" data-tags="热题HOT100">热题HOT100</a>
     
-        <a class="post-tag" href="javascript:void(0);" data-tags="链表">链表</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags="回溯算法">回溯算法</a>
     
 </div>
                 
                 
                     <div class="post-intro-read">
-                        <span>字数统计: <span class="post-count word-count">361</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
+                        <span>字数统计: <span class="post-count word-count">165</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
                     <span class="post-intro-calander iconfont-archer">&#xe676;</span>
-                    <span class="post-intro-time">2020/07/30</span>
+                    <span class="post-intro-time">2020/08/19</span>
                     
                     <span id="busuanzi_container_page_pv" class="busuanzi-pv">
                         <span class="iconfont-archer">&#xe602;</span>
@@ -405,26 +405,17 @@ height:50vh;
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <h1 id="LeetCode算法笔记–Day34"><a href="#LeetCode算法笔记–Day34" class="headerlink" title="LeetCode算法笔记–Day34"></a>LeetCode算法笔记–Day34</h1><h1 id="21-Merge-Two-Sorted-Lists"><a href="#21-Merge-Two-Sorted-Lists" class="headerlink" title="21. Merge Two Sorted Lists"></a>21. Merge Two Sorted Lists</h1><h2 id="题目："><a href="#题目：" class="headerlink" title="题目："></a>题目：</h2><blockquote>
-<p><strong>Merge two sorted linked lists and return it as a new sorted list. The new list should be made by splicing together the nodes of the first two lists.</strong>  </p>
-<p><em>example</em><br><strong>input</strong>: 1-&gt;2-&gt;4, 1-&gt;3-&gt;4<br><strong>output</strong>: 1-&gt;1-&gt;2-&gt;3-&gt;4-&gt;4</p>
+        <h1 id="LeetCode算法笔记–Day46"><a href="#LeetCode算法笔记–Day46" class="headerlink" title="LeetCode算法笔记–Day46"></a>LeetCode算法笔记–Day46</h1><h2 id="题目1："><a href="#题目1：" class="headerlink" title="题目1："></a>题目1：</h2><h3 id="78-Subsets"><a href="#78-Subsets" class="headerlink" title="78. Subsets"></a>78. Subsets</h3><blockquote>
+<p><strong>Given a set of distinct integers, nums, return all possible subsets (the power set).</strong>  </p>
+<p><strong>Note</strong>: The solution set must not contain duplicate subsets.</p>
+<p><em>example</em><br><strong>input</strong>: nums = [1,2,3]</p>
+<p><strong>output</strong>: [<br>  [3],<br>  [1],<br>  [2],<br>  [1,2,3],<br>  [1,3],<br>  [2,3],<br>  [1,2],<br>  []<br>]</p>
 </blockquote>
-<h2 id="My-Answer："><a href="#My-Answer：" class="headerlink" title="My Answer："></a>My Answer：</h2><h3 id="方法一：递归"><a href="#方法一：递归" class="headerlink" title="方法一：递归"></a>方法一：递归</h3><ul>
-<li>时间复杂度：O(n + m)</li>
-<li>空间复杂度：O(n + m)</li>
+<h3 id="回溯算法"><a href="#回溯算法" class="headerlink" title="回溯算法"></a>回溯算法</h3><h3 id="Analyse"><a href="#Analyse" class="headerlink" title="Analyse:"></a>Analyse:</h3><ul>
+<li>回溯算法基本结构</li>
 </ul>
-<p><img src="http://voyz-image.test.upcdn.net/2020/07/30/20b858ac4ebfabfaa1ba04bd65bc03db.png" alt="Snip20200730_3.png"></p>
-<figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line"> * Definition <span class="keyword">for</span> singly-linked list.</span><br><span class="line"> * <span class="function"><span class="keyword">function</span> <span class="title">ListNode</span><span class="params">(val, next)</span></span> &#123;</span><br><span class="line"> *     this.val = (val===undefined ? <span class="number">0</span> : val)</span><br><span class="line"> *     this.<span class="built_in">next</span> = (<span class="built_in">next</span>===undefined ? null : <span class="built_in">next</span>)</span><br><span class="line"> * &#125;</span><br><span class="line"> */</span><br><span class="line">/**</span><br><span class="line"> * @param &#123;ListNode&#125; l1</span><br><span class="line"> * @param &#123;ListNode&#125; l2</span><br><span class="line"> * @<span class="keyword">return</span> &#123;ListNode&#125;</span><br><span class="line"> */</span><br><span class="line">var mergeTwoLists = <span class="function"><span class="keyword">function</span><span class="params">(l1, l2)</span></span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (l1 === null) &#123;</span><br><span class="line">        <span class="keyword">return</span> l2;</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (l2 === null) &#123;</span><br><span class="line">        <span class="keyword">return</span> l1;</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (l1.val &lt; l2.val) &#123;</span><br><span class="line">        l1.<span class="built_in">next</span> = mergeTwoLists(l1.<span class="built_in">next</span>, l2);</span><br><span class="line">        <span class="keyword">return</span> l1;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        l2.<span class="built_in">next</span> = mergeTwoLists(l1, l2.<span class="built_in">next</span>);</span><br><span class="line">        <span class="keyword">return</span> l2;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<h3 id="方法二：迭代"><a href="#方法二：迭代" class="headerlink" title="方法二：迭代"></a>方法二：迭代</h3><ul>
-<li>时间复杂度：O(n + m)</li>
-<li><p>空间复杂度：O(1)</p>
-</li>
-<li><p>当 l1 和 l2 都不是空链表时，判断 l1 和 l2 哪一个链表的头节点的值更小，将较小值的节点添加到结果里，当一个节点被添加到结果里之后，将对应链表中的节点向后移一位。</p>
-</li>
-</ul>
-<figure class="highlight vbscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line"> * Definition <span class="keyword">for</span> singly-linked list.</span><br><span class="line"> * <span class="keyword">function</span> ListNode(val, <span class="keyword">next</span>) &#123;</span><br><span class="line"> *     this.val = (val===undefined ? <span class="number">0</span> : val)</span><br><span class="line"> *     this.<span class="keyword">next</span> = (<span class="keyword">next</span>===undefined ? <span class="literal">null</span> : <span class="keyword">next</span>)</span><br><span class="line"> * &#125;</span><br><span class="line"> */</span><br><span class="line">/**</span><br><span class="line"> * @param &#123;ListNode&#125; l1</span><br><span class="line"> * @param &#123;ListNode&#125; l2</span><br><span class="line"> * @return &#123;ListNode&#125;</span><br><span class="line"> */</span><br><span class="line">var mergeTwoLists = <span class="keyword">function</span>(l1, l2) &#123;</span><br><span class="line">    <span class="keyword">let</span> preHead = <span class="keyword">new</span> ListNode(<span class="number">-1</span>);</span><br><span class="line">    <span class="keyword">let</span> _pre = preHead;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span>(l1 != <span class="literal">null</span> &amp;&amp; l2 != <span class="literal">null</span>)&#123;</span><br><span class="line">        <span class="keyword">if</span>(l1.val &lt; l2.val)&#123;</span><br><span class="line">            _pre.<span class="keyword">next</span> = l1;</span><br><span class="line">            l1 = l1.<span class="keyword">next</span>;</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            _pre.<span class="keyword">next</span> = l2;</span><br><span class="line">            l2 = l2.<span class="keyword">next</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        _pre = _pre.<span class="keyword">next</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    _pre.<span class="keyword">next</span> = l1 == <span class="literal">null</span> ? l2 : l1;</span><br><span class="line">    return preHead.<span class="keyword">next</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<p><img src="http://voyz-image.test.upcdn.net/2020/07/30/584dafd7a3975e8a73183ff85784f6a5.png" alt="Snip20200730_2.png"></p>
-
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">result = []</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">backtrack</span><span class="params">(路径, 选择条件)</span></span><span class="symbol">:</span></span><br><span class="line">    <span class="keyword">if</span> 满足结束条件<span class="symbol">:</span></span><br><span class="line">        result.add(路径)</span><br><span class="line">        <span class="keyword">return</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> 选择 <span class="keyword">in</span> 选择条件<span class="symbol">:</span></span><br><span class="line">        做选择</span><br><span class="line">        backtrack(路径, 新的选择条件)</span><br><span class="line">        撤销选择</span><br></pre></td></tr></table></figure>
+<h3 id="My-Answer："><a href="#My-Answer：" class="headerlink" title="My Answer："></a>My Answer：</h3><figure class="highlight maxima"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * @param &#123;number[]&#125; nums</span></span><br><span class="line"><span class="comment"> * @return &#123;number[][]&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="built_in">var</span> subsets = function(nums) &#123;</span><br><span class="line">    <span class="built_in">let</span> res = [];</span><br><span class="line">    </span><br><span class="line">    <span class="built_in">let</span> trackBack = function(start,<span class="built_in">track</span>)&#123;</span><br><span class="line">        res.<span class="built_in">push</span>(<span class="built_in">track</span>);</span><br><span class="line">        <span class="keyword">for</span>(<span class="built_in">let</span> i=start;i&lt;nums.<span class="built_in">length</span>;i++)&#123;</span><br><span class="line">            <span class="built_in">track</span>.<span class="built_in">push</span>(nums[i]);</span><br><span class="line">            trackBack(i+<span class="number">1</span>,<span class="built_in">track</span>.slice());</span><br><span class="line">            <span class="built_in">track</span>.<span class="built_in">pop</span>();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    trackBack(<span class="number">0</span>,[]);</span><br><span class="line">    <span class="built_in">return</span> res;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
     </article>
     <!-- license  -->
     
@@ -432,17 +423,12 @@ height:50vh;
     <ul class="post-paginator">
         <li class="next">
             
-                <div class="nextSlogan">Next Post</div>
-                <a href="/2020/08/04/LeetCode算法笔记-Day35/" title="LeetCode算法笔记-Day35">
-                    <div class="nextTitle">LeetCode算法笔记-Day35</div>
-                </a>
-            
         </li>
         <li class="previous">
             
                 <div class="prevSlogan">Previous Post</div>
-                <a href="/2020/07/29/LeetCode算法笔记-Day33/" title="LeetCode算法笔记-Day33">
-                    <div class="prevTitle">LeetCode算法笔记-Day33</div>
+                <a href="/2020/08/18/LeetCode算法笔记-Day45/" title="LeetCode算法笔记-Day45">
+                    <div class="prevTitle">LeetCode算法笔记-Day45</div>
                 </a>
             
         </li>
@@ -586,7 +572,7 @@ top:50vh;
         <div class="toc-catalog">
             <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
         </div>
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#LeetCode算法笔记–Day34"><span class="toc-number">1.</span> <span class="toc-text">LeetCode算法笔记–Day34</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#21-Merge-Two-Sorted-Lists"><span class="toc-number">2.</span> <span class="toc-text">21. Merge Two Sorted Lists</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#题目："><span class="toc-number">2.1.</span> <span class="toc-text">题目：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#My-Answer："><span class="toc-number">2.2.</span> <span class="toc-text">My Answer：</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#方法一：递归"><span class="toc-number">2.2.1.</span> <span class="toc-text">方法一：递归</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#方法二：迭代"><span class="toc-number">2.2.2.</span> <span class="toc-text">方法二：迭代</span></a></li></ol></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#LeetCode算法笔记–Day46"><span class="toc-number">1.</span> <span class="toc-text">LeetCode算法笔记–Day46</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#题目1："><span class="toc-number">1.1.</span> <span class="toc-text">题目1：</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#78-Subsets"><span class="toc-number">1.1.1.</span> <span class="toc-text">78. Subsets</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#回溯算法"><span class="toc-number">1.1.2.</span> <span class="toc-text">回溯算法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Analyse"><span class="toc-number">1.1.3.</span> <span class="toc-text">Analyse:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#My-Answer："><span class="toc-number">1.1.4.</span> <span class="toc-text">My Answer：</span></a></li></ol></li></ol></li></ol>
     </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>

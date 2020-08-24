@@ -22,7 +22,7 @@
     <meta name="description" content="">
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Voyz&#39;s Studio</title>
+    <title>Flutter学习笔记-2 · Voyz&#39;s Studio</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -203,12 +203,23 @@
 </head>
 
     
+        <body class="post-body">
+    
     
 <header class="header">
 
     <div class="read-progress"></div>
     <div class="header-sidebar-menu">&#xe775;</div>
     <!-- post页的toggle banner  -->
+    
+    <div class="banner">
+            <div class="blog-title">
+                <a href="/">Voyz&#39;s Studio.</a>
+            </div>
+            <div class="post-title">
+                <a href="#" class="post-name">Flutter学习笔记-2</a>
+            </div>
+    </div>
     
     <a class="home-link" href="/">Voyz's Studio.</a>
 </header>
@@ -220,24 +231,74 @@
 
 
 
+
+height:50vh;
 ">
     
     <!-- 主页  -->
+    
+    
+    <!-- 404页  -->
             
     <div class="site-intro-placeholder"></div>
-    <div class="site-intro-img" style="background-image: url(/)"></div>
+    <div class="site-intro-img" style="background-image: url(/intro/post-bg.jpg)"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
+            
+            Flutter学习笔记-2
+            <!-- 404 -->
             
         </h1>
         <!-- 副标题 -->
         <p class="intro-subtitle">
             <!-- 主页副标题  -->
             
+            
+            <!-- 404 -->
+            
         </p>
         <!-- 文章页meta -->
+        
+            <div class="post-intros">
+                <!-- 文章页标签  -->
+                
+                    <div class="post-intro-tags">
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Flutter">Flutter</a>
+    
+</div>
+                
+                
+                    <div class="post-intro-read">
+                        <span>字数统计: <span class="post-count word-count">285</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
+                    </div>
+                
+                <div class="post-intro-meta">
+                    <span class="post-intro-calander iconfont-archer">&#xe676;</span>
+                    <span class="post-intro-time">2020/08/24</span>
+                    
+                    <span id="busuanzi_container_page_pv" class="busuanzi-pv">
+                        <span class="iconfont-archer">&#xe602;</span>
+                        <span id="busuanzi_value_page_pv"></span>
+                    </span>
+                    
+                    <span class="shareWrapper">
+                        <span class="iconfont-archer shareIcon">&#xe71d;</span>
+                        <span class="shareText">Share</span>
+                        <ul class="shareList">
+                            <li class="iconfont-archer share-qr" data-type="qr">&#xe75b;
+                                <div class="share-qrcode"></div>
+                            </li>
+                            <li class="iconfont-archer" data-type="weibo">&#xe619;</li>
+                            <li class="iconfont-archer" data-type="qzone">&#xe62e;</li>
+                            <li class="iconfont-archer" data-type="twitter">&#xe634;</li>
+                            <li class="iconfont-archer" data-type="facebook">&#xe67a;</li>
+                        </ul>
+                    </span>
+                </div>
+            </div>
         
     </div>
 </div>
@@ -338,78 +399,57 @@
 </script>        
         <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
         <div class="container container-unloaded">
-            <main class="main index-page">
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2020/08/21/LeetCode算法笔记-Day48/">
-            
-                <span>LeetCode算法笔记-Day48</span>
-        </a>
-        <div class="abstract-content">
-            不同的二叉搜索树
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/08/21</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="算法题">算法题</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="热题HOT100">热题HOT100</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="二叉树">二叉树</a>
-    
-</div>
-            
-        </div>
+            <main class="main post-page">
+    <article class="article-entry">
+        <h1 id="Flutter学习笔记-2"><a href="#Flutter学习笔记-2" class="headerlink" title="Flutter学习笔记-2"></a>Flutter学习笔记-2</h1><h2 id="基础框架"><a href="#基础框架" class="headerlink" title="基础框架"></a>基础框架</h2><h3 id="代码结构"><a href="#代码结构" class="headerlink" title="代码结构"></a>代码结构</h3><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="symbol">'package</span>:flutter/material.dart';</span><br><span class="line"></span><br><span class="line">void main() =&gt; runApp(<span class="type">MyApp</span>());</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyApp</span> <span class="keyword">extends</span> <span class="title">StatelessWidget</span> </span>&#123;</span><br><span class="line">    <span class="meta">@overirde</span></span><br><span class="line">    <span class="type">Widget</span> build(buildContext context)&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="type">MaterialApp</span>(</span><br><span class="line">            title:'****',</span><br><span class="line">            home: <span class="type">Scaffold</span>(</span><br><span class="line">                appBar: <span class="keyword">new</span> <span class="type">AppBar</span>(</span><br><span class="line">                    tilte:'****'</span><br><span class="line">                ),</span><br><span class="line">                body: ****</span><br><span class="line">            )</span><br><span class="line">        )</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="基础组件"><a href="#基础组件" class="headerlink" title="基础组件"></a>基础组件</h2><h3 id="Text-Container-ListView"><a href="#Text-Container-ListView" class="headerlink" title="Text/Container/ListView"></a>Text/Container/ListView</h3><figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="string">'package:flutter/material.dart'</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">void</span> main() =&gt; runApp(</span><br><span class="line">    MyApp(items: <span class="keyword">new</span> <span class="built_in">List</span>&lt;<span class="built_in">String</span>&gt;.generate(<span class="number">20</span>, (i) =&gt; <span class="string">"这是第 <span class="subst">$&#123;i + <span class="number">1</span>&#125;</span> 个元素"</span>)));</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyApp</span> <span class="keyword">extends</span> <span class="title">StatelessWidget</span> </span>&#123;</span><br><span class="line">  <span class="keyword">final</span> <span class="built_in">List</span>&lt;<span class="built_in">String</span>&gt; items;</span><br><span class="line">  MyApp(&#123;Key key, <span class="meta">@required</span> <span class="keyword">this</span>.items&#125;) : <span class="keyword">super</span>(key: key);</span><br><span class="line"></span><br><span class="line">  <span class="meta">@override</span></span><br><span class="line">  Widget build(BuildContext context) &#123;</span><br><span class="line">    <span class="keyword">return</span> MaterialApp(</span><br><span class="line">      title: <span class="string">"Voyz Flutter Demo"</span>,</span><br><span class="line">      home: Scaffold(</span><br><span class="line">          appBar: <span class="keyword">new</span> AppBar(</span><br><span class="line">            title: <span class="keyword">new</span> Text(<span class="string">'Voyz Flutter Demo'</span>),</span><br><span class="line">          ),</span><br><span class="line">          body: <span class="keyword">new</span> ListView.builder(</span><br><span class="line">              itemCount: items.length,</span><br><span class="line">              itemBuilder: (context, index) &#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">new</span> Container(</span><br><span class="line">                  child: <span class="keyword">new</span> Text(</span><br><span class="line">                    <span class="string">'<span class="subst">$&#123;items[index]&#125;</span>'</span>,</span><br><span class="line">                    style: TextStyle(fontSize: <span class="number">18.0</span>, color: Colors.yellow[<span class="number">100</span>]),</span><br><span class="line">                  ),</span><br><span class="line">                  alignment: Alignment.center,</span><br><span class="line">                  width: <span class="number">100.0</span>,</span><br><span class="line">                  height: <span class="number">80.0</span>,</span><br><span class="line">                  color: Colors.red[<span class="number">300</span>],</span><br><span class="line">                  margin: <span class="keyword">const</span> EdgeInsets.fromLTRB(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">5.0</span>),</span><br><span class="line">                );</span><br><span class="line">              &#125;)),</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="组件化"><a href="#组件化" class="headerlink" title="组件化"></a>组件化</h3><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="symbol">'package</span>:flutter/material.dart';</span><br><span class="line">void main () =&gt; runApp(<span class="type">MyApp</span>());</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyApp</span> <span class="keyword">extends</span> <span class="title">StatelessWidget</span></span>&#123;</span><br><span class="line">  <span class="meta">@override</span></span><br><span class="line">  <span class="type">Widget</span> build(<span class="type">BuildContext</span> context )&#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="type">MaterialApp</span>(</span><br><span class="line">        title:<span class="symbol">'ListView</span> widget',</span><br><span class="line">        home:<span class="type">Scaffold</span>(</span><br><span class="line">          body:<span class="type">Center</span>(</span><br><span class="line">            child:<span class="type">Container</span>(</span><br><span class="line">              height:<span class="number">200.0</span>,</span><br><span class="line">              child: <span class="type">MyListContent</span>()</span><br><span class="line">            ),</span><br><span class="line">          ),</span><br><span class="line">        ),</span><br><span class="line">      );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyListContent</span> <span class="keyword">extends</span> <span class="title">StatelessWidget</span> </span>&#123;</span><br><span class="line">  <span class="meta">@override</span></span><br><span class="line">  <span class="type">Widget</span> build(<span class="type">BuildContext</span> context) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="type">ListView</span>(</span><br><span class="line">      children: &lt;<span class="type">Widget</span>&gt;[</span><br><span class="line">        <span class="type">Text</span>(</span><br><span class="line">          '这是第一个',</span><br><span class="line">          style: <span class="type">TextStyle</span>(</span><br><span class="line">            fontSize: <span class="number">18.0</span>,</span><br><span class="line">            color: <span class="type">Colors</span>.red,</span><br><span class="line">          ),</span><br><span class="line">        ),</span><br><span class="line">        <span class="type">Text</span>(</span><br><span class="line">          '这是第二个',</span><br><span class="line">          style: <span class="type">TextStyle</span>(</span><br><span class="line">            fontSize: <span class="number">18.0</span>,</span><br><span class="line">            color: <span class="type">Colors</span>.green,</span><br><span class="line">          ),</span><br><span class="line">        ),</span><br><span class="line">        <span class="type">Text</span>(</span><br><span class="line">          '这是第三个',</span><br><span class="line">          style: <span class="type">TextStyle</span>(</span><br><span class="line">            fontSize: <span class="number">18.0</span>,</span><br><span class="line">            color: <span class="type">Colors</span>.lightBlue,</span><br><span class="line">          ),</span><br><span class="line">        ),</span><br><span class="line">      ],</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
     </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2020/08/20/LeetCode算法笔记-Day47/">
-            
-                <span>LeetCode算法笔记-Day47</span>
-        </a>
-        <div class="abstract-content">
-            二叉树的中序遍历
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/08/20</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="算法题">算法题</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="热题HOT100">热题HOT100</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="迭代">迭代</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="二叉树">二叉树</a>
-    
-</div>
-            
-        </div>
-    </article>
+    <!-- license  -->
     
     <!-- paginator  -->
+    <ul class="post-paginator">
+        <li class="next">
+            
+        </li>
+        <li class="previous">
+            
+                <div class="prevSlogan">Previous Post</div>
+                <a href="/2020/08/24/Flutter学习笔记-1/" title="Flutter学习笔记-1">
+                    <div class="prevTitle">Flutter学习笔记-1</div>
+                </a>
+            
+        </li>
+    </ul>
+    <!-- 评论插件 -->
+    <!-- 来必力City版安装代码 -->
+
+    <div id="lv-container" data-id="city" data-uid="MTAyMC80MDU2Ny8xNzA5NA==">
+        <script type="text/javascript">
+            (function (d, s) {
+                var j, e = d.getElementsByTagName(s)[0];
+                if (typeof LivereTower === 'function') { return; }
+                j = d.createElement(s);
+                j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+                j.async = true;
+
+                e.parentNode.insertBefore(j, e);
+            })(document, 'script');
+        </script>
+        <noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+    </div>
+
+<!-- City版安装代码已完成 -->
     
+    
+    <!-- partial('_partial/comment/changyan') -->
+    <!--PC版-->
+
+
+    
+    
+
+    <!-- 评论 -->
 </main>
             <!-- profile -->
             
@@ -504,6 +544,24 @@
 </footer>
     </div>
     <!-- toc -->
+    
+    <div class="toc-wrapper" style=
+    
+
+
+
+
+
+
+
+top:50vh;
+
+    >
+        <div class="toc-catalog">
+            <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
+        </div>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Flutter学习笔记-2"><span class="toc-number">1.</span> <span class="toc-text">Flutter学习笔记-2</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#基础框架"><span class="toc-number">1.1.</span> <span class="toc-text">基础框架</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#代码结构"><span class="toc-number">1.1.1.</span> <span class="toc-text">代码结构</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#基础组件"><span class="toc-number">1.2.</span> <span class="toc-text">基础组件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Text-Container-ListView"><span class="toc-number">1.2.1.</span> <span class="toc-text">Text/Container/ListView</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#组件化"><span class="toc-number">1.2.2.</span> <span class="toc-text">组件化</span></a></li></ol></li></ol></li></ol>
+    </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
     <div class="sidebar sidebar-hide">
@@ -2821,6 +2879,8 @@ jsonContent:
     
     </div>
     <!-- async load share.js -->
+    
+        <script src="/scripts/share.js" async></script>    
      
     </body>
 </html>

@@ -22,7 +22,7 @@
     <meta name="description" content="">
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Voyz&#39;s Studio</title>
+    <title>Flutter学习笔记-1 · Voyz&#39;s Studio</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -203,12 +203,23 @@
 </head>
 
     
+        <body class="post-body">
+    
     
 <header class="header">
 
     <div class="read-progress"></div>
     <div class="header-sidebar-menu">&#xe775;</div>
     <!-- post页的toggle banner  -->
+    
+    <div class="banner">
+            <div class="blog-title">
+                <a href="/">Voyz&#39;s Studio.</a>
+            </div>
+            <div class="post-title">
+                <a href="#" class="post-name">Flutter学习笔记-1</a>
+            </div>
+    </div>
     
     <a class="home-link" href="/">Voyz's Studio.</a>
 </header>
@@ -220,24 +231,74 @@
 
 
 
+
+height:50vh;
 ">
     
     <!-- 主页  -->
+    
+    
+    <!-- 404页  -->
             
     <div class="site-intro-placeholder"></div>
-    <div class="site-intro-img" style="background-image: url(/)"></div>
+    <div class="site-intro-img" style="background-image: url(/intro/post-bg.jpg)"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
+            
+            Flutter学习笔记-1
+            <!-- 404 -->
             
         </h1>
         <!-- 副标题 -->
         <p class="intro-subtitle">
             <!-- 主页副标题  -->
             
+            
+            <!-- 404 -->
+            
         </p>
         <!-- 文章页meta -->
+        
+            <div class="post-intros">
+                <!-- 文章页标签  -->
+                
+                    <div class="post-intro-tags">
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Flutter">Flutter</a>
+    
+</div>
+                
+                
+                    <div class="post-intro-read">
+                        <span>字数统计: <span class="post-count word-count">433</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
+                    </div>
+                
+                <div class="post-intro-meta">
+                    <span class="post-intro-calander iconfont-archer">&#xe676;</span>
+                    <span class="post-intro-time">2020/08/24</span>
+                    
+                    <span id="busuanzi_container_page_pv" class="busuanzi-pv">
+                        <span class="iconfont-archer">&#xe602;</span>
+                        <span id="busuanzi_value_page_pv"></span>
+                    </span>
+                    
+                    <span class="shareWrapper">
+                        <span class="iconfont-archer shareIcon">&#xe71d;</span>
+                        <span class="shareText">Share</span>
+                        <ul class="shareList">
+                            <li class="iconfont-archer share-qr" data-type="qr">&#xe75b;
+                                <div class="share-qrcode"></div>
+                            </li>
+                            <li class="iconfont-archer" data-type="weibo">&#xe619;</li>
+                            <li class="iconfont-archer" data-type="qzone">&#xe62e;</li>
+                            <li class="iconfont-archer" data-type="twitter">&#xe634;</li>
+                            <li class="iconfont-archer" data-type="facebook">&#xe67a;</li>
+                        </ul>
+                    </span>
+                </div>
+            </div>
         
     </div>
 </div>
@@ -338,78 +399,74 @@
 </script>        
         <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
         <div class="container container-unloaded">
-            <main class="main index-page">
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2020/08/21/LeetCode算法笔记-Day48/">
-            
-                <span>LeetCode算法笔记-Day48</span>
-        </a>
-        <div class="abstract-content">
-            不同的二叉搜索树
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/08/21</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="算法题">算法题</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="热题HOT100">热题HOT100</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="二叉树">二叉树</a>
-    
-</div>
-            
-        </div>
+            <main class="main post-page">
+    <article class="article-entry">
+        <h1 id="Flutter学习笔记-1"><a href="#Flutter学习笔记-1" class="headerlink" title="Flutter学习笔记-1"></a>Flutter学习笔记-1</h1><h2 id="认识Flutter"><a href="#认识Flutter" class="headerlink" title="认识Flutter"></a>认识Flutter</h2><h3 id="官网介绍"><a href="#官网介绍" class="headerlink" title="官网介绍"></a>官网介绍</h3><blockquote>
+<p>Flutter是谷歌的移动UI框架，可以快速在iOS和Android上构建高质量的原生用户界面。 Flutter可以与现有的代码一起工作。在全世界，Flutter正在被越来越多的开发者和组织使用，并且Flutter是完全免费、开源的。  </p>
+</blockquote>
+<h3 id="框架对比"><a href="#框架对比" class="headerlink" title="框架对比"></a>框架对比</h3><blockquote>
+<p><strong>Cordova</strong>：Cordova还是基于网页技术进行包装，利用插件的形式开发移动应用的。无论是性能还是体验，Flutter完胜。  </p>
+</blockquote>
+<blockquote>
+<p><strong>React Native</strong>：RN的效率由于是将View编译成了原生View,所以效率上要比基于Cordova的HTML5高很多,但是它也有效率问题,RN的渲染机制是基于前端框架的考虑,复杂的UI渲染是需要依赖多个view叠加.比如我们渲染一个复杂的ListView,每一个小的控件,都是一个native的view,然后相互组合叠加.想想此时如果我们的list再需要滑动刷新,会有多少个对象需要渲染.所以也就有了前面所说的RN的列表方案不友好。</p>
+</blockquote>
+<blockquote>
+<p><strong>Flutter</strong>：吸收了前两者的教训之后,在渲染技术上,选择了自己实现(GDI),由于有更好的可控性,使用了新的语言Dart,避免了RN的那种通过桥接器与Javascript通讯导致效率低下的问题,所以在性能方面比RN更高一筹;有经验的开发者可以打开Android手机开发者选项里面的显示边界布局,发现Flutter的布局是一个整体.说明Flutter的渲染没用使用原生控件进行渲染。</p>
+</blockquote>
+<h3 id="Flutter生态"><a href="#Flutter生态" class="headerlink" title="Flutter生态"></a>Flutter生态</h3><p><a href="https://github.com/Solido/awesome-flutter" target="_blank" rel="noopener">插件case（awesome-flutter）</a></p>
+<h2 id="环境搭建"><a href="#环境搭建" class="headerlink" title="环境搭建"></a>环境搭建</h2><p><a href="https://flutterchina.club/get-started/install/" target="_blank" rel="noopener">环境搭建</a></p>
+
     </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2020/08/20/LeetCode算法笔记-Day47/">
-            
-                <span>LeetCode算法笔记-Day47</span>
-        </a>
-        <div class="abstract-content">
-            二叉树的中序遍历
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/08/20</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="算法题">算法题</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="热题HOT100">热题HOT100</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="迭代">迭代</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="二叉树">二叉树</a>
-    
-</div>
-            
-        </div>
-    </article>
+    <!-- license  -->
     
     <!-- paginator  -->
+    <ul class="post-paginator">
+        <li class="next">
+            
+                <div class="nextSlogan">Next Post</div>
+                <a href="/2020/08/24/Flutter学习笔记-2/" title="Flutter学习笔记-2">
+                    <div class="nextTitle">Flutter学习笔记-2</div>
+                </a>
+            
+        </li>
+        <li class="previous">
+            
+                <div class="prevSlogan">Previous Post</div>
+                <a href="/2020/08/21/LeetCode算法笔记-Day48/" title="LeetCode算法笔记-Day48">
+                    <div class="prevTitle">LeetCode算法笔记-Day48</div>
+                </a>
+            
+        </li>
+    </ul>
+    <!-- 评论插件 -->
+    <!-- 来必力City版安装代码 -->
+
+    <div id="lv-container" data-id="city" data-uid="MTAyMC80MDU2Ny8xNzA5NA==">
+        <script type="text/javascript">
+            (function (d, s) {
+                var j, e = d.getElementsByTagName(s)[0];
+                if (typeof LivereTower === 'function') { return; }
+                j = d.createElement(s);
+                j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+                j.async = true;
+
+                e.parentNode.insertBefore(j, e);
+            })(document, 'script');
+        </script>
+        <noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+    </div>
+
+<!-- City版安装代码已完成 -->
     
+    
+    <!-- partial('_partial/comment/changyan') -->
+    <!--PC版-->
+
+
+    
+    
+
+    <!-- 评论 -->
 </main>
             <!-- profile -->
             
@@ -504,6 +561,24 @@
 </footer>
     </div>
     <!-- toc -->
+    
+    <div class="toc-wrapper" style=
+    
+
+
+
+
+
+
+
+top:50vh;
+
+    >
+        <div class="toc-catalog">
+            <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
+        </div>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Flutter学习笔记-1"><span class="toc-number">1.</span> <span class="toc-text">Flutter学习笔记-1</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#认识Flutter"><span class="toc-number">1.1.</span> <span class="toc-text">认识Flutter</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#官网介绍"><span class="toc-number">1.1.1.</span> <span class="toc-text">官网介绍</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#框架对比"><span class="toc-number">1.1.2.</span> <span class="toc-text">框架对比</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Flutter生态"><span class="toc-number">1.1.3.</span> <span class="toc-text">Flutter生态</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#环境搭建"><span class="toc-number">1.2.</span> <span class="toc-text">环境搭建</span></a></li></ol></li></ol>
+    </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
     <div class="sidebar sidebar-hide">
@@ -2821,6 +2896,8 @@ jsonContent:
     
     </div>
     <!-- async load share.js -->
+    
+        <script src="/scripts/share.js" async></script>    
      
     </body>
 </html>

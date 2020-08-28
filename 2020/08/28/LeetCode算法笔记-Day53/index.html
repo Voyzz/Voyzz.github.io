@@ -22,7 +22,7 @@
     <meta name="description" content="">
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>LeetCode算法笔记-Day42 · Voyz&#39;s Studio</title>
+    <title>LeetCode算法笔记-Day53 · Voyz&#39;s Studio</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -217,7 +217,7 @@
                 <a href="/">Voyz&#39;s Studio.</a>
             </div>
             <div class="post-title">
-                <a href="#" class="post-name">LeetCode算法笔记-Day42</a>
+                <a href="#" class="post-name">LeetCode算法笔记-Day53</a>
             </div>
     </div>
     
@@ -247,7 +247,7 @@ height:50vh;
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            LeetCode算法笔记-Day42
+            LeetCode算法笔记-Day53
             <!-- 404 -->
             
         </h1>
@@ -270,18 +270,18 @@ height:50vh;
     
         <a class="post-tag" href="javascript:void(0);" data-tags="热题HOT100">热题HOT100</a>
     
-        <a class="post-tag" href="javascript:void(0);" data-tags="动态规划">动态规划</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags="二叉树">二叉树</a>
     
 </div>
                 
                 
                     <div class="post-intro-read">
-                        <span>字数统计: <span class="post-count word-count">232</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
+                        <span>字数统计: <span class="post-count word-count">284</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
                     <span class="post-intro-calander iconfont-archer">&#xe676;</span>
-                    <span class="post-intro-time">2020/08/15</span>
+                    <span class="post-intro-time">2020/08/28</span>
                     
                     <span id="busuanzi_container_page_pv" class="busuanzi-pv">
                         <span class="iconfont-archer">&#xe602;</span>
@@ -405,20 +405,22 @@ height:50vh;
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <h1 id="LeetCode算法笔记–Day42"><a href="#LeetCode算法笔记–Day42" class="headerlink" title="LeetCode算法笔记–Day42"></a>LeetCode算法笔记–Day42</h1><h1 id="53-Maximum-Subarray"><a href="#53-Maximum-Subarray" class="headerlink" title="53. Maximum Subarray"></a>53. Maximum Subarray</h1><h2 id="题目："><a href="#题目：" class="headerlink" title="题目："></a>题目：</h2><blockquote>
-<p><strong>Given an integer array nums, find the contiguous subarray (containing at least one number) which has the largest sum and return its sum.</strong></p>
+        <h1 id="LeetCode算法笔记-Day53"><a href="#LeetCode算法笔记-Day53" class="headerlink" title="LeetCode算法笔记-Day53"></a>LeetCode算法笔记-Day53</h1><h2 id="105-Construct-Binary-Tree-from-Preorder-and-Inorder-Traversal"><a href="#105-Construct-Binary-Tree-from-Preorder-and-Inorder-Traversal" class="headerlink" title="105. Construct Binary Tree from Preorder and Inorder Traversal"></a>105. Construct Binary Tree from Preorder and Inorder Traversal</h2><blockquote>
+<p><strong>Given preorder and inorder traversal of a tree, construct the binary tree.</strong>  </p>
+<p><strong>Note</strong>:You may assume that duplicates do not exist in the tree.</p>
 </blockquote>
 <blockquote>
-<p><em>example</em><br><strong>input</strong>: [-2,1,-3,4,-1,2,1,-5,4]<br><strong>output</strong>: 6</p>
+<p><strong>example</strong>:  </p>
 </blockquote>
-<h2 id="Analyze："><a href="#Analyze：" class="headerlink" title="Analyze："></a>Analyze：</h2><h3 id="方法一：动态规划"><a href="#方法一：动态规划" class="headerlink" title="方法一：动态规划"></a>方法一：动态规划</h3><ul>
-<li>动态规划的是首先对数组进行遍历，当前最大连续子序列和为 sum，结果为 ans  </li>
-<li>如果 sum &gt; 0，则说明 sum 对结果有增益效果，则 sum 保留并加上当前遍历数字  </li>
-<li>如果 sum &lt;= 0，则说明 sum 对结果无增益效果，需要舍弃，则 sum 直接更新为当前遍历数字  </li>
-<li>每次比较 sum 和 ans的大小，将最大值置为ans，遍历结束返回结果</li>
-<li>时间复杂度：O(n)O(n)  </li>
+<figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">preorder = [3,9,20,15,7]</span><br><span class="line">inorder = [9,3,15,20,7]</span><br><span class="line"></span><br><span class="line">Return the following binary tree:</span><br><span class="line"></span><br><span class="line">    3</span><br><span class="line">   / \</span><br><span class="line">  9  20</span><br><span class="line">    /  \</span><br><span class="line">   15   7</span><br></pre></td></tr></table></figure>
+<h2 id="Analyse"><a href="#Analyse" class="headerlink" title="Analyse:"></a>Analyse:</h2><ul>
+<li>变量 pre 保存当前要构造的树的 root</li>
+<li>变量 in 保存 inorder 数组中可以成为 root 的数字们的开头那个</li>
+<li>对于当前要构造的树，有一个停止点 stop ，inorder 数组中第 in 项到第 stop 项是要构造的树的节点值们</li>
+<li>每次递归调用，都会确定出一个停止点，它告诉了子调用在哪里停止，把自己的根节点值作为左子树调用的停止点，自己的（父调用给下来的）停止点作为右子树的停止点
+ </li>
 </ul>
-<h2 id="My-Answer："><a href="#My-Answer：" class="headerlink" title="My Answer："></a>My Answer：</h2><figure class="highlight maxima"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * @param &#123;number[]&#125; nums</span></span><br><span class="line"><span class="comment"> * @return &#123;number&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="built_in">var</span> maxSubArray = function(nums) &#123;</span><br><span class="line">    <span class="built_in">let</span> <span class="built_in">sum</span> = <span class="number">0</span>,</span><br><span class="line">        res = nums[<span class="number">0</span>];</span><br><span class="line"></span><br><span class="line">    nums.forEach((<span class="built_in">num</span>)=&gt;&#123;</span><br><span class="line">        <span class="keyword">if</span>(<span class="built_in">sum</span> &lt;= <span class="number">0</span>)&#123;</span><br><span class="line">            <span class="built_in">sum</span> = <span class="built_in">num</span>;</span><br><span class="line">        &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="built_in">sum</span> += <span class="built_in">num</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        res = Math.<span class="built_in">max</span>(res,<span class="built_in">sum</span>)</span><br><span class="line">    &#125;)</span><br><span class="line"></span><br><span class="line">    <span class="built_in">return</span> res;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h3 id="Answer："><a href="#Answer：" class="headerlink" title="Answer："></a>Answer：</h3><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for a binary tree node.</span></span><br><span class="line"><span class="comment"> * function TreeNode(val) &#123;</span></span><br><span class="line"><span class="comment"> *     this.val = val;</span></span><br><span class="line"><span class="comment"> *     this.left = this.right = null;</span></span><br><span class="line"><span class="comment"> * &#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;number[]&#125; preorder</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;number[]&#125; inorder</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> &#123;TreeNode&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> buildTree = <span class="function"><span class="keyword">function</span><span class="params">(preorder, inorder)</span> </span>&#123;</span><br><span class="line">    pre = i = <span class="number">0</span></span><br><span class="line">    build = <span class="function"><span class="keyword">function</span><span class="params">(stop)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (inorder[i] != stop) &#123;</span><br><span class="line">            <span class="keyword">var</span> root = <span class="keyword">new</span> TreeNode(preorder[pre++])</span><br><span class="line">            root.left = build(root.val)</span><br><span class="line">            i++</span><br><span class="line">            root.right = build(stop)</span><br><span class="line">            <span class="keyword">return</span> root</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">null</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> build()</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
     </article>
     <!-- license  -->
     
@@ -426,17 +428,12 @@ height:50vh;
     <ul class="post-paginator">
         <li class="next">
             
-                <div class="nextSlogan">Next Post</div>
-                <a href="/2020/08/16/LeetCode算法笔记-Day43/" title="LeetCode算法笔记-Day43">
-                    <div class="nextTitle">LeetCode算法笔记-Day43</div>
-                </a>
-            
         </li>
         <li class="previous">
             
                 <div class="prevSlogan">Previous Post</div>
-                <a href="/2020/08/14/LeetCode算法笔记-Day41/" title="LeetCode算法笔记-Day41">
-                    <div class="prevTitle">LeetCode算法笔记-Day41</div>
+                <a href="/2020/08/27/LeetCode算法笔记-Day52/" title="LeetCode算法笔记-Day52">
+                    <div class="prevTitle">LeetCode算法笔记-Day52</div>
                 </a>
             
         </li>
@@ -580,7 +577,7 @@ top:50vh;
         <div class="toc-catalog">
             <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
         </div>
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#LeetCode算法笔记–Day42"><span class="toc-number">1.</span> <span class="toc-text">LeetCode算法笔记–Day42</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#53-Maximum-Subarray"><span class="toc-number">2.</span> <span class="toc-text">53. Maximum Subarray</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#题目："><span class="toc-number">2.1.</span> <span class="toc-text">题目：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Analyze："><span class="toc-number">2.2.</span> <span class="toc-text">Analyze：</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#方法一：动态规划"><span class="toc-number">2.2.1.</span> <span class="toc-text">方法一：动态规划</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#My-Answer："><span class="toc-number">2.3.</span> <span class="toc-text">My Answer：</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#LeetCode算法笔记-Day53"><span class="toc-number">1.</span> <span class="toc-text">LeetCode算法笔记-Day53</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#105-Construct-Binary-Tree-from-Preorder-and-Inorder-Traversal"><span class="toc-number">1.1.</span> <span class="toc-text">105. Construct Binary Tree from Preorder and Inorder Traversal</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Analyse"><span class="toc-number">1.2.</span> <span class="toc-text">Analyse:</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Answer："><span class="toc-number">1.2.1.</span> <span class="toc-text">Answer：</span></a></li></ol></li></ol></li></ol>
     </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>

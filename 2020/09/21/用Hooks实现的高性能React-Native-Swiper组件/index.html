@@ -441,7 +441,7 @@ height:50vh;
 </ul>
 <figure class="highlight xquery"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">...</span><br><span class="line">const _renderList = ()=&gt;&#123;</span><br><span class="line">  let listData = [</span><br><span class="line">      &#123;</span><br><span class="line">        title:<span class="string">'1'</span>,</span><br><span class="line">        bgColor:<span class="string">'#f00'</span></span><br><span class="line">      &#125;,</span><br><span class="line">      &#123;</span><br><span class="line">        title:<span class="string">'2'</span>,</span><br><span class="line">        bgColor:<span class="string">'#0f0'</span></span><br><span class="line">      &#125;,</span><br><span class="line">      &#123;</span><br><span class="line">        title:<span class="string">'3'</span>,</span><br><span class="line">        bgColor:<span class="string">'#00f'</span></span><br><span class="line">      &#125;,</span><br><span class="line">    ]</span><br><span class="line">    return (</span><br><span class="line">      listData.map((item,idx)=&gt;&#123;</span><br><span class="line">        return (</span><br><span class="line">          &lt;View style=&#123;&#123;width:WIDTH,height:<span class="number">300</span>,backgroundColor:item.bgColor,justifyContent: <span class="string">'center'</span>,alignItems: <span class="string">'center'</span>&#125;&#125; key=&#123;idx&#125;&gt;</span><br><span class="line">              &lt;Text&gt;&#123;item.title&#125;&lt;/Text&gt;</span><br><span class="line">          &lt;/View&gt;</span><br><span class="line">        )</span><br><span class="line">      &#125;)</span><br><span class="line">    )</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">...</span><br><span class="line"></span><br><span class="line">&lt;Swiper height=&#123;<span class="number">300</span>&#125;</span><br><span class="line">        autoplay=&#123;true&#125;</span><br><span class="line">        loop=&#123;true&#125;</span><br><span class="line">        showPagination=&#123;true&#125;</span><br><span class="line">        &gt;</span><br><span class="line">  &#123;_renderList()&#125;</span><br><span class="line">&lt;/Swiper&gt;</span><br><span class="line"></span><br><span class="line">...</span><br></pre></td></tr></table></figure>
 <ul>
-<li>update   <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">npm</span> <span class="string">update</span> <span class="string">react-native-swiper-hooks</span></span><br><span class="line"><span class="string">```</span>   </span><br><span class="line"></span><br><span class="line"><span class="meta">---</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="string">&lt;span</span> <span class="string">id='demo'&gt;&lt;span&gt;</span></span><br><span class="line"><span class="comment">## Demo</span></span><br><span class="line"><span class="comment">### autoplay ↓</span></span><br><span class="line"><span class="string">![autoplay](https://i.loli.net/2020/09/21/nMUlKg74HGNZvLA.gif)</span></span><br></pre></td></tr></table></figure>
+<li>update   <figure class="highlight clean"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">npm update react-native-swiper-hooks</span><br><span class="line">```   </span><br><span class="line"></span><br><span class="line">--</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&lt;span id=<span class="string">'demo'</span>&gt;&lt;span&gt;</span><br><span class="line">## Demo</span><br><span class="line">### autoplay ↓</span><br><span class="line">![autoplay](https:<span class="comment">//i.loli.net/2020/09/21/nMUlKg74HGNZvLA.gif)</span></span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <p>height={300}<br>paginationSelectedColor={‘#CCFF66’}<br>autoplay={true}<br>loop={true}<br>showPagination={true}<br>direction={‘row’}<br><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">  </span><br><span class="line"><span class="section">### non-autoplay ↓</span></span><br><span class="line">![<span class="string">non_autoplay.gif</span>](<span class="link">https://i.loli.net/2020/09/21/4TLBZhYnAXatsbI.gif</span>)</span><br></pre></td></tr></table></figure></p>
@@ -872,6 +872,11 @@ height:50vh;
     <!-- paginator  -->
     <ul class="post-paginator">
         <li class="next">
+            
+                <div class="nextSlogan">Next Post</div>
+                <a href="/2020/09/22/LeetCode算法笔记-Day63/" title="LeetCode算法笔记-Day63">
+                    <div class="nextTitle">LeetCode算法笔记-Day63</div>
+                </a>
             
         </li>
         <li class="previous">
@@ -2937,9 +2942,30 @@ top:50vh;
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 116
+        Total : 117
         </div>
         <!-- search  -->
         
@@ -2952,6 +2978,11 @@ top:50vh;
     
     <div class="archive-year"> 2020 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">09/22</span><a class="archive-post-title" href="/2020/09/22/LeetCode算法笔记-Day63/">LeetCode算法笔记-Day63</a>
+        </li>
     
     
         <li class="archive-post-item">
@@ -3140,12 +3171,12 @@ top:50vh;
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">07/24</span><a class="archive-post-title" href="/2020/07/24/LeetCode算法笔记-Day30/">LeetCode算法笔记-Day30</a>
+            <span class="archive-post-date">07/24</span><a class="archive-post-title" href="/2020/07/24/JS-Map对象的用法/">JS_Map对象的用法</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">07/24</span><a class="archive-post-title" href="/2020/07/24/JS-Map对象的用法/">JS_Map对象的用法</a>
+            <span class="archive-post-date">07/24</span><a class="archive-post-title" href="/2020/07/24/LeetCode算法笔记-Day30/">LeetCode算法笔记-Day30</a>
         </li>
     
     
@@ -3566,11 +3597,11 @@ top:50vh;
     
         <span class="sidebar-tag-name" data-tags="热题HOT100"><span class="iconfont-archer">&#xe606;</span>热题HOT100</span>
     
-        <span class="sidebar-tag-name" data-tags="哈希表"><span class="iconfont-archer">&#xe606;</span>哈希表</span>
-    
         <span class="sidebar-tag-name" data-tags="滑动窗口"><span class="iconfont-archer">&#xe606;</span>滑动窗口</span>
     
         <span class="sidebar-tag-name" data-tags="回溯算法"><span class="iconfont-archer">&#xe606;</span>回溯算法</span>
+    
+        <span class="sidebar-tag-name" data-tags="哈希表"><span class="iconfont-archer">&#xe606;</span>哈希表</span>
     
         <span class="sidebar-tag-name" data-tags="链表"><span class="iconfont-archer">&#xe606;</span>链表</span>
     
@@ -3578,17 +3609,17 @@ top:50vh;
     
         <span class="sidebar-tag-name" data-tags="矩阵"><span class="iconfont-archer">&#xe606;</span>矩阵</span>
     
-        <span class="sidebar-tag-name" data-tags="贪心算法"><span class="iconfont-archer">&#xe606;</span>贪心算法</span>
-    
         <span class="sidebar-tag-name" data-tags="动态规划"><span class="iconfont-archer">&#xe606;</span>动态规划</span>
+    
+        <span class="sidebar-tag-name" data-tags="贪心算法"><span class="iconfont-archer">&#xe606;</span>贪心算法</span>
     
         <span class="sidebar-tag-name" data-tags="指针"><span class="iconfont-archer">&#xe606;</span>指针</span>
     
         <span class="sidebar-tag-name" data-tags="快速排序"><span class="iconfont-archer">&#xe606;</span>快速排序</span>
     
-        <span class="sidebar-tag-name" data-tags="迭代"><span class="iconfont-archer">&#xe606;</span>迭代</span>
-    
         <span class="sidebar-tag-name" data-tags="二叉树"><span class="iconfont-archer">&#xe606;</span>二叉树</span>
+    
+        <span class="sidebar-tag-name" data-tags="迭代"><span class="iconfont-archer">&#xe606;</span>迭代</span>
     
         <span class="sidebar-tag-name" data-tags="数组"><span class="iconfont-archer">&#xe606;</span>数组</span>
     
@@ -3602,13 +3633,13 @@ top:50vh;
     
         <span class="sidebar-tag-name" data-tags="旅行记"><span class="iconfont-archer">&#xe606;</span>旅行记</span>
     
-        <span class="sidebar-tag-name" data-tags="效率工具"><span class="iconfont-archer">&#xe606;</span>效率工具</span>
-    
         <span class="sidebar-tag-name" data-tags="python"><span class="iconfont-archer">&#xe606;</span>python</span>
     
-        <span class="sidebar-tag-name" data-tags="小程序"><span class="iconfont-archer">&#xe606;</span>小程序</span>
+        <span class="sidebar-tag-name" data-tags="效率工具"><span class="iconfont-archer">&#xe606;</span>效率工具</span>
     
         <span class="sidebar-tag-name" data-tags="英语"><span class="iconfont-archer">&#xe606;</span>英语</span>
+    
+        <span class="sidebar-tag-name" data-tags="小程序"><span class="iconfont-archer">&#xe606;</span>小程序</span>
     
         <span class="sidebar-tag-name" data-tags="生活"><span class="iconfont-archer">&#xe606;</span>生活</span>
     

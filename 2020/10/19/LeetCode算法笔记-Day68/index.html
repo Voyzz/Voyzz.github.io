@@ -22,7 +22,7 @@
     <meta name="description" content="">
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Voyz&#39;s Studio</title>
+    <title>LeetCode算法笔记-Day68 · Voyz&#39;s Studio</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -203,12 +203,23 @@
 </head>
 
     
+        <body class="post-body">
+    
     
 <header class="header">
 
     <div class="read-progress"></div>
     <div class="header-sidebar-menu">&#xe775;</div>
     <!-- post页的toggle banner  -->
+    
+    <div class="banner">
+            <div class="blog-title">
+                <a href="/">Voyz&#39;s Studio.</a>
+            </div>
+            <div class="post-title">
+                <a href="#" class="post-name">LeetCode算法笔记-Day68</a>
+            </div>
+    </div>
     
     <a class="home-link" href="/">Voyz's Studio.</a>
 </header>
@@ -220,24 +231,76 @@
 
 
 
+
+height:50vh;
 ">
     
     <!-- 主页  -->
+    
+    
+    <!-- 404页  -->
             
     <div class="site-intro-placeholder"></div>
-    <div class="site-intro-img" style="background-image: url(/)"></div>
+    <div class="site-intro-img" style="background-image: url(/intro/post-bg.jpg)"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
+            
+            LeetCode算法笔记-Day68
+            <!-- 404 -->
             
         </h1>
         <!-- 副标题 -->
         <p class="intro-subtitle">
             <!-- 主页副标题  -->
             
+            
+            <!-- 404 -->
+            
         </p>
         <!-- 文章页meta -->
+        
+            <div class="post-intros">
+                <!-- 文章页标签  -->
+                
+                    <div class="post-intro-tags">
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="算法题">算法题</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="热题HOT100">热题HOT100</a>
+    
+</div>
+                
+                
+                    <div class="post-intro-read">
+                        <span>字数统计: <span class="post-count word-count">204</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
+                    </div>
+                
+                <div class="post-intro-meta">
+                    <span class="post-intro-calander iconfont-archer">&#xe676;</span>
+                    <span class="post-intro-time">2020/10/19</span>
+                    
+                    <span id="busuanzi_container_page_pv" class="busuanzi-pv">
+                        <span class="iconfont-archer">&#xe602;</span>
+                        <span id="busuanzi_value_page_pv"></span>
+                    </span>
+                    
+                    <span class="shareWrapper">
+                        <span class="iconfont-archer shareIcon">&#xe71d;</span>
+                        <span class="shareText">Share</span>
+                        <ul class="shareList">
+                            <li class="iconfont-archer share-qr" data-type="qr">&#xe75b;
+                                <div class="share-qrcode"></div>
+                            </li>
+                            <li class="iconfont-archer" data-type="weibo">&#xe619;</li>
+                            <li class="iconfont-archer" data-type="qzone">&#xe62e;</li>
+                            <li class="iconfont-archer" data-type="twitter">&#xe634;</li>
+                            <li class="iconfont-archer" data-type="facebook">&#xe67a;</li>
+                        </ul>
+                    </span>
+                </div>
+            </div>
         
     </div>
 </div>
@@ -338,45 +401,59 @@
 </script>        
         <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
         <div class="container container-unloaded">
-            <main class="main index-page">
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href="/2020/08/18/LeetCode算法笔记-Day45/">
-            
-                <span>LeetCode算法笔记-Day45</span>
-        </a>
-        <div class="abstract-content">
-            最小路径和 / 颜色分类
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/08/18</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class="abstract-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="算法题">算法题</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="热题HOT100">热题HOT100</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="动态规划">动态规划</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="快速排序">快速排序</a>
-    
-</div>
-            
-        </div>
+            <main class="main post-page">
+    <article class="article-entry">
+        <h1 id="LeetCode算法笔记-Day68"><a href="#LeetCode算法笔记-Day68" class="headerlink" title="LeetCode算法笔记-Day68"></a>LeetCode算法笔记-Day68</h1><h2 id="461-Hamming-Distance"><a href="#461-Hamming-Distance" class="headerlink" title="461. Hamming Distance"></a>461. Hamming Distance</h2><p><strong>The Hamming distance between two integers is the number of positions at which the corresponding bits are different.</strong></p>
+<p><strong>Given two integers x and y, calculate the Hamming distance.</strong></p>
+<figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">Example:</span></span><br><span class="line"></span><br><span class="line"><span class="symbol">Input:</span> <span class="built_in">x</span> = <span class="number">1</span>, <span class="built_in">y</span> = <span class="number">4</span></span><br><span class="line"></span><br><span class="line"><span class="symbol">Output:</span> <span class="number">2</span></span><br><span class="line"></span><br><span class="line"><span class="symbol">Explanation:</span></span><br><span class="line"><span class="number">1</span>   (<span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">1</span>)</span><br><span class="line"><span class="number">4</span>   (<span class="number">0</span> <span class="number">1</span> <span class="number">0</span> <span class="number">0</span>)</span><br><span class="line">       ↑   ↑</span><br><span class="line"></span><br><span class="line">The above arrows point to positions where the corresponding bits are different.</span><br></pre></td></tr></table></figure>
+<h2 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h2><h3 id="Answer："><a href="#Answer：" class="headerlink" title="Answer："></a>Answer：</h3><figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * @param &#123;number&#125; x</span></span><br><span class="line"><span class="comment"> * @param &#123;number&#125; y</span></span><br><span class="line"><span class="comment"> * @return &#123;number&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line">var <span class="attr">hammingDistance</span> = function(x, y) &#123;</span><br><span class="line">    <span class="keyword">let</span> <span class="attr">res</span> = <span class="number">0</span>,</span><br><span class="line">        <span class="attr">x_bits</span> = x.<span class="built_in">toString</span>(<span class="number">2</span>).split(<span class="string">""</span>),</span><br><span class="line">        <span class="attr">y_bits</span> = y.<span class="built_in">toString</span>(<span class="number">2</span>).split(<span class="string">""</span>),</span><br><span class="line">        <span class="attr">x_p</span> = x_bits.length - <span class="number">1</span>,</span><br><span class="line">        <span class="attr">y_p</span> = y_bits.length - <span class="number">1</span>;</span><br><span class="line">    </span><br><span class="line">    while(x_p &gt;= <span class="number">0</span> || y_p &gt;= <span class="number">0</span>)&#123;</span><br><span class="line">        <span class="keyword">let</span> <span class="attr">x_bit</span> = typeof(x_bits[x_p]) !== 'undefined' ? x_bits[x_p] : <span class="number">0</span>,</span><br><span class="line">            <span class="attr">y_bit</span> = typeof(y_bits[y_p]) !== 'undefined' ? y_bits[y_p] : <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">if</span>(x_bit != y_bit) res += <span class="number">1</span>;</span><br><span class="line">        x_p <span class="attr">-=</span> <span class="number">1</span>;</span><br><span class="line">        y_p <span class="attr">-=</span> <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    return res;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h2 id="方法二：异或"><a href="#方法二：异或" class="headerlink" title="方法二：异或"></a>方法二：异或</h2><h3 id="Answer：-1"><a href="#Answer：-1" class="headerlink" title="Answer："></a>Answer：</h3><figure class="highlight zephir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;number&#125; x</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;number&#125; y</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> &#123;number&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> hammingDistance = <span class="function"><span class="keyword">function</span><span class="params">(x, y)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">let</span> res = <span class="number">0</span>,</span><br><span class="line">        <span class="keyword">xor</span> = (x^y).toString(<span class="number">2</span>).split(<span class="string">""</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">let</span> i=<span class="number">0</span>;i&lt;<span class="keyword">xor</span>.length;i++)&#123;</span><br><span class="line">        <span class="keyword">if</span>(<span class="keyword">xor</span>[i] == <span class="number">1</span>) res += <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> res;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
     </article>
+    <!-- license  -->
     
     <!-- paginator  -->
+    <ul class="post-paginator">
+        <li class="next">
+            
+        </li>
+        <li class="previous">
+            
+                <div class="prevSlogan">Previous Post</div>
+                <a href="/2020/10/12/LeetCode算法笔记-Day67/" title="LeetCode算法笔记-Day67">
+                    <div class="prevTitle">LeetCode算法笔记-Day67</div>
+                </a>
+            
+        </li>
+    </ul>
+    <!-- 评论插件 -->
+    <!-- 来必力City版安装代码 -->
+
+    <div id="lv-container" data-id="city" data-uid="MTAyMC80MDU2Ny8xNzA5NA==">
+        <script type="text/javascript">
+            (function (d, s) {
+                var j, e = d.getElementsByTagName(s)[0];
+                if (typeof LivereTower === 'function') { return; }
+                j = d.createElement(s);
+                j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+                j.async = true;
+
+                e.parentNode.insertBefore(j, e);
+            })(document, 'script');
+        </script>
+        <noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+    </div>
+
+<!-- City版安装代码已完成 -->
     
+    
+    <!-- partial('_partial/comment/changyan') -->
+    <!--PC版-->
+
+
+    
+    
+
+    <!-- 评论 -->
 </main>
             <!-- profile -->
             
@@ -471,6 +548,24 @@
 </footer>
     </div>
     <!-- toc -->
+    
+    <div class="toc-wrapper" style=
+    
+
+
+
+
+
+
+
+top:50vh;
+
+    >
+        <div class="toc-catalog">
+            <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
+        </div>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#LeetCode算法笔记-Day68"><span class="toc-number">1.</span> <span class="toc-text">LeetCode算法笔记-Day68</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#461-Hamming-Distance"><span class="toc-number">1.1.</span> <span class="toc-text">461. Hamming Distance</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#方法一"><span class="toc-number">1.2.</span> <span class="toc-text">方法一</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Answer："><span class="toc-number">1.2.1.</span> <span class="toc-text">Answer：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#方法二：异或"><span class="toc-number">1.3.</span> <span class="toc-text">方法二：异或</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Answer：-1"><span class="toc-number">1.3.1.</span> <span class="toc-text">Answer：</span></a></li></ol></li></ol></li></ol>
+    </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
     <div class="sidebar sidebar-hide">
@@ -3292,6 +3387,8 @@ jsonContent:
     
     </div>
     <!-- async load share.js -->
+    
+        <script src="/scripts/share.js" async></script>    
      
     </body>
 </html>

@@ -22,7 +22,7 @@
     <meta name="description" content="">
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-    <title>LeetCode算法笔记--子集 · Voyz&#39;s Studio</title>
+    <title>执行上下文、变量对象、作用域链与闭包 · Voyz&#39;s Studio</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -217,7 +217,7 @@
                 <a href="/" >Voyz&#39;s Studio.</a>
             </div>
             <div class="post-title">
-                <a href="#" class="post-name">LeetCode算法笔记--子集</a>
+                <a href="#" class="post-name">执行上下文、变量对象、作用域链与闭包</a>
             </div>
     </div>
     
@@ -247,7 +247,7 @@ height:50vh;
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            LeetCode算法笔记--子集
+            执行上下文、变量对象、作用域链与闭包
             <!-- 404 -->
             
         </h1>
@@ -266,22 +266,18 @@ height:50vh;
                 
                     <div class= post-intro-tags >
     
-        <a class="post-tag" href="javascript:void(0);" data-tags = "算法题">算法题</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "热题HOT100">热题HOT100</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "回溯算法">回溯算法</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags = "JavaScript">JavaScript</a>
     
 </div>
                 
                 
                     <div class="post-intro-read">
-                        <span>字数统计: <span class="post-count word-count">165</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
+                        <span>字数统计: <span class="post-count word-count">458</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
                     <span class="post-intro-calander iconfont-archer">&#xe676;</span>
-                    <span class="post-intro-time">2020/12/19</span>
+                    <span class="post-intro-time">2021/04/25</span>
                     
                     <span id="busuanzi_container_page_pv" class="busuanzi-pv">
                         <span class="iconfont-archer">&#xe602;</span>
@@ -405,17 +401,36 @@ height:50vh;
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <h1 id="LeetCode算法笔记–Day46"><a href="#LeetCode算法笔记–Day46" class="headerlink" title="LeetCode算法笔记–Day46"></a>LeetCode算法笔记–Day46</h1><h2 id="题目1："><a href="#题目1：" class="headerlink" title="题目1："></a>题目1：</h2><h3 id="78-Subsets"><a href="#78-Subsets" class="headerlink" title="78. Subsets"></a>78. Subsets</h3><blockquote>
-<p><strong>Given a set of distinct integers, nums, return all possible subsets (the power set).</strong>  </p>
-<p><strong>Note</strong>: The solution set must not contain duplicate subsets.</p>
-<p><em>example</em><br><strong>input</strong>: nums = [1,2,3]</p>
-<p><strong>output</strong>: [<br>  [3],<br>  [1],<br>  [2],<br>  [1,2,3],<br>  [1,3],<br>  [2,3],<br>  [1,2],<br>  []<br>]</p>
-</blockquote>
-<h3 id="回溯算法"><a href="#回溯算法" class="headerlink" title="回溯算法"></a>回溯算法</h3><h3 id="Analyse"><a href="#Analyse" class="headerlink" title="Analyse:"></a>Analyse:</h3><ul>
-<li>回溯算法基本结构</li>
+        <h1 id="执行上下文、变量对象、作用域链与闭包"><a href="#执行上下文、变量对象、作用域链与闭包" class="headerlink" title="执行上下文、变量对象、作用域链与闭包"></a>执行上下文、变量对象、作用域链与闭包</h1><h2 id="关系"><a href="#关系" class="headerlink" title="关系"></a>关系</h2><ul>
+<li><code>执行上下文</code>包含：<code>变量对象</code>和<code>作用域链</code>  </li>
+<li><code>变量对象</code>包含：<code>arguments</code></li>
+<li><code>活动对象</code>包含：<code>赋值的arguments</code>和<code>this</code></li>
 </ul>
-<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">result</span> = []</span><br><span class="line">def backtrack(路径, 选择条件):</span><br><span class="line">    <span class="keyword">if</span> 满足结束条件:</span><br><span class="line">        <span class="built_in">result</span>.<span class="built_in">add</span>(路径)</span><br><span class="line">        <span class="literal">return</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> 选择 <span class="keyword">in</span> 选择条件:</span><br><span class="line">        做选择</span><br><span class="line">        backtrack(路径, 新的选择条件)</span><br><span class="line">        撤销选择</span><br></pre></td></tr></table></figure>
-<h3 id="My-Answer："><a href="#My-Answer：" class="headerlink" title="My Answer："></a>My Answer：</h3><figure class="highlight maxima"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * @param &#123;number[]&#125; nums</span></span><br><span class="line"><span class="comment"> * @return &#123;number[][]&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="built_in">var</span> subsets = function(nums) &#123;</span><br><span class="line">    <span class="built_in">let</span> res = [];</span><br><span class="line">    </span><br><span class="line">    <span class="built_in">let</span> trackBack = function(start,<span class="built_in">track</span>)&#123;</span><br><span class="line">        res.<span class="built_in">push</span>(<span class="built_in">track</span>);</span><br><span class="line">        <span class="keyword">for</span>(<span class="built_in">let</span> i=start;i&lt;nums.<span class="built_in">length</span>;i++)&#123;</span><br><span class="line">            <span class="built_in">track</span>.<span class="built_in">push</span>(nums[i]);</span><br><span class="line">            trackBack(i+<span class="number">1</span>,<span class="built_in">track</span>.slice());</span><br><span class="line">            <span class="built_in">track</span>.<span class="built_in">pop</span>();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    trackBack(<span class="number">0</span>,[]);</span><br><span class="line">    <span class="built_in">return</span> res;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<figure class="highlight nim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">// 执行上下文</span><br><span class="line">testEC = &#123;</span><br><span class="line">    // 变量对象</span><br><span class="line">    <span class="type">VO</span>: &#123;</span><br><span class="line">        arguments: <span class="meta">&#123;...&#125;</span>,  </span><br><span class="line">        foo: &lt;foo reference&gt;  // 表示foo的地址引用</span><br><span class="line">        a: undefined</span><br><span class="line">    &#125;,</span><br><span class="line">    // (活动对象)</span><br><span class="line">    <span class="type">AO</span>: &#123;</span><br><span class="line">        arguments: <span class="meta">&#123;...&#125;</span>,  </span><br><span class="line">        foo: &lt;foo reference&gt;  // 表示foo的地址引用</span><br><span class="line">        a: <span class="number">1</span>,</span><br><span class="line">        this: window</span><br><span class="line">    &#125;,</span><br><span class="line">    // 作用域链</span><br><span class="line">    scopeChain: scopeChain: [<span class="type">VO</span>(innerTest),<span class="type">VO</span>(global)], </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="执行上下文"><a href="#执行上下文" class="headerlink" title="执行上下文"></a>执行上下文</h2><ul>
+<li>「定义」：函数运行时创建的 <code>执行环境</code></li>
+<li>「机制」：函数执行时<code>入栈</code>，执行完<code>出栈</code></li>
+<li>「包括」：<code>全局</code>执行上下文/<code>函数</code>执行上下文/<code>eval</code>执行上下文   </li>
+</ul>
+<hr>
+<ul>
+<li>「创建」：创建 <code>变量对象</code>、<code>this</code></li>
+<li>「代码执行」：<code>变量赋值</code></li>
+<li>「销毁」：执行上下文<code>出栈</code>、内存空间失去引用等待<code>回收</code>  </li>
+</ul>
+<h2 id="变量对象"><a href="#变量对象" class="headerlink" title="变量对象"></a>变量对象</h2><ul>
+<li>「创建过程」：<code>arguments</code> =&gt; <code>函数声明</code> =&gt; <code>变量声明</code></li>
+<li>「执行」：栈顶的执行上下文， <code>变量对象(VO)</code> –<code>[赋值、this]</code>–&gt; <code>活动对象(AO)</code>  </li>
+</ul>
+<h2 id="作用域链"><a href="#作用域链" class="headerlink" title="作用域链"></a>作用域链</h2><ul>
+<li>「作用域」：<code>词法环境</code>，写代码的时候就已经确定了</li>
+<li>「作用域链」：<code>当前环境</code>与<code>上层环境</code>的一系列<code>变量对象</code>组成，它保证了当前执行环境对符合访问权限的变量和函数的有序访问。  </li>
+</ul>
+<h2 id="闭包"><a href="#闭包" class="headerlink" title="闭包"></a>闭包</h2><ul>
+<li>通过闭包，我们可以在其他的<code>执行上下文</code>中，访问到函数的<code>内部变量</code></li>
+<li>由于作用域链中连接到了其他变量对象，因此其自身执行上下文出栈后仍<code>未失去引用</code>，不会被<code>垃圾回收</code>  <figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> <span class="function"><span class="keyword">fn</span> = <span class="title">null</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> a = <span class="number">2</span>;</span><br><span class="line">  <span class="function"><span class="keyword">function</span> <span class="title">innnerFoo</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    console.log(a);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="function"><span class="keyword">fn</span> = <span class="title">innnerFoo</span></span>; <span class="comment">// 将 innnerFoo的引用，赋值给全局变量中的fn</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">bar</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">fn</span>(<span class="params"></span>)</span>; <span class="comment">// 此处的保留的innerFoo的引用</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">foo();</span><br><span class="line">bar(); <span class="comment">// 2</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+
     </article>
     <!-- license  -->
     
@@ -424,16 +439,16 @@ height:50vh;
         <li class="next">
             
                 <div class="nextSlogan">Next Post</div>
-                <a href= "/2020/12/20/LeetCode%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0-Day47/" title= "LeetCode算法笔记--二叉树的中序遍历">
-                    <div class="nextTitle">LeetCode算法笔记--二叉树的中序遍历</div>
+                <a href= "/2021/05/02/%E5%89%8D%E7%AB%AF%E5%B8%B8%E8%A7%81%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E6%96%B9%E6%A1%88%E6%80%BB%E7%BB%93/" title= "前端常见性能优化方案总结">
+                    <div class="nextTitle">前端常见性能优化方案总结</div>
                 </a>
             
         </li>
         <li class="previous">
             
                 <div class="prevSlogan">Previous Post</div>
-                <a href= "/2020/12/18/LeetCode%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0-Day45/" title= "LeetCode算法笔记--最小路径和 / 颜色分类">
-                    <div class="prevTitle">LeetCode算法笔记--最小路径和 / 颜色分类</div>
+                <a href= "/2021/04/22/React%E7%BB%84%E4%BB%B6%E9%80%BB%E8%BE%91%E5%A4%8D%E7%94%A8%E7%9A%84%E4%B8%89%E7%A7%8D%E5%AE%9E%E7%8E%B0%E6%96%B9%E5%BC%8F%E5%AF%B9%E6%AF%94/" title= "React组件逻辑复用的三种实现方式对比">
+                    <div class="prevTitle">React组件逻辑复用的三种实现方式对比</div>
                 </a>
             
         </li>
@@ -577,7 +592,7 @@ top:50vh;
         <div class="toc-catalog">
             <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
         </div>
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#LeetCode%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B0%E2%80%93Day46"><span class="toc-number">1.</span> <span class="toc-text">LeetCode算法笔记–Day46</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE1%EF%BC%9A"><span class="toc-number">1.1.</span> <span class="toc-text">题目1：</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#78-Subsets"><span class="toc-number">1.1.1.</span> <span class="toc-text">78. Subsets</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95"><span class="toc-number">1.1.2.</span> <span class="toc-text">回溯算法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Analyse"><span class="toc-number">1.1.3.</span> <span class="toc-text">Analyse:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#My-Answer%EF%BC%9A"><span class="toc-number">1.1.4.</span> <span class="toc-text">My Answer：</span></a></li></ol></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%89%A7%E8%A1%8C%E4%B8%8A%E4%B8%8B%E6%96%87%E3%80%81%E5%8F%98%E9%87%8F%E5%AF%B9%E8%B1%A1%E3%80%81%E4%BD%9C%E7%94%A8%E5%9F%9F%E9%93%BE%E4%B8%8E%E9%97%AD%E5%8C%85"><span class="toc-number">1.</span> <span class="toc-text">执行上下文、变量对象、作用域链与闭包</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B3%E7%B3%BB"><span class="toc-number">1.1.</span> <span class="toc-text">关系</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%89%A7%E8%A1%8C%E4%B8%8A%E4%B8%8B%E6%96%87"><span class="toc-number">1.2.</span> <span class="toc-text">执行上下文</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%98%E9%87%8F%E5%AF%B9%E8%B1%A1"><span class="toc-number">1.3.</span> <span class="toc-text">变量对象</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%9C%E7%94%A8%E5%9F%9F%E9%93%BE"><span class="toc-number">1.4.</span> <span class="toc-text">作用域链</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%97%AD%E5%8C%85"><span class="toc-number">1.5.</span> <span class="toc-text">闭包</span></a></li></ol></li></ol>
     </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
